@@ -11,7 +11,7 @@
 <style>
 	*{margin:0; padding:0; box-sizing:border-box; list-style:none; margin:0 auto;}
 	.slide{width:1200px; height :300px; }
-	.bar_name{width:1200px; line-height:23px; background:#e3e3e3; text-align:center;}
+	.bar_name{width:1200px; line-height:23px; background:#ffffff; text-align:center;}
 	.small_image{display:flex; justify-content:center; align-items:center;}
 	.small_image>ul{display:flex; justify-content:center; align-items:center; width:100%;}
 	.small_image>ul>li{width:25%;}

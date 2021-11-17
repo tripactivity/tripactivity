@@ -40,7 +40,7 @@ section>div{float:left; outline:1px solid red; width:33%; text-align:center;}
    	<div class="footer_center">
    		<ul >
    			<li><a href="#">언제 어디서나 트립액티비티<br>트립액티비티</a></li>
-   			<li><a href="#"><img src="#" alt="footer_logo"></a></li>
+   			<li><a href="#"><img src="resources/img/LOGO.png" alt="footer_logo"></a></li>
    			
    		</ul>
    	</div>

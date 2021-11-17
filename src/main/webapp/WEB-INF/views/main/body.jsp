@@ -30,7 +30,7 @@
 	.small_image>ul{display:flex; justify-content:center; align-items:center; width:100%;}
 	.small_image>ul>li{width:25%; height:250px; }
     .small_image>ul>li>a{width:100%; height:100%;}
-    .small_image>ul>li>a>img{width:100%; height:100%; ;}
+    .small_image>ul>li>a>img{width:100%; height:100%;}
 
     
     .fixed{outline:1px solid skyblue;}

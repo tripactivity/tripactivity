@@ -25,7 +25,7 @@
 			<li><a href="#"><img src="#" alt="메인 슬라이드"></a></li>
 		</ul>
 	</div>
-	<!-- 베스트 상품 틀 -->
+	<!-- 베스트 상품 틀 --><!-- sdfasdf-->
 	<div class="bar_name">
 		<h1>베스트 상품</h1>
 	</div>

@@ -19,7 +19,7 @@
 </style>
 </head>
 <body>
-	<!-- 메인 슬라이드 -->
+	<!-- 메인 슬라이드 --><!-- 확인용 -->
 	<div class="slide" id="slide2">
 		<ul>
 			<li><a href="#"><img src="#" alt="메인 슬라이드"></a></li>

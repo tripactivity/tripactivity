@@ -4,78 +4,99 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-	<title>Home</title>
-	<style>
-		*{margin:0; padding:0; box-sizing:border-box;}
-	</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Document</title>
+
+    <style>
+        *{margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; color:#030303;}
+        header{max-width:1200px; margin:0 auto; min-width:1200px;}
+        .header_top{width:100%; height: 100%; display:flex; position:relative; outline:1px solid #e3e3e3;}
+        .logo{width:30%; height:100%;}
+        .logo>img{width:100%; height:100%; }
+
+        .center{width:35%; display:flex; justify-content: center; align-items:center;}
+        .right{width:35%;}
+
+        #search_form{position:relative; width:50%;}
+        .text_box{width:100%; padding:10px 0px 10px 0px; border-radius:4px;}
+        .fa-search{position:absolute; right:10px; top: 50%;
+    transform: translateY(-50%); font-size:26px; background:none; border:none; color:skyblue;}
+
+        .nav{ display:block; position:absolute; top:10px; right:50px; }
+        .nav>ul{display:block; width:100%;}    
+        .nav>ul>li{ line-height:32px; display:inline-block; font-size:16px; outline:1px solid #e3e3e3; text-align:center;}   
+        
+        .weather{display:inline-block; position:absolute; bottom:10px; right:50px;}
+        .weather>ul{display:inline-block;}
+        .weather>ul>li{display:inline-block;}
+        .weather>ul>li>a{line-height:12px;}
+            /*header_bottom*/
+        .header_bottom{width:100%; outline:1px solid yellow;}
+            .category{margin:0 auto; display:block; width:80%; }
+            .category>ul>li{float:left; margin-left:20px; width:15%;}
+            .category>ul>li>a{display:block; line-height:40px; outline:1px solid #e3e3e3; width:100%;}
+           
+    </style>
 </head>
 <body>
-<!--  로고  -->
- <div class="logo">
-       <a href="/"><img src="resources/img/logo.png" alt="" ></a>
-      </div>
-<!--  통합검색어  -->
-<div id="search" class="search_area" data-clk-prefix="sch">
-<form id="sform" name="sform" action="#" method="get" role="search">
-<fieldset>
-<legend class="blind">검색</legend>
+    <header>
+        <div class="header_top">
+            <div class="logo"><a href="#"><img src="/resources/img/logo.png"></a>
+            </div>
 
-<div class="green_window" style=''>
-<!-- [AU] data-atcmp-element 에 해당하는 attribute를 추가해주세요. -->
-<input id="query" name="query" type="text" title="검색어 입력" maxlength="255" class="input_text" tabindex="1" accesskey="s" style="ime-mode:active;" autocomplete="off"  placeholder="검색어를 입력해 주세요." onclick="document.getElementById('fbm').value=1;" value="" data-atcmp-element>
-</div>
-<button id="search_btn" type="submit" title="검색" tabindex="3" class="btn_submit" onclick="window.nclick(this,'sch.action','','',event);" style=''>
-<span class="blind">검색</span>
-<span class="ico_search_submit"></span>
-</button>
-</fieldset>
-</form></div>
+            <div class="center">
+                <form action="#" method="get" id="search_form">
+                
+                         <input type="text" name="search" class="text_box">
+                         <button type="submit" class="fas fa-search"></button>
+                       
+                   
+                </form>
+                
+                
 
-
-<!--  카테고리 -->
-       <nav id="category" class="category">
-        <ul>
-          <li><a href="#">숙박</a></li>
-          <li><a href="#">레저</a></li>
-          <li><a href="#">교통</a></li>
-          <li><a href="#">이벤트</a></li>
-        </ul></nav>
+            </div>
+            <div class="right">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">마이페이지</a></li>
+                        <li><a href="#">고객 센터</a></li>
+                    </ul>
+                </nav>
+                <div class="weather">
+                    <ul>
+                        <li><a href="#">10.0비</a></li>
+                        <li><a href="#">10.012.3/12.0</a></li>
+                        <li><a href="#">10.0둔산동</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div><!--header_top-->
+        <div class="header_bottom">
+            <div class="category">
+                <ul>
+                    <li><a href="#">숙박</a></li>
+                    <li><a href="#">레저</a></li>
+                    <li><a href="#">교통</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <!--<li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>-->
+                </ul>
+            </div>
         
-        <!--  네비 -->
-       <nav id="nav" class="nav">
-        <ul>
-          <li><a href="#">로그인</a></li>
-          <li><a href="#">회원가입</a></li>
-          <li><a href="#">마이페이지</a></li>
-          <li><a href="#">고객센터</a></li>
-        </ul></nav>
-        <!--  날씨 -->
-<div id="NM_WEATHER" class="group_weather">
-	<div>
-		<a data-clk="squ.weat" href="https://weather.naver.com/today/07170112" class="weather_area ico_w01">
-			<div class="current_box">
-				<strong class="current" aria-label="현재기온">16.0°</strong><strong class="state">맑음</strong>
-			</div>
-			<div class="degree_box">
-				<span class="min" aria-label="최저기온">4.0°</span><span class="max" aria-label="최고기온">16.0°</span>
-			</div>
-			<span class="location">둔산동</span></a>
-	</div>
-	<div>
-		<a data-clk="squ.dust" href="https://weather.naver.com/today/07170112" class="air_area">
-			<ul class="list_air">
-				<li class="air_item">미세<strong class="state state_normal">보통</strong></li>
-				<li class="air_item">초미세<strong class="state state_normal">보통</strong></li>
-			</ul>
-			<span class="location">둔산동</span>
-		</a>
-	</div>
-</div>
 
-        
-       
-        
+        </div>
+    </header>
 </body>
 </html>

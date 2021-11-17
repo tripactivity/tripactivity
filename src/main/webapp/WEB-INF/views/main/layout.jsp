@@ -46,9 +46,7 @@
       </div>
         </footer>
         
-        <div class="left_fixed">
-            왼쪽 이벤트 배너
-        </div>
+   
      
     </div>
 </body>

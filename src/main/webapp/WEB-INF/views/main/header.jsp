@@ -47,7 +47,7 @@
 <body>
     <header>
         <div class="header_top">
-            <div class="logo"><a href="#"><img src="resources/img/logo.png"></a>
+            <div class="logo"><a href="#"><img src="resources/img/LOGO.png"></a>
             </div>
 
             <div class="center">

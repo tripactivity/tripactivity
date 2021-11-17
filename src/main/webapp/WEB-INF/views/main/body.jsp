@@ -79,7 +79,7 @@
         <!-- 메인 슬라이드 --><!-- 확인용 -->
         <div class="slide" id="slide2">
             <ul>
-                <li><a href="#"><img src="main_banner.png" alt="메인 슬라이드"></a></li>
+                <li><a href="#"><img src="resources/img/main_banner.png" alt="메인 슬라이드"></a></li>
             </ul>
         </div>
         <!-- 베스트 상품 틀 -->
@@ -89,9 +89,9 @@
         <!-- 상품 작은 이미지 -->
         <div class="small_image margin25">
             <ul>
-                <li><a href="#"><img src="recent_image01.jpg" alt="작은이미지"></a></li>
-                <li><a href="#"><img src="recent_image02.png" alt="작은이미지"></a></li>
-                <li><a href="#"><img src="recent_image01.jpg" alt="작은이미지"></a></li>
+                <li><a href="#"><img src="resources/img/recent_image01.jpg" alt="작은이미지"></a></li>
+                <li><a href="#"><img src="resources/img/recent_image02.png" alt="작은이미지"></a></li>
+                <li><a href="#"><img src="resources/img/recent_image01.jpg" alt="작은이미지"></a></li>
                 
                         
             </ul>
@@ -105,16 +105,16 @@
             </div>
             <div class="for_padding">
                 <div class="left_container_box left_container_second_box img">
-                    <a href="#"><img src="recent_image01.jpg" alt="최근본 상품 이미지"></a>
+                    <a href="#"><img src="resources/img/recent_image01.jpg" alt="최근본 상품 이미지"></a>
                 </div>
                 <div class="left_container_box left_container_third_box img">
-                    <a href="#"><img src="recent_image02.png" alt="최근본 상품 이미지"></a>
+                    <a href="#"><img src="resources/img/recent_image02.png" alt="최근본 상품 이미지"></a>
                 </div>
                 <div class="left_container_box left_container_second_box img">
-                    <a href="#"><img src="recent_image01.jpg" alt="최근본 상품 이미지"></a>
+                    <a href="#"><img src="resources/img/recent_image01.jpg" alt="최근본 상품 이미지"></a>
                 </div>
                 <div class="left_container_box left_container_second_box img">
-                    <a href="#"><img src="recent_image01.jpg" alt="최근본 상품 이미지"></a>
+                    <a href="#"><img src="resources/img/recent_image01.jpg" alt="최근본 상품 이미지"></a>
                 </div>
 
                 
@@ -131,7 +131,7 @@
         <div class="sell_banner_container">
             <div class="sell_banner">
                 <ul>
-                    <li><a href="#"><img src="left_banner.png"></a></li>
+                    <li><a href="#"><img src="resources/img/left_banner.png"></a></li>
                 </ul>
             </div>
             <div class="sell_banner_close">

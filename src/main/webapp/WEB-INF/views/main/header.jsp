@@ -37,7 +37,7 @@
         .weather>ul>li{display:inline-block;}
         .weather>ul>li>a{line-height:12px;}
             /*header_bottom*/
-        .header_bottom{width:100%; outline:1px solid yellow;}
+        .header_bottom{width:100%; height:100px;  background:white;}
             .category{margin:0 auto; display:block; width:80%; }
             .category>ul>li{float:left; margin-left:20px; width:15%;}
             .category>ul>li>a{display:block; line-height:40px; outline:1px solid #e3e3e3; width:100%;}
@@ -55,8 +55,6 @@
                 
                          <input type="text" name="search" class="text_box">
                          <button type="submit" class="fas fa-search"></button>
-                       
-                   
                 </form>
                 
                 
@@ -88,11 +86,13 @@
                     <li><a href="#">레저</a></li>
                     <li><a href="#">교통</a></li>
                     <li><a href="#">이벤트</a></li>
+                    
                     <!--<li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>-->
                 </ul>
+                
             </div>
         
 

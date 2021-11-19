@@ -14,9 +14,9 @@
 	*{margin:0; padding:0; box-sizing:border-box; list-style:none; margin:0 auto;}
     /*font awesome*/
     }
-    .fa-chevron-left{font-size:40px; color:skyblue;}
+/*     .fa-chevron-left{font-size:40px; color:skyblue;}
     .fa-chevron-right{font-size:40px; color:skyblue;}
-    
+     */
 
     .margin-top{width:100%; height:100px;}
     main{margin:0 auto; min-width:1200px; height:3000px; position:relative; margin-top:40px;}

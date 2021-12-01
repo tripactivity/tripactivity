@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 
     <style>
@@ -63,7 +64,16 @@
             <div class="right">
                 <nav class="nav">
                     <ul>
-                        <li><a href="#">로그인</a></li>
+                    <li><a href="#">로그인</a></li>
+                     <%--    <c:choose>
+                        	<c:when test="$isLogOn == true && member!=null}">
+                        		<h3>환영합니다. ${member.name}님!</h3>
+                        		<a href="${contextPath}/member/logout.do"><h3>로그아웃</h3></a>
+                        		</c:when>
+                        	<c:oterwise>
+                        		<a href="${contextPath}/member/loginForm.do"><h3>로그인</h3></a>
+                        	</c:oterwise>
+                        </c:choose> --%>
                         <li><a href="#">회원가입</a></li>
                         <li><a href="#">마이페이지</a></li>
                         <li><a href="#">고객 센터</a></li>

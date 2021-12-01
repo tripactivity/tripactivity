@@ -12,8 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="${contextPath }/resources/css/common/header.css">
-<link rel="stylesheet" href="${contextPath }/resources/css/reset.css">
+    <link rel="stylesheet" href="resources/css/common/header.css">
+<link rel="stylesheet" href="resources/css/reset.css">
     <title>Document</title>
 
     
@@ -31,7 +31,7 @@
             </div>
             <div class="cjh_nav2">
                 <ul>
-                    <li><a href="#">고객센터</a></li>
+                    <li><a href="center.do">고객센터</a></li>
                     <li><a href="#">로그인</a></li>
                     <li><a href="#">장바구니</a></li>
                     <li><a href="#">마이페이지</a></li>

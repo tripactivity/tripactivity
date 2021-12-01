@@ -27,7 +27,7 @@
   <link href="resources/bootstrap/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="resources/boot/css/style.css" rel="stylesheet">
+  <link href="resources/bootstrap/css/style.css" rel="stylesheet">
 </head>
 <body>
 

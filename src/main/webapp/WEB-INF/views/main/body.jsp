@@ -11,8 +11,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-<link rel="stylesheet" href="${contextPath }/resources/css/common/header.css">
-<link rel="stylesheet" href="${contextPath }/resources/css/reset.css">
+<link rel="stylesheet" href="resources/css/common/header.css">
+<link rel="stylesheet" href="resources/css/reset.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
       <!-- Swiper JS -->
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -53,7 +53,7 @@
         </div>
         <!-- 상품 작은 이미지 -->
         <div class="cjh_best_container">
-            <a href="#" class="cjh_first_best_a cjh_best_box">
+            <a href="ac_Product.do" class="cjh_first_best_a cjh_best_box">
                 <div class="cjh_first_best_img">
                     <img src="resources/img/recent_image01.jpg">
                 </div><!--cjh_first_best_img-->

@@ -1,16 +1,557 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+     pageEncoding="UTF-8"
+    isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<%@ page session="false" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-<link rel="stylesheet" type="text/css" href="resources/css/product/ac_Product.css" />
-<script type="text/javascript" src="resources/js/ac_Product.js"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <style>
+        *{
+            list-style: none;
+            margin:0; 
+            padding:0; 
+            box-sizing:border-box;
+            letter-spacing:0px;
+        }
+        div{
+            display:block;
+        }
+        article,aside,footer,header,main,section,summary{
+            display:block;
+        }
+        .yj_product_main{
+            position:relative;
+            width:100%;
+        }
+        .yj_product_main1{
+            margin:0 auto;
+            position:relative;
+            width:1060px;
+        }
+        #yj_bigImg2{
+            width:14px;
+            vertical-align:sub;
+            margin-right:6px;
+        }
+        #yj_bigImg{
+            width:18px;
+            vertical-align:middle;
+            margin-right:6px;
+            
+        }
+        .yj_product_checkbox_hide--aa{
+            display:none;
+            margin-bottom:12px;
+        }
+        .yj_product_container{
+            display:flex;
+        }
+        .yj_product_aside{
+            margin-top:32px;
+            margin-right:30px;
+            width:250px;
+        }
+        .yj_aside_mapbutton{
+            padding-bottom:24px;
+        }
+        .yj_aside_mapbutton>button{
+            border-radius:4px;
+            border-color:#dee2e6;
+        }
+        .yj_aside_mapbutton_map{
+            width:100%;
+            height:64px;
+            font-size:18px;
+            padding: left 0, im !important;
+            padding: right 0, im !important;
+        }
+        .yj_checkboxModule--ae{
+            width:20px;
+            height:20px;
+            position:relative;
+            margin:0 8px 0 0;
+            vertical-align: bottom;
+        }
+        .yj_checkbox_label{
+            display:inline;
+        }
+        .yj_checkbox_label>span{
+            font-size:14px;
+        }
+        .yj_product_header_h3{
+            margin:0;
+            font-size:16px;
+            color:#1d1d1d;
+            line-height: 20px;
+            font-weight:bold;
+        }
+        .yj_product_botton{
+            display:flex;
+            align-items:center;
+            width:100%;
+            line-height:40px;
+            border-radius:20px;
+            border: 1px solid #dee2e6;
+            background-color:#f7f7f7;
+            font-size:14px;
+            font-weight:500;
+            color:#1d1d1d;
+            height:40px;
+            padding-left:16px;
+            padding-right:16px;
+        }
+        .yj_product_checkbox--aa{
+            margin-bottom:12px;
+        }
+        .yj_product_couponproduct{
+            padding-bottom:16px;
+            margin-bottom:20px;
+            border-bottom:solid 1px #e9ecef;
+        }
+        .yj_product__section_header{
+            margin-bottom:16px;
+        }
+        .yj_product_section_height_bb{
+            margin-bottom:16px;
+        }
+        .yj_product_section_height_bb>hr{
+            border-top:1px solid #e9ecef;
+            margin-top:24px;
+            margin-bottom:16px;
+        }
+        .yj_product_section_ui_aa{
+            margin-bottom:16px;
+        }
+        .yj_product_kinds{
+            margin-bottom:16px;
+        }
+        .yj_product__section_header{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom:16px;
+            border-bottom:1px solid #e9ecef;
+        }
+        .yj_product__section>hr{
+            border-top:1px solid #e9ecef;
+            margin-top:24px;
+            margin-bottom:20px;
+        }
+        .yj_product_kinds_all{
+            padding:0;
+            border:0;
+            background-color:transparent;
+            font-size:14;
+            font-weight:bold;
+            color:#1d1d1d;
+            margin-top:16px;
+        }
+        .yj_aside_mapbutton_map>span{
+            color:#1d1d1d;
+        }
+        .yj_aside_mapbutton_image{
+            vertical-align: sub;
+            margin-right:2px;
+        }
+        .yj_product_searching_header{
+            font-weight:600;
+            color:#1d1d1d;
+        }
+        .yj_product_searching_goods{
+            display:flex;
+            align-items:center;
+        }
+        .yj_product_searching{
+            display:flex;
+            justify-content: space-between;
+            margin-bottom:20px;
+        }
+        .yj_product_section_aa{
+            min-height:initial;
+        }
+        a:link{
+            text-decoration: none;
+        }
+        .yj_product_section_bb:first-child{
+            margin-top:8px;
+        }
+        .yj_product_section_bb{
+            position:relative;
+            display:flex;
+            align-items: center;
+            height:200px;
+            margin-bottom:16px;
+            border-radius:2px;
+            box-shadow: inset 0 0 0 1px #dee2e6;
+            z-index:1;
+        }
+        .yj_product_div_aa{
+            width:258px;
+            height:100%;
+            padding:1px;
+        }
+        .yj_product_div_bb{
+            position:relative;
+            height:100%;
+        }
+        .yj_product_div_cc{
+            width:100%;
+            height:100%;
+            position:relative;
+        }
+        .yj_product_daejeon1{
+            width:100%;
+            height:100%;
+            opacity:1;
+        }
+        .yj_product_article{
+            margin-top:32px;
+            width:780px;
+            vertical-align:top;
+        }
+        .yj_product_div_dd{
+            display:flex;
+            flex-direction:column;
+            width: calc(100% - 258px);
+            height: 100%;
+            padding: 22px 24px 24px;
+        }
+        .yj_product_div_ee{
+            line-height:24px;
+        }
+        .yj_product_h2_aa{
+            margin-bottom:0;
+            font-size:18px;
+            font-weight:600;
+            color:#1d1d1d;
+        }
+        .yj_product_h2_bb{
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+        }
+        .yj_product_searching_goods_aa{
+            display:flex;
+            align-items:center;
+        }
+        .yj_product_searching_goods_li{
+            margin-right:10px;
+            font-size:13px;
+        }
+        .yj_product_searching_button{
+            padding: 0 0 0 8px;
+            border: none;
+            background-color: transparent;
+            font-size:13px;
+            font-weight:500;
+            color:#1d1d1d;
+        }
+        .yj_product_div_ff{
+            margin:6px 0 8px;
+        }
+        .yj_product_div_ff>p{
+            overflow:inherit;
+            text-overflow: inherit;
+            white-space:inherit;
+        }
+        .yj_product_p_aa{
+            margin:0;
+            font-weight:500;
+            font-size:13px;
+            line-height:14px;
+            letter-spacing:-.3px;
+            color:#848c94;
+        }
+        .yj_product_span_aa{
+            display:inline-block;
+            vertical-align: middle;
+            border-radius:4px;
+            border:solid 1px #f1f3f5;
+            background-color: #f5f6f7;
+            padding:2px 5px;
+            margin-bottom : 6px;
+            margin-right:5px;
+            white-space: nowrap;
+        }
+        .yj_product_price_ee{
+            display:flex;
+            flex-direction: column;
+            margin-top:auto;
+        }
+        .yj_product_price_aa{
+            position:relative;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            width:168px;
+            z-index:1;
+        }
+        .yj_product_price_bb{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            color:#1d1d1d;
+        }
+        .yj_product_price_cc{
+            position:relative;
+            width:100%;
+            display:flex;
+            justify-content: flex-end;
+        }
+        .yj_product_price_dd{
+            display:flex;
+            flex-direction: column;
+            white-space: nowrap;
+        }
+        .yj_product_couponPrice_aa{
+            display:flex;
+            align-items: flex-end;
+            margin-bottom:4px;
+        }
+        .yj_product_discountPrice_aa{
+            margin-right:5px;
+            font-weight: 700;
+            font-size:14px;
+            line-height: 16px;
+            letter-spacing: -.3px;
+            color:#fa5b4a;
+        }
+        .yj_product_originalPrice_aa{
+            margin-right:4px;
+            line-height: 1;
+            font-size:12px;
+            font-weight: 500;
+            letter-spacing:-.3px;
+            color:#adb5bd;
+        }
+        .yj_product_mainPrice_aa{
+            display:flex;
+            align-items: flex-end;
+            font-weight: bold;
+        }
+        .yj_product_benefitPrice_aa{
+            margin:0;
+            line-height: 24px;
+            font-size:20px;
+        }
+        .yj_product_footer_aa{
+            margin-top:32px;
+            margin-bottom:140px;
+        }
+        .yj_product_footer_div_aa{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button[disabled],input[disabled]{
+            cursor:default;
+        }
+        button[disabled]{
+            pointer-events: none !important;
+        }
+        .yj_product_footer_button_bb{
+            width:40px;
+            height:40px;
+            background-color: transparent;
+            font-size:14px;
+            color:#1d1d1d;
+            transition:background-color .2s,color .2s;
+        }
+        .yj_product_footer_button_next_aa{
+            margin-left:12px;
+        }
+        .yj_product_footer_button_dd{
+            margin-right:4px;
+        }
+        .yj_product_footer_button_prev_aa{
+            margin-right:12px;
+        }
+        .yj_product_search{
+            padding:4px 20px 20px;
+            margin-bottom:20px;
+            margin-top:20px;
+            border-radius: 8px;
+            box-shadow: rgb(33 37 41/ 10%) 0px 4px 8px 0px;
+            background-color: var(white);
+        }
+        .yj_product_search_choose{
+            position: relative;
+            display:flex;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+            border-bottom:1px solid #c8cacc;
+            margin-bottom:16px;
+            overflow:auto;
+
+        }
+        .yj_product_search_pro{
+            margin-right:32px;
+            display:inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            flex-shrink: 0;
+            padding:16px 0px;
+            cursor: pointer;
+        }
+        .yj_icon{
+            display:inline-block;
+            border:0px;
+            width:20px;
+            height:20px;
+        }
+        .yj_product_span_cc{
+            font-size:16px;
+            font-weight:bold;
+            line-height: 1.25;
+            letter-spacing: -0.4px;
+            margin-left:8px;
+
+        }
+        .yj_product_search_box{
+            display:flex;
+            -webkit-box-align:center;
+            align-items:center;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+        }
+        .yj_product_search_text{
+            width:280px;
+        }
+        .yj_product_search_text>div{
+            margin-right:8px;
+        }
+        .yj_product_search_text_aa{
+            display:inline-block;
+            position: relative;
+            width:100%;
+        }
+        .yj_product_search_calendar{
+            width:280px;
+        }
+        .yj_product_search_person{
+            width:280px;
+        }
+        .yj_search_button{
+            position:relative;
+            display:inline-flex;
+        }
+        .yj_product_search_box.on{
+            display:flex;
+        }
+        
+        
+
+    </style>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script>
+      $(function () {
+            $('.yj_demo').daterangepicker({
+                "locale": {
+                    "format": "YYYY-MM-DD",
+                    "separator": " ~ ",
+                    "applyLabel": "확인",
+                    "cancelLabel": "취소",
+                    "fromLabel": "From",
+                    "toLabel": "To",
+                    "customRangeLabel": "Custom",
+                    "weekLabel": "W",
+                    "daysOfWeek": ["월", "화", "수", "목", "금", "토", "일"],
+                    "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+                    "firstDay": 1
+                },
+                "startDate": "2021-12-06",
+                "endDate": "2021-12-07",
+                "drops": "down"
+            }, function (start, end, label) {
+                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+            });
+        });
+
+        let out_bus=document.querySelector('.out_bus');
+        let fast_bus=document.querySelector('.fast_bus');
+        let train =document.querySelector('.train');
+
+        let cjh_result=document.querySelector('.cjh_result');
+
+
+
+        let in_bus_form=document.querySelector('.in_bus_form');
+        let out_bus_form=document.querySelector('.out_bus_form');
+        let train_form =document.querySelector('.train_form');
+
+        let submit = document.querySelectorAll('.submit');
+        let aa = document.querySelectorAll('.aa');
+
+
+       for(i=0; i<submit.length; i++){
+            submit[i].addEventListener('click', function(){
+                cjh_result.style.display="block";
+            })
+        };
+        /*  조회 및 제출 동시에 하는 스크립트 
+        for(i=0; i<submit.length; i++){
+            submit[i].addEventListener('click', function(){
+                cjh_result.style.display="block";
+            })
+            submit[i].addEventListener('click', function(){
+                for(i=0; i<aa.length; i++){
+                    aa[0].submit();
+                    return false;
+                }
+                
+            })
+        };
+        */
+
+        
+
+        out_bus.addEventListener('click', function(){
+            cjh_result.style.display="none";
+          
+            in_bus_form.classList.add('on');
+            out_bus_form.classList.remove('on');
+            train_form.classList.remove('on');
+        });
+
+        fast_bus.addEventListener('click', function(){
+            cjh_result.style.display="none";
+            
+            out_bus_form.classList.add('on');
+            in_bus_form.classList.remove('on');
+            train_form.classList.remove('on');
+        });
+
+        train.addEventListener('click', function(){
+            cjh_result.style.display="none";
+            
+            train_form.classList.add('on');
+            in_bus_form.classList.remove('on');
+            out_bus_form.classList.remove('on');
+        });
+
+        $(document).ready(function() {
+  $(".yj_product_search_pro").click(function() {
+    var idx = $(this).index();
+    $(".yj_product_search_pro").removeClass("on");
+    $(".yj_product_search_pro").eq(idx).addClass("on");
+    $(".yj_onAndOff").hide();
+    $(".yj_onAndOff").eq(idx).show();
+  })
+});
+    </script>
+    
 </head>
 <body>
-	<div class="yj_product_main">
+
+    <div class="yj_product_main">
         <div class="yj_product_main1">
             <div class="yj_product_search">
                 <div class="yj_product_search_choose">
@@ -190,7 +731,7 @@
                             </span>
                         </button>
                     </div>
-                    <main class>
+                    <section><!--  class가 있엇음 -->
                         <div class="yj_product_couponproduct">
                             <label class="yj_product_couponproduct_label">
                                 <input type="checkbox" id="yj_promotion" class="yj_checkboxModule--ae yj_checkboxModule--ad" name="yj_promotion" value="N">
@@ -200,16 +741,16 @@
                                 </div>
                             </label>
                         </div>
-                    </main>
-                    <main>
-                        <header class="yj_product__section_header">
+                    </section>
+                    <section>
+                        <section class="yj_product__section_header">
                             <h3 class="yj_product_header_h3">종류</h3>
-                        </header>
+                        </section>
                         <section class="yj_product_section_height_aa yj_product_section_height_bb">
                             <ui class="yj_product_section_ui_aa">
                                 <li class="yj_product_kinds">
                                     <button type="button" class="yj_product_botton">
-                                        <img src="https://cdn-icons.flaticon.com/png/128/3666/premium/3666365.png?token=exp=1637736694~hmac=62798f786728fa31af454a7edc5f3da6" alt="전체메뉴아이콘" id="yj_bigImg">
+                                        <img src="https://cdn-icons.flaticon.com/png/128/3666/premium/3666365.png?token=exp=1637736694~hmac=62798f786728fa31af454a7edc5f3da6" alt="#" id="yj_bigImg">
                                         전체
                                     </button>
                                 </li>
@@ -236,15 +777,15 @@
                             <hr>
                         </section>
                     
-                    <header class="yj_product__section_header">
+                    <section class="yj_product__section_header">
                         <h3 class="yj_product_header_h3">필터</h3>
                         <button type="button" class="yj_product_filter_button" style="padding-top:0px; padding-bottom: 0px; font-size:14px; line-height:24px;" disabled>전체 초기화</button>
-                    </header>
+                    </section>
                     <section class="yj_product__section">
                         <div>
-                        <header class="yj_product__section_header">
+                        <section class="yj_product__section_header">
                             <h3 class="yj_product_header_h3">시설</h3>
-                        </header>
+                        </section>
                         <div class="yj_product_checkbox--aa">
                             <label class="yj_product_checkboxItem--ab yj_checkboxModule--ac yj_checkboxModule--ad" for="SWIMMING_POOL">
                                 <input type="checkbox" id="SWIMMING_POOL" class="yj_checkboxModule--ae yj_checkboxModule--ad" name="SWIMMING_POOL" value="SWIMMING_POOL">
@@ -338,9 +879,9 @@
                     </div>
                     <hr>
                     <div>
-                        <header class="yj_product__section_header">
+                        <section class="yj_product__section_header">
                             <h3 class="yj_product_header_h3">서비스</h3>
-                        </header>
+                        </section>
                         <div class="yj_product_checkbox--aa">
                             <label class="yj_product_checkboxItem--ab yj_checkboxModule--ac yj_checkboxModule--ad" for="BREAKFAST">
                                 <input type="checkbox" id="BREAKFAST" class="yj_checkboxModule--ae yj_checkboxModule--ad" name="BREAKFAST" value="BREAKFAST">
@@ -409,10 +950,10 @@
                         </div>
                     </div>
                     </section>
-                </main>
+                </section>
                 </aside>
                 <article class="yj_product_article">
-                    <header class="yj_product_searching">
+                    <section class="yj_product_searching">
                         <h2 class="yj_product_searching_header">검색된 숙소 3개</h2>
                         <ul class="yj_product_searching_goods_aa">
                             <li class="yj_product_searching_goods_li yj_product_searching_goods_bold">
@@ -431,7 +972,7 @@
                                 </button>
                             </li>
                         </ul>
-                    </header>
+                    </section>
                     <section class="yj_product_section_aa">
                         <a href="" target="_blank">
                             <section class="yj_product_section_bb">
@@ -467,7 +1008,7 @@
                                                                 <del>212,400원</del>
                                                             </span>
                                                         </div>
-                                                        <h1 class="yj_product_mainPrice_aa">
+                                                        <h1 class="yj_product_Price_aa">
                                                             <span class="yj_product_benefitPrice_aa">182,400원</span>
                                                         </h1>
                                                     </div>
@@ -590,5 +1131,7 @@
 
         </div>
     </div>
+    
+    
 </body>
 </html>

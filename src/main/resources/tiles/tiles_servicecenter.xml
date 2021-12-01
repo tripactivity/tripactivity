@@ -3,9 +3,9 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 <tiles-definitions>
-    <definition name="ac_Product" extends="baseLayout">
-       <put-attribute name="title" value="대전 숙소 페이지" />
-       <put-attribute name="body" value="/WEB-INF/views/product/ac_Product.jsp" />
+    <definition name="center" extends="baseLayout">
+       <put-attribute name="title" value="고객센터" />
+       <put-attribute name="body" value="/WEB-INF/views/center/center_main.jsp" />
     </definition>
     
 </tiles-definitions>

@@ -28,18 +28,17 @@
 <body>
     <div class="container">
         <header>
-            <h1>header</h1>
+            
              <div id="header">
          <tiles:insertAttribute name="header"/>
       </div>
   
         </header>
-        <main>
-        <h1>main</h1>    <div id="body">
+          <div id="body">
           <tiles:insertAttribute name="body"/>
       </div>
    
-        </main>
+       
   
     </div>
      <tiles:insertAttribute name="footer"/>

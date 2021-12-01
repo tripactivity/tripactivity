@@ -8,56 +8,45 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+  <!-- Favicons -->
+  <link href="resources/img/logo1.PNG" rel="icon">
+  <link href="resources/img/logo1.PNG" rel="apple-touch-icon">
 
-<style>
-	*{margin:0; padding:0; box-sizing:border-box; list-style:none; margin:0 auto;}
-	section{width:1200px; height:200px; background-color:#e3e3e3; display:block;}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-section>div{float:left; outline:1px solid red; width:33%; text-align:center;}
+  <!-- Vendor CSS Files -->
+  <link href="resources/boot/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="resources/boot/vendor/aos/aos.css" rel="stylesheet">
+  <link href="resources/boot/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="resources/boot/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="resources/boot/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="resources/boot/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="resources/boot/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="resources/boot/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="resources/boot/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-.footer_left{text-align:left;}
-.footer_right{text-align:right;}
-	
-</style>
+  <!-- Template Main CSS File -->
+  <link href="resources/boot/css/style.css" rel="stylesheet">
 </head>
 <body>
 
-<footer>
-<!-- 푸터 왼쪽 -->
-   <section >
-   	<div class="footer_left">
-   		<ul >
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   		</ul>
-   	</div>
-   	<!--  푸터 중앙 -->
-   	<div class="footer_center">
-   		<ul >
-   			<li><a href="#">언제 어디서나 트립액티비티<br>트립액티비티</a></li>
-   			<li><a href="#"><img src="resources/img/LOGO.png" alt="footer_logo"></a></li>
-   			
-   		</ul>
-   	</div>
-   	<!--  푸터 오른쪽 -->
-  	<div class="footer_right">
-   		<ul >
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   			<li><a href="#">aaa</a></li>
-   		</ul>
-   	</div> 
-   		
-   </section>
-</footer>
+<!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>TripActivity</h3>
+      <p>(주)트립액티비티 | 대표 : 김찬영  |  주소 : 대전광역시 서구 대덕대로 182  사업자등록번호 : 248-88-00100 | 관광사업등록번호 : 제2020-40호| 통신판매업신고번호 : 제 2020-대전둔산-02294호 | TEL : 042-476-2111 | FAX : +82 2-6953-0000 | 개인정보보호책임자 : 장영준 | E-mail : jangyj1023@naver.com | 디자인문의 : 김예은 | E-mail : kyy980480404@gmail.com | 차정현 | E-mail : ae6567@naver.com |  </p>
+     
+    </div>
+  </footer><!-- End Footer -->
+  <script src="resources/boot/vendor/aos/aos.js"></script>
+  <script src="resources/boot/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="resources/boot/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="resources/boot/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="resources/boot/vendor/php-email-form/validate.js"></script>
+  <script src="resources/boot/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="resources/boot/js/main.js"></script>
 </body>
 </html>

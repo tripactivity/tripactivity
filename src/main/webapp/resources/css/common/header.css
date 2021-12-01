@@ -1,0 +1,390 @@
+
+@font-face {
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.nanumgothic * {
+ font-family: 'Nanum Gothic', sans-serif;
+}
+
+*{
+        font-family:'nanumgothic', 'sans-serif';
+        list-style:none;
+        text-decoration:none;
+    }
+
+/*swiper*/
+/*swiper*/
+.swiper {
+        width: 100%;
+        height:392px;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+      }
+
+      .swiper-button-next{color:#f7f7f7;}
+      .swiper-button-prev{color:#f7f7f7;}
+
+      /*swiper=end*/
+
+.cjh_best_cate{
+    font-family:'OTWelcomeRA'; color:#1d1d1d ;
+}
+.cjh_best_title{
+    font-family:'GmarketSansMedium'; color:#1d1d1d ;
+}
+.cjh_start_score{
+    color:powderblue;
+    
+}
+.cjh_bar_name {font-family:'GmarketSansBold';}
+.cjh_bar_name >h1{line-height:38px;}
+    header{position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    height: 110px;
+    background: white;
+    transition: all .6s;
+    background-color:white;
+    
+}
+
+    .cjh_inner{
+        position: relative;
+    
+    min-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    width:100%;
+    
+    }
+
+    .cjh_inner_bottom{
+        position: relative;
+    
+    min-width: 1280px;
+    height: 70px;  /*80px*/
+    margin: 0 auto;
+    background:white;
+    width:100%;
+    border-top:1px solid #e3e3e3;
+    opacity:1;
+    }
+    .cjh_logo{
+        position:absolute;
+        left:0;
+        top:50%;
+        transform:translateY(-50%);
+        z-index:1;
+        width:185px;
+        font-size:0;
+        line-height:0;
+        margin-left:150px;
+    
+    }
+
+    header .cjh_inner .cjh_logo >a img{width:100%; height:100%;}
+
+    .cjh_search{
+        width: 582px;
+        height:52px;
+        border:2px solid skyblue;
+        border-radius:2px;
+        
+   
+   
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+   
+    transform: translate(-50%, -50%);
+    
+    }
+
+    header .cjh_inner_bottom #cjh_gnb{
+        
+        width:100%;
+        border-width:0 0 1px;
+        
+        font-size:0;
+        border-bottom:1px solid #e3e3e3;
+        font-family:"GmarketSansMedium";
+    
+    }
+
+    header .cjh_inner_bottom #cjh_gnb>ul{
+        margin-left:450px;
+        border-bottom:1px solid #e3e3e3;
+    }
+    header .cjh_inner_bottom #cjh_gnb>ul>li{
+        display:inline-block;
+        position:relative;
+        /*vertical-align: top; 왜 썻는지 기억이 안남*/
+    }
+    header .cjh_inner_bottom #cjh_gnb>ul>li:hover{
+        border-bottom:3px solid #e3e3e3;
+    }
+
+    header .cjh_inner_bottom #cjh_gnb>ul>li>a{
+        position:relative;
+        padding:0 60px;
+        font-size:20px;
+        line-height:70px;
+        color:#000000;
+    }
+
+    header .cjh_inner_bottom #cjh_gnb>ul>li .cjh_depth2{
+        display:none; /*block*/
+        position:absolute;
+        top:100%;
+        z-index:100; /*100*/
+        width:100%;
+        height:300px;
+        text-align:center;
+        transition:all .3s;
+    }
+
+    header .cjh_inner_bottom #cjh_gnb>ul>li .cjh_depth2>li>a{
+        font-size:20px;
+        line-height:50px;
+        color:black;
+        
+        transition:all .3s ease-in;
+    }
+    header .cjh_inner_bottom #cjh_gnb>ul>li .cjh_depth2>li>a:hover{
+      border-bottom:1px solid skyblue;
+    }
+
+    header .cjh_inner_bottom #cjh_gnb>ul>li .cjh_depth2 li~li{
+        margin-top:24px;
+    }
+
+    .cjh_inner .cjh_nav2{
+        position:absolute;
+        top:0;
+        right:0;
+        margin-right:150px;
+}
+    .cjh_inner .cjh_nav2>ul>li{
+    display:inline-block;
+    position:relative;
+
+}
+
+    .cjh_inner .cjh_nav2>ul>li>a{
+        position:relative;
+        padding:0 5px;
+        font-size:16px;
+        line-height:110px;
+        color:#000000;
+    }
+
+
+   
+
+        .cjh_inner .cjh_search .cjh_input_search_text{
+            width: 444px;
+    height: 24px;
+    padding: 13px 15px;
+    margin: 1px;
+    background-color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    font-weight: 700;
+    outline: 0;
+    border:none;
+        }
+
+        .cjh_inner .cjh_search>a{
+            position: absolute;
+    top: 50%;
+    
+    transform: translate(-50%, -50%);
+    right: 0;
+        }
+
+        
+        .cjh_map{
+            display:none;
+            width:300px;
+            height:300px;
+            position:absolute;
+            right:150px;
+            top:50%;
+            transform:translateY(-50%);
+            margin-top:30px;
+
+        }
+        .cjh_map img{
+           width:100%;
+           height:100%;
+        }
+
+        .cjh_left{
+            display:none;
+            width:350px;
+            height:200px;
+            position:absolute;
+            left:150px;
+            top:50%;
+            transform:translateY(-50%);
+            margin-top:30px;
+
+        }
+        .cjh_left img{
+           width:100%;
+           height:100%;
+        }
+
+        footer{height:100vh;}
+
+       
+
+    .cjh_whether{position:absolute; top:0; right:150px; z-index:1000; font-size:12px; color:#030303; display:flex;
+        width:250px; justify-content:space-between; margin-top:30px;
+    }
+
+    .cjh_header_cate{border-right:1px solid #e3e3e3;}
+    .cjh_header_cate:nth-child(4){border-right:none;}
+
+
+    /*main*/
+    main{width:1280px; margin:0 auto; border:1px solid skyblue;  margin-top:100px; position:relative;}
+
+
+    .cjh_slide{width:100%; height:300px; display:block;}
+    .cjh_slide>ul{width:100%; height:100%;}
+    .cjh_slide>ul>li{width:100%; height:100%;}
+    .cjh_slide>ul>li>a{width:100%; height:100%;}
+    .cjh_slide>ul>li>a>img{width:100%; height:100%;}
+
+	.cjh_bar_name{width:100%;  background:#e3e3e3; text-align:center; display:block; margin-top:80px; padding:5px 0 5px 0;}
+    .cjh_bar_name{font-size:26px; line-height:26px; margin-bottom:20px;}
+
+
+
+    .cjh_best_container{display:flex; width:100%; justify-content:space-evenly}
+    .cjh_best_box{width:22%; height: 310px; display:flex; flex-direction:column; border:1px solid #e3e3e3; transition:all 0.3s ease-in-out;}
+   .cjh_best_box:hover{box-shadow: 0 2px 8px #666d7552;
+    transform: translateY(-2px);}
+    .cjh_first_best_img{width:100%; height:60%;}
+    .cjh_first_best_img>img{width:100%; height:100%;}
+
+    /*box*/
+    .cjh_best_cate{width:100%; line-height:12px; font-size:12px; text-overflow:ellipsis; margin-bottom:5px; margin-top:5px;
+}
+
+
+.cjh_best_title{font-size:15px; line-height:20px; font-weight:600; width:100%;}
+
+.cjh_best_title{overflow:hidden; text-overflow:ellipsis; margin-bottom:5px;}
+
+.cjh_text_box{padding:10px; display:flex; flex-direction:column; justify-content:space-evenly}
+
+
+.cjh_best_price{width:100%;}
+.cjh_start_score{width:100%; font-size:10px; margin-bottom:5px;}
+.cjh_price{width:100%; display:flex; flex-direction:row; font-family:'GmarketSansLight';}
+
+.cjh_price .before_price .price_line{text-decoration:line-through; font-size:12px; font-family:'GmarketSansMedium';}
+.cjh_price .after_price{font-weight:600;}
+
+/*최근 본 상품*/
+.fa-chevron-left{font-size:25px; color:skyblue;}
+    .fa-chevron-right{font-size:25px; color:skyblue;}
+.cjh_fixed{outline:1px solid skyblue;}
+    .cjh_left_container{width:200px; position:fixed;; top:20%; right:4%; display:flex; flex-direction:column;
+         justify-content: center; align-items:center; transition:all .3s ease-in-out; background-color:white;}
+    .cjh_left_container_box{width:90%; margin-top:15px;}
+    div.cjh_left_container_box:nth-child(2){
+        height:100px;
+    }
+    div.cjh_left_container_box:nth-child(3){
+        height:100px;
+    }
+    
+    .cjh_left_container_box>a{width:100%;  text-align:center;}
+    .cjh_left_container_box>a>img{width:100%; height:100%; text-align:center; display:block}
+    .cjh_left_container_first_box{display:flex; flex-direction:column;}
+    .cjh_left_container_first_box>a{background-color:#e3e3e3; margin-bottom:5px; line-height:30px; display:block; text-decoration:none;}
+
+    /*마진*/
+    .margin25{margin-top:25px;}
+    .margin26{margin-top:26px;}
+    .margin27{margin-top:27px;}
+    .margin28{margin-top:28px;}
+    .margin29{margin-top:29px;}
+    .margin30{margin-top:30px;}
+
+    .cjh_fixed_btn{display:block; width:50%; padding:10px 30px;}
+    .cjh_fixed_btn>a{display:block;}
+
+    .cjh_fixed_bottom{display:flex;}
+
+    .cjh_sell_banner_container{display:flex; flex-direction:column; width:240px; position:fixed; top:20%; left:3%; background:#e3e3e3;}
+    
+    
+    .cjh_sell_banner>ul{width:100%; height:100%;}
+    .cjh_sell_banner>ul>li>a>img{width:100%; height:100%;}
+    
+    .cjh_sell_banner_close{ text-align:right; padding:5px; background:#e3e3e3; margin-right:5px;}
+    .cjh_sell_banner_close>a{padding:5px; }
+
+    .cjh_recent_img{margin:0 auto; margin-top:15px;}
+
+    footer{width:100%;
+    height:300px; background:#e3e3e3; margin-top:100px;}

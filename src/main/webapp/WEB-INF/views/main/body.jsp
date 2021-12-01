@@ -2,6 +2,7 @@
      pageEncoding="UTF-8"
     isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
 <%@ page session="false" %>
 
 <!DOCTYPE html>
@@ -10,135 +11,508 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-<style>
-	*{margin:0; padding:0; box-sizing:border-box; list-style:none; margin:0 auto;}
-    /*font awesome*/
-    }
-    .fa-chevron-left{font-size:40px; color:skyblue;}
-    .fa-chevron-right{font-size:40px; color:skyblue;}
-    
+<link rel="stylesheet" href="${contextPath }/resources/css/common/header.css">
+<link rel="stylesheet" href="${contextPath }/resources/css/reset.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+      <!-- Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    .margin-top{width:100%; height:100px;}
-    main{margin:0 auto; min-width:1200px; height:3000px; position:relative; margin-top:40px;}
-	.slide{width:1200px; height:300px; display:block;}
-    .slide>ul{width:100%; height:100%;}
-    .slide>ul>li{width:100%; height:100%;}
-    .slide>ul>li>a{width:100%; height:100%;}
-    .slide>ul>li>a>img{width:100%; height:100%;}
-
-	.bar_name{width:1200px;  background:#e3e3e3; text-align:center; display:block; margin-top:80px; padding:5px 0 5px 0;}
-	.small_image{display:flex; justify-content:center; align-items:center; width:1200px;}
-	.small_image>ul{display:flex; justify-content:center; align-items:center; width:100%;}
-	.small_image>ul>li{width:25%; height:250px; }
-    .small_image>ul>li>a{width:100%; height:100%;}
-    .small_image>ul>li>a>img{width:100%; height:100%;}
-
-    
-    .fixed{outline:1px solid skyblue;}
-    .left_container{width:200px; position:fixed; top:10%; right:4%; display:flex; flex-direction:column;
-         justify-content: center; align-items:center; transition:all .3s ease-in-out; background-color:white;}
-    .left_container_box{width:90%; margin-top:15px;}
-    div.left_container_box:nth-child(2){
-        height:100px;
-    }
-    div.left_container_box:nth-child(3){
-        height:100px;
-    }
-    
-    .left_container_box>a{width:100%;  text-align:center;}
-    .left_container_box>a>img{width:90%; height:100%; text-align:center; display:block}
-    .left_container_first_box{display:flex; flex-direction:column;}
-    .left_container_first_box>a{background-color:#e3e3e3; margin-bottom:5px; line-height:30px; display:block; text-decoration:none;}
-
-    /*마진*/
-    .margin25{margin-top:25px;}
-    .margin26{margin-top:26px;}
-    .margin27{margin-top:27px;}
-    .margin28{margin-top:28px;}
-    .margin29{margin-top:29px;}
-    .margin30{margin-top:30px;}
-
-    .fixed_btn{display:block; width:50%; padding:20px;}
-    .fixed_btn>a{display:block;}
-
-    .fixed_bottom{display:flex;}
-
-    .sell_banner_container{display:flex; flex-direction:column; width:240px; position:fixed; top:20%; left:3%; background:#e3e3e3;}
-    .sell_banner{}
-    
-    .sell_banner>ul{width:100%; height:100%;}
-    .sell_banner>ul>li>a>img{width:100%; height:100%;}
-    
-    .sell_banner_close{width:100%; text-align:right; padding:5px; background:#e3e3e3; margin-right:5px;
-    .sell_banner_close>a{padding:5px; }
-	
-</style>
 </head>
 <body>
     <div class="margin-top"></div>
+<%--    <content>
+        <div class="cjh_bg"></div>
+        <h2 class="cjh_h2">Welcome</h2>
+        <h3 class="cjh_h3">TripActivity</h3>
+    </content> --%>
+
     <main>
-        <!-- 메인 슬라이드 --><!-- 확인용 -->
-        <div class="slide" id="slide2">
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper ">
+              <div class="swiper-slide"><img src="resources/img/main_slide(01).png" alt="main slide1"></div>
+              <div class="swiper-slide"><img src="resources/img/main_slide(02).jpg" alt="main slide2"></div>
+              <div class="swiper-slide"><img src="resources/img/main_slide(03).jpg" alt="main slide"></div>
+              <div class="swiper-slide"><img src="resources/img/main_slide(04).jpg" alt="main slide2"></div>
+              <div class="swiper-slide"><img src="resources/img/main_slide(05).jpg" alt="main slide"></div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+         <!-- 메인 슬라이드 --><!-- 확인용 
+         <div class="cjh_slide" id="cjh_slide2">
             <ul>
-                <li><a href="#"><img src="resources/img/main_banner.png" alt="메인 슬라이드"></a></li>
+                <li><a href="#"><img src="main_banner.png" alt="메인 슬라이드"></a></li>
             </ul>
-        </div>
+        </div>-->
         <!-- 베스트 상품 틀 -->
-        <div class="bar_name ">
+        <div class="cjh_bar_name ">
             <h1>베스트 상품</h1>
         </div>
         <!-- 상품 작은 이미지 -->
-        <div class="small_image margin25">
-            <ul>
-                <li><a href="#"><img src="resources/img/recent_image01.jpg" alt="작은이미지"></a></li>
-                <li><a href="#"><img src="resources/img/recent_image02.png" alt="작은이미지"></a></li>
-                <li><a href="#"><img src="resources/img/recent_image01.jpg" alt="작은이미지"></a></li>
-                
-                        
-            </ul>
+        <div class="cjh_best_container">
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            
         </div>
-    </main>
-    
-        <div class="left_container fixed">
-            <div class="left_container_box left_container_first_box img">
+
+        <!--두번쨰-->
+         <!-- 베스트 상품 틀 -->
+         <div class="cjh_bar_name ">
+            <h1>베스트 상품</h1>
+        </div>
+        <!-- 상품 작은 이미지 -->
+        <div class="cjh_best_container">
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            
+        </div>
+
+         <!-- 베스트 상품 틀 -->
+         <div class="cjh_bar_name ">
+            <h1>베스트 상품</h1>
+        </div>
+        <!-- 상품 작은 이미지 -->
+        <div class="cjh_best_container">
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            
+        </div>
+
+         <!-- 베스트 상품 틀 -->
+         <div class="cjh_bar_name ">
+            <h1>베스트 상품</h1>
+        </div>
+        <!-- 상품 작은 이미지 -->
+        <div class="cjh_best_container">
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            <a href="#" class="cjh_first_best_a cjh_best_box">
+                <div class="cjh_first_best_img">
+                    <img src="resources/img/recent_image01.jpg">
+                </div><!--cjh_first_best_img-->
+                    <div class="cjh_text_box">
+                        <div class="cjh_best_cate">
+                            <p>숙박/호텔 대전</p>
+                        </div>
+                        <div class="cjh_best_title">
+                            <p>[당일사용 가능]대전광역시 그린아트 호텔</p>
+                        </div>
+                        <div class="cjh_best_price">
+                           <div class="cjh_start_score">★★★★★</div>
+                           <div class="cjh_price">
+                               <div class="before_price"><span class="price_line">30000</span><span>원</span></div>
+                               <div class="after_price">17900원</div>
+                           </div>
+                        </div>
+                    </div>
+            </a>
+
+            
+        </div>
+
+
+        <div class="cjh_left_container cjh_fixed">
+            <div class="cjh_left_container_box cjh_left_container_first_box cjh_img">
                 <a href="#">최근 본 상품</a>
                 <a href="#">장바구니</a>
             </div>
-            <div class="for_padding">
-                <div class="left_container_box left_container_second_box img">
+            <div class="cjh_for_padding">
+                <div class="cjh_left_container_box cjh_left_container_second_box cjh_recent_img">
                     <a href="#"><img src="resources/img/recent_image01.jpg" alt="최근본 상품 이미지"></a>
                 </div>
-                <div class="left_container_box left_container_third_box img">
+                <div class="cjh_left_container_box cjh_left_container_third_box cjh_recent_img">
                     <a href="#"><img src="resources/img/recent_image02.png" alt="최근본 상품 이미지"></a>
                 </div>
-                <div class="left_container_box left_container_second_box img">
+                <div class="cjh_left_container_box cjh_left_container_second_box cjh_recent_img">
                     <a href="#"><img src="resources/img/recent_image01.jpg" alt="최근본 상품 이미지"></a>
                 </div>
-                <div class="left_container_box left_container_second_box img">
+                <div class="cjh_left_container_box cjh_left_container_second_box cjh_recent_img">
                     <a href="#"><img src="resources/img/recent_image01.jpg" alt="최근본 상품 이미지"></a>
                 </div>
-
+    
                 
-            </div><!--for_padding-->
-            <div class="fixed_bottom">
-                <div class="button_left fixed_btn">
+            </div><!-- for_padding -->
+            <div class="cjh_fixed_bottom">
+                <div class="cjh_button_left cjh_fixed_btn">
                     <a href="#"><i class="fas fa-chevron-left"></i></a>
                 </div>
-                <div class="button_right fixed_btn">
+                <div class="cjh_button_right cjh_fixed_btn">
                     <a href="#"><i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
-        </div><!--left_container-->
-        <div class="sell_banner_container">
-            <div class="sell_banner">
+        </div><!-- left_container -->
+        <div class="cjh_sell_banner_container">
+            <div class="cjh_sell_banner">
                 <ul>
                     <li><a href="#"><img src="resources/img/left_banner.png"></a></li>
                 </ul>
             </div>
-            <div class="sell_banner_close">
+            <div class="cjh_sell_banner_close">
                 <a herf="#">닫기</a>
             </div>
         </div>
+    </main>
+    
+       
     
 </body>
 </html>
+<script>
+        const header_cate =document.getElementsByClassName('cjh_header_cate');
+        const inner_bottom = document.getElementsByClassName('cjh_inner_bottom');
+        const depth2=document.getElementsByClassName('cjh_depth2');
+        const map=document.getElementsByClassName('cjh_map');
+        
+       
+        
+        for(i=0; i<header_cate.length; i++){
+            header_cate[i].addEventListener('click', function(){
+                inner_bottom[0].style.height ="400px";
+                map[0].style.display="block";
+               
+                for(i=0; i<depth2.length; i++){
+                    depth2[i].style.display="block";
+                    
+                }
+              
+            })
+        }
+       
+
+        cjh_sell_banner_close = document.getElementsByClassName('cjh_sell_banner_close');
+        cjh_sell_banner_container = document.getElementsByClassName('cjh_sell_banner_container');
+        for(i=0; i<cjh_sell_banner_close.length; i++){
+            cjh_sell_banner_close[i].addEventListener('click', function(){
+                cjh_sell_banner_container[0].style.display="none";
+            })
+        }
+    
+        /*swiper script*/
+
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 400000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>

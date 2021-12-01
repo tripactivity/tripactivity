@@ -26,21 +26,21 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    
+        
             
-             <div id="header">
+             
          <tiles:insertAttribute name="header"/>
-      </div>
+      
   
-        </header>
-          <div id="body">
+       
+          
           <tiles:insertAttribute name="body"/>
-      </div>
+      
    
        
   
-    </div>
+    
      <tiles:insertAttribute name="footer"/>
 </body>
 

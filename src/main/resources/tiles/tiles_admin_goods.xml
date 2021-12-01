@@ -7,6 +7,10 @@
        <put-attribute name="title" value="대전 숙소 페이지" />
        <put-attribute name="body" value="/WEB-INF/views/product/ac_Product.jsp" />
     </definition>
+    <definition name="ac_Product_Detail" extends="baseLayout">
+    	<put-attribute name="title" value="숙소 상세 페이지" />
+    	<put-attribute name="body" value="/WEB-INF/views/product/ac_Product_Detail.jsp"/>
+    </definition>
     
 </tiles-definitions>
 

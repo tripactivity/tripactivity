@@ -39,13 +39,6 @@
 </head>
 <body>
 <section>
-	
-	 
-</section>
-
-<main id="main">
-<!-- 1:1 문의하기 jsp -->
-<section>
 <div class = "container">
 	 
 	<div class="section-title" data-aos="zoom-out">
@@ -89,7 +82,7 @@
 	
 </section>
     <!-- 1:1 문의하기 화면 jsp -->
-</main>
+
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

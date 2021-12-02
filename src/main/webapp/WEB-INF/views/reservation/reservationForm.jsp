@@ -76,7 +76,7 @@
                         <strong>방문 방법</strong>
                         <div>
                             <button data-method="WALK" class="yj_walk on">
-                                <span>도보</span>
+                                <span><img src="resources/img/reserve_icons8-walking-24.png" style="width:18px; height:18px;">도보</span>
                             </button>
                             <button data-method="CAR" class="yj_car">
                                 <span>차량</span>

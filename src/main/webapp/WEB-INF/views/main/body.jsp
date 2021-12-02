@@ -9,10 +9,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
 <title>Insert title here</title>
+<link rel="stylesheet" href="resources/css/reset.css">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <link rel="stylesheet" href="resources/css/common/header.css">
-<link rel="stylesheet" href="resources/css/reset.css">
+
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
       <!-- Swiper JS -->
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

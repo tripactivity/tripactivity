@@ -6,7 +6,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
         <link rel="stylesheet" type="text/css" href="resources/css/product/ac_Product_Detail.css">
-        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
         <!-- Link Swiper's CSS -->
     	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	</head>
@@ -166,98 +166,7 @@
             <img class="yj_lazy" data-original="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg" src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg" alt="금천 호텔 트리플8" style="display: inline;">
         </p>
         <strong class="yj_title">Standard(넷플릭스, 1PC, 65인치 TV)</strong>
-        <div class="yj_swiperslide" id="yj_swiperslideId">
-            
-        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper3">
-        <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"  
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    
+           
     <div class="yj_info">
         <div class="yj_info_half">
             <div class="yj_info_half_price">
@@ -309,97 +218,6 @@
             <img class="yj_lazy" data-original="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/360732/c1090a0d84aad4e7757959d68e95d924.jpg" src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/360732/c1090a0d84aad4e7757959d68e95d924.jpg" alt="금천 호텔 트리플8" style="display: inline;">
         </p>
         <strong class="yj_title">Standard Twin</strong>
-        <div class="yj_swiperslide" name="yj_swiperslideId">
-            
-        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper3">
-        <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"  
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282122/e98a7a510b304a9729cc5b6f9f956130.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-            </div>
-        </div>
     
     <div class="yj_info">
         <div class="yj_info_half">
@@ -452,98 +270,7 @@
             <img class="yj_lazy" data-original="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282123/329ff8df79b6d756dfc9912d465d8253.jpg" src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282123/329ff8df79b6d756dfc9912d465d8253.jpg" alt="금천 호텔 트리플8" style="display: inline;">
         </p>
         <strong class="yj_title">Premium Standard(넷플릭스, 1PC, 65인치 TV)</strong>
-        <div class="yj_swiperslide" name="yj_swiperslideId">
             
-        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper3">
-        <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282123/329ff8df79b6d756dfc9912d465d8253.jpg"
-            class="swiper-lazy"  
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282123/329ff8df79b6d756dfc9912d465d8253.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282123/329ff8df79b6d756dfc9912d465d8253.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282123/329ff8df79b6d756dfc9912d465d8253.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282123/329ff8df79b6d756dfc9912d465d8253.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282123/329ff8df79b6d756dfc9912d465d8253.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282123/329ff8df79b6d756dfc9912d465d8253.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282123/329ff8df79b6d756dfc9912d465d8253.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Required swiper-lazy class and image source specified in data-src attribute -->
-          <img
-            data-src="https://image.goodchoice.kr/resize_370x220/adimg_new/63639/282123/329ff8df79b6d756dfc9912d465d8253.jpg"
-            class="swiper-lazy"
-          />
-          <!-- Preloader image -->
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    
     <div class="yj_info">
         <div class="yj_info_half">
             <div class="yj_info_half_price">
@@ -867,7 +594,82 @@
     </ul>
 </article>
 <article class="yj_QnA yj_tabMenu">
-
+	<div class = "container">
+    <section id="contact" class="contact">
+    <div class="section-title" data-aos="zoom-out">
+          <p>상품 문의하기</p>
+        </div>
+    <div class = "col-12">
+    	<button type = "button" class="btn-outline-secondary" style="float:right" value="#">글쓰기</button>
+   	</div>
+   	
+    	<table class = "table table-hover">
+    		<thead  class="text-center">
+    			<tr>
+    				<th>번호</th>
+    				<th>회원ID</th>
+    				<th>제목</th>
+    				<th>작성일</th>
+    				<th>공개 여부</th>
+    				<th>첨부파일</th>
+    			</tr>
+    		</thead>
+    		<tbody  class="text-center">
+    			<tr>
+    				<td>5</td>
+    				<td>chan0632</td>
+    				<td>비밀글입니다.</td>
+    				<td>2021-11-30</td>
+    				<td>비공개</td>
+    				<td>있음</td>
+    			</tr>
+    			<tr>
+    				<td>4</td>
+    				<td>thakd0632</td>
+    				<td>안녕하세요!</td>
+    				<td>2021-11-30</td>
+    				<td>공개</td>
+    				<td>없음</td>
+    			</tr>
+    			<tr>
+    				<td>3</td>
+    				<td>tkfkd123</td>
+    				<td>비밀글입니다.</td>
+    				<td>2021-11-30</td>
+    				<td>비공개</td>
+    				<td>있음</td>
+    			</tr>
+    			<tr>
+    				<td>2</td>
+    				<td>jeju000</td>
+    				<td>비밀글입니다.</td>
+    				<td>2021-11-30</td>
+    				<td>비공개</td>
+    				<td>있음</td>
+    			</tr>
+    			<tr>
+    				<td>1</td>
+    				<td>love0632</td>
+    				<td>안녕하세요!</td>
+    				<td>2021-11-30</td>
+    				<td>공개</td>
+    				<td>없음</td>
+    			</tr>
+    			
+    		</tbody>   	
+    	</table>
+    	
+    	<div class="text-center">
+    		<ul class="pagination justify-content-center">
+				<li class="page-item"><a class="page-link" href="">Previous</a></li>
+				<li class="page-item"><a class="page-link" href="">1</a></li>
+				<li class="page-item"><a class="page-link" href="">2</a></li>
+				<li class="page-item"><a class="page-link" href="">3</a></li>
+				<li class="page-item"><a class="page-link" href="">Next</a></li>
+		</ul>
+    	</div>   	
+    </section>
+    </div>
 </article>
     
     	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>

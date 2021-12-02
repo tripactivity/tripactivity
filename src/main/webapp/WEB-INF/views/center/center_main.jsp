@@ -434,17 +434,6 @@
     </section><!-- End Team Section -->
   
   </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3>TripActivity</h3>
-      <p>(주)트립액티비티 | 대표 : 김찬영  |  주소 : 대전광역시 서구 대덕대로 182  사업자등록번호 : 248-88-00100 | 관광사업등록번호 : 제2020-40호| 통신판매업신고번호 : 제 2020-대전둔산-02294호 | TEL : 042-476-2111 | FAX : +82 2-6953-0000 | 개인정보보호책임자 : 장영준 | E-mail : jangyj1023@naver.com | 디자인문의 : 김예은 | E-mail : kyy980480404@gmail.com | 차정현 | E-mail : ae6567@naver.com |  </p>
-     
-      
-    </div>
-  </footer><!-- End Footer -->
-
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 <!--   <script src="resources/vendor/bootstrap/js/bootstrap.js"></script>
   <script src="resources/jquery/jquery-3.1.2.js"></script> -->

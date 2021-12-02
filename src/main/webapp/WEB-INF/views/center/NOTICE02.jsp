@@ -38,11 +38,6 @@
  
 </head>
 <body>
-<section>
-	
-	 
-</section>
-
 <main id="main">
 <!-- 공지사항 글쓰기 jsp -->
 <section>

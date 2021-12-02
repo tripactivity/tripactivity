@@ -79,7 +79,7 @@
                                 <span><img src="resources/img/reserve_icons8-walking-24.png" style="width:18px; height:18px;">도보</span>
                             </button>
                             <button data-method="CAR" class="yj_car">
-                                <span>차량</span>
+                                <span><img src="resources/img/reserve_icons8-car-24.png" style="width:18px; height:18px;">차량</span>
                             </button>
                         </div>
                         <div id="yj_parking_comment" class="yj_parking_txt" style="visibility: hidden;">

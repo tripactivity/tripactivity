@@ -30,26 +30,12 @@ public class HomeController {
 	
 	  @RequestMapping(value= "/main/center.do",method={RequestMethod.POST,RequestMethod.GET}) 
 	  public String center(HttpServletRequest request, HttpServletResponse response) throws Exception{
-			/*
-			 * HttpSession session; ModelAndView mav=new ModelAndView(); String
-			 * viewName=(String)request.getAttribute("viewName"); mav.setViewName(viewName);
-			 * 
-			 * session=request.getSession(); session.setAttribute("side_menu", "user");
-			 * Map<String,List<GoodsVO>> goodsMap=goodsService.listGoods();
-			 * mav.addObject("goodsMap", goodsMap);
-			 */
+			
 	  return "center"; 
 	  }
 	  @RequestMapping(value= "/main/ac_Product.do",method={RequestMethod.POST,RequestMethod.GET}) 
 	  public String ac_Product(HttpServletRequest request, HttpServletResponse response) throws Exception{
-			/*
-			 * HttpSession session; ModelAndView mav=new ModelAndView(); String
-			 * viewName=(String)request.getAttribute("viewName"); mav.setViewName(viewName);
-			 * 
-			 * session=request.getSession(); session.setAttribute("side_menu", "user");
-			 * Map<String,List<GoodsVO>> goodsMap=goodsService.listGoods();
-			 * mav.addObject("goodsMap", goodsMap);
-			 */
+			
 	  return "ac_Product"; 
 	  }
 	  @RequestMapping(value= "/main/ac_Product_Detail.do",method={RequestMethod.POST,RequestMethod.GET}) 

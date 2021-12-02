@@ -181,15 +181,10 @@ label{
             background:#fff;
         }
         .yj_walk>span{
-            display:inline-block;
-            padding-left:20px;
-            
+            display:inline-block;            
         }
         .yj_car>span{
             display:inline-block;
-            padding-left:20px;
-            background:url('reserve_icons8-car-24.png') 0 50% no-repeat;
-            background-size:18px auto;
         }
         .yj_parking_txt{
             height:47px;

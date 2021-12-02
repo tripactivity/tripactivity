@@ -62,5 +62,11 @@ public class HomeController {
 			
 	  return "reservationForm"; 
 	  }
+	  
+	  @RequestMapping(value= "/main/Mypage.do",method={RequestMethod.POST,RequestMethod.GET}) 
+	  public String Mypage_n_main(HttpServletRequest request, HttpServletResponse response) throws Exception{
+			
+	  return "Mypage"; 
+	  }
 	 
 }

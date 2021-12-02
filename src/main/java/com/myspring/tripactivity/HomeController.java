@@ -52,5 +52,29 @@ public class HomeController {
 			 */
 	  return "ac_Product"; 
 	  }
+	  @RequestMapping(value= "/main/ac_Product_Detail.do",method={RequestMethod.POST,RequestMethod.GET}) 
+	  public String ac_Product_Detail(HttpServletRequest request, HttpServletResponse response) throws Exception{
+			/*
+			 * HttpSession session; ModelAndView mav=new ModelAndView(); String
+			 * viewName=(String)request.getAttribute("viewName"); mav.setViewName(viewName);
+			 * 
+			 * session=request.getSession(); session.setAttribute("side_menu", "user");
+			 * Map<String,List<GoodsVO>> goodsMap=goodsService.listGoods();
+			 * mav.addObject("goodsMap", goodsMap);
+			 */
+	  return "ac_Product_Detail"; 
+	  }
+	  @RequestMapping(value= "/main/reservationForm.do",method={RequestMethod.POST,RequestMethod.GET}) 
+	  public String reservationForm(HttpServletRequest request, HttpServletResponse response) throws Exception{
+			/*
+			 * HttpSession session; ModelAndView mav=new ModelAndView(); String
+			 * viewName=(String)request.getAttribute("viewName"); mav.setViewName(viewName);
+			 * 
+			 * session=request.getSession(); session.setAttribute("side_menu", "user");
+			 * Map<String,List<GoodsVO>> goodsMap=goodsService.listGoods();
+			 * mav.addObject("goodsMap", goodsMap);
+			 */
+	  return "reservationForm"; 
+	  }
 	 
 }

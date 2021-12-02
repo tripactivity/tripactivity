@@ -23,7 +23,7 @@
         
         <div class="cjh_inner">
             <h1 class="cjh_logo">
-                <a href="main.do"><img src="resources/img/logo.PNG" alt="trip&activity logo"></a>    
+                <a href="main.do"><img src="resources/img/LOGO.png" alt="trip&activity logo"></a>    
             </h1>
             <div class="cjh_search">
                 <input type="text" class="cjh_input_search_text" placeholder="검색어를 입력해주세요">

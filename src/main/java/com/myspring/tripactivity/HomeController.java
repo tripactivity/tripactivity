@@ -68,5 +68,17 @@ public class HomeController {
 			
 	  return "Mypage"; 
 	  }
+	  
+	  @RequestMapping(value= "/main/cart.do",method={RequestMethod.POST,RequestMethod.GET}) 
+	  public String cart(HttpServletRequest request, HttpServletResponse response) throws Exception{
+			
+	  return "cart"; 
+	  }
+	  
+	  @RequestMapping(value= "/main/member_inform_PW.do",method={RequestMethod.POST,RequestMethod.GET}) 
+	  public String member_inform_PW(HttpServletRequest request, HttpServletResponse response) throws Exception{
+			
+	  return "member_inform_PW"; 
+	  }
 	 
 }

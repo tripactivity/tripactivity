@@ -1,0 +1,60 @@
+.kye_cart {
+    width: 1155px;
+    height: 1100px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding-top: 210px; 
+}
+
+.kye_left {
+    width: 770px;
+    float: left;
+    top: 40px;
+}
+
+.kye_right {
+	position: fixed;
+	top:209px;
+	left:60%;
+    width: 360px;
+    height: 400px;
+    border: 1px solid #444;
+    float: right;
+    font-size: larger;
+    margin: 45px 0;
+    background-color: #fff;
+    text-align:center;
+}
+
+img {
+    width: 50%;
+    padding-top: 15px;
+}
+
+.product {
+    width: 650px;
+    height: 250px;
+    border: 1px solid #444;
+    padding: 10px 30px;
+    margin-top: 20px;
+    font-size: large;
+    text-align: left;
+}
+
+#product_info {
+    float: right;
+    padding-right: 50px;
+    padding-bottom: 20px;
+
+}
+
+.product button {
+    width: 200px;
+    float: left;
+    margin: 0 auto;
+
+}
+
+#check_nomal {
+    bottom: 80px;
+}

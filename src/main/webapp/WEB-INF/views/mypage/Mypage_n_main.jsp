@@ -20,14 +20,14 @@
 		<div class="cjh_body_accordion">
     <div class="cjh_accordion">
         <div class="cjh_contentBx">
-            <div class="cjh_label">마이페이지</div>
+            <div class="cjh_label"><a href="Mypage.do">마이페이지</a></div>
         </div>
         <div class="cjh_contentBx">
-            <div class="cjh_label">회원 정보 수정</div>
+            <div class="cjh_label"><a href="member_inform_PW.do">회원 정보 수정</a></div>
             
         </div><!--content bx-->
         <div class="cjh_contentBx">
-            <div class="cjh_label cjh_plus">회원 정보 수정</div>
+            <div class="cjh_label cjh_plus">예약 조회/변경</div>
             <div class="cjh_content">
                 <ul>
                     <li><a href="#">예약 조회</a></li>
@@ -47,7 +47,7 @@
             
         </div><!--content bx-->
         <div class="cjh_contentBx">
-            <div class="cjh_label">장바구니</div>
+            <div class="cjh_label"><a href="cart.do">장바구니</a></div>
 
         </div><!--content bx-->
         <div class="cjh_contentBx">
@@ -89,21 +89,21 @@
             </div><!--welcome-->
             <div class="kye_mypage_T_buttons">
                 <div class="kye_M_T_B_reservation kye_circle_text">
-                    <img id="kye_icon" src="image/icon_3.png">
+                    <img id="kye_icon" src="resources/img/calender.png">
                     <div id="button_solid"></div>
                     <div id="button_text">
                         <a href="#"><span id="kye_a">{2}</span>건</a>
                     </div>
                 </div><!--kye_M_T_B_reservation-->
                 <div class="kye_M_T_B_coupone kye_circle_text">
-                    <img id="kye_icon" src="image\coupon.png">
+                    <img id="kye_icon" src="resources/img/coupon.png">
                     <div id="button_solid"></div>
                     <div id="button_text">
                         <a href="#"><span id="kye_a">{5}</span>개</a>
                     </div>
                 </div><!--kye_M_T_B_coupone-->
                 <div class="kye_M_T_B_reserves kye_circle_text">
-                    <img id="kye_icon" src="image\Reserves.png">
+                    <img id="kye_icon" src="resources/img/Reserves.png">
                     <div id="button_solid"></div>
                     <div id="button_text">
                         <a href="#"><span id="kye_a_reserves">{5000}<b>원</b></span></a>

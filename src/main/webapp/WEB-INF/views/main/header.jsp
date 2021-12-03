@@ -33,7 +33,7 @@
                 <ul>
                     <li><a href="center.do">고객센터</a></li>
                     <li><a href="#">로그인</a></li>
-                    <li><a href="#">장바구니</a></li>
+                    <li><a href="cart.do">장바구니</a></li>
                     <li><a href="Mypage.do">마이페이지</a></li>
                 </ul>
             </div>

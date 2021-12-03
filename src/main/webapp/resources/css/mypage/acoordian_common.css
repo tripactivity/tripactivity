@@ -1,5 +1,13 @@
 @charset "EUC-KR";
 
+a:visited { color:white; }
+aside {
+	position:absolute;
+	left:140px;
+	top: 200px;
+	width:200px;
+	float:left;
+}
 .cjh_body_accordion{
            width:200px;
         }

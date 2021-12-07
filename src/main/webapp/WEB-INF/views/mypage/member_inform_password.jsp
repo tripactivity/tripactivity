@@ -1,5 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="EUC-KR"
+    isELIgnored="false"
+%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<C:set var="contextPath" value="${pageContext.request.contextPath}" />
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
+
 <html>
     <head>
         <title>마이페이지_비밀번호확인</title>
@@ -88,10 +97,10 @@
 	</aside>
 	
         <div class="kye_verify_password">
-             <form class="register-form">
+             <form class="register-form" action="member_inform.do">
              	<p>회원 정보를 수정하시려면 비밀번호를 입력해주세요.</p>
                 <input type="password" placeholder="password"/><br><br>
-                <input type="submit" value="확인"/>
+                <input type="submit" value="확인" />
                 <input type="button" value="취소" onclick="history.go(-1)"/>
              </form>
         </div>

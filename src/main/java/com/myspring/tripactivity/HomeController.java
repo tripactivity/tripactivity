@@ -1,5 +1,7 @@
 package com.myspring.tripactivity;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller("mainController")
 @EnableAspectJAutoProxy
-public class HomeController {
+public class HomeController extends HttpServlet{
 	/*
 	 * @Autowired private GoodsService goodsService;
 	 */
@@ -79,6 +81,12 @@ public class HomeController {
 	  public String member_inform_PW(HttpServletRequest request, HttpServletResponse response) throws Exception{
 			
 	  return "member_inform_PW"; 
+	  }
+	  
+	  @RequestMapping(value= "/main/member_inform.do",method={RequestMethod.POST,RequestMethod.GET}) 
+	  public String member_inform(HttpServletRequest request, HttpServletResponse response) throws Exception{
+			
+	  return "member_inform"; 
 	  }
 	 
 }

@@ -420,5 +420,19 @@
    		</if>
    		
    	</select>
+   	
+   	<!-- 객실 리스트 -->
+   	<select id="ac_roomList" resultType="com.myspring.trip.model.RoomVO">
+   	
+   		select * from accommodation_tbl a left outer join room_tbl r on a.ac_CompanyName = r.company_Name where ac_ProductNum = ${ac_ProductNum}
+   		
+   	</select>
+   	
+   	<!-- 숙박업체별 상세보기 페이지 -->
+   	<select id="getAc_productsInfo" resultType="com.myspring.trip.model.Ac_productVO">
+   	
+   		select ac_ProductNum, fileName, imgFileKind, uuid, uploadPath  from img_tbl where ac_ProductNum = ${ac_ProductNum}
+   	
+   	</select>
 	
   </mapper>

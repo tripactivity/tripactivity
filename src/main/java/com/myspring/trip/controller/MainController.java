@@ -80,7 +80,7 @@ public class MainController {
 		
 		logger.info("getImage()........" + fileName);
 		
-		File file = new File("c:\\upload\\" + fileName);
+		File file = new File("d:\\upload\\" + fileName);
 		
 		ResponseEntity<byte[]> result = null;
 		

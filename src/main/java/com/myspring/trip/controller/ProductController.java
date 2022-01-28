@@ -38,11 +38,12 @@ import com.myspring.trip.model.Le_productVO;
 import com.myspring.trip.model.PageMakerDTO;
 import com.myspring.trip.model.RoomVO;
 import com.myspring.trip.model.TicketVO;
+import com.myspring.trip.service.BoardService;
 import com.myspring.trip.service.ProductService;
 
 import net.coobird.thumbnailator.Thumbnails;
 
-@Controller("ac_productEnrollController")
+@Controller("productController")
 @RequestMapping("/product")
 public class ProductController {
 
@@ -50,6 +51,9 @@ public class ProductController {
 
 	@Autowired
 	private ProductService productService;
+	
+	@Autowired
+	private BoardService bservice;
 
 	// 숙박 업체 관리 페이지
 	@GetMapping("/ac_enrollManage")
@@ -111,11 +115,11 @@ public class ProductController {
 			fileList.forEach(vo ->{
 				
 				// 원본 이미지
-				Path path = Paths.get("C:\\upload", vo.getUploadPath(), vo.getUuid() + "_" + vo.getFileName());
+				Path path = Paths.get("D:\\upload", vo.getUploadPath(), vo.getUuid() + "_" + vo.getFileName());
 				pathList.add(path);
 				
 				// 섬네일 이미지
-				path = Paths.get("C:\\upload", vo.getUploadPath(), "s_" + vo.getUuid()+"_" + vo.getFileName());
+				path = Paths.get("D:\\upload", vo.getUploadPath(), "s_" + vo.getUuid()+"_" + vo.getFileName());
 				pathList.add(path);
 				
 			});
@@ -193,11 +197,11 @@ public class ProductController {
 			fileList.forEach(vo ->{
 				
 				// 원본 이미지
-				Path path = Paths.get("C:\\upload", vo.getUploadPath(), vo.getUuid() + "_" + vo.getFileName());
+				Path path = Paths.get("D:\\upload", vo.getUploadPath(), vo.getUuid() + "_" + vo.getFileName());
 				pathList.add(path);
 				
 				// 섬네일 이미지
-				path = Paths.get("C:\\upload", vo.getUploadPath(), "s_" + vo.getUuid()+"_" + vo.getFileName());
+				path = Paths.get("D:\\upload", vo.getUploadPath(), "s_" + vo.getUuid()+"_" + vo.getFileName());
 				pathList.add(path);
 				
 			});
@@ -273,11 +277,11 @@ public class ProductController {
 			fileList.forEach(vo ->{
 				
 				// 원본 이미지
-				Path path = Paths.get("C:\\upload", vo.getUploadPath(), vo.getUuid() + "_" + vo.getFileName());
+				Path path = Paths.get("D:\\upload", vo.getUploadPath(), vo.getUuid() + "_" + vo.getFileName());
 				pathList.add(path);
 				
 				// 섬네일 이미지
-				path = Paths.get("C:\\upload", vo.getUploadPath(), "s_" + vo.getUuid()+"_" + vo.getFileName());
+				path = Paths.get("D:\\upload", vo.getUploadPath(), "s_" + vo.getUuid()+"_" + vo.getFileName());
 				pathList.add(path);
 				
 			});
@@ -295,11 +299,11 @@ public class ProductController {
 			fileList2.forEach(vo ->{
 				
 				// 원본 이미지
-				Path path = Paths.get("C:\\upload", vo.getUploadPath(), vo.getUuid() + "_" + vo.getFileName());
+				Path path = Paths.get("D:\\upload", vo.getUploadPath(), vo.getUuid() + "_" + vo.getFileName());
 				pathList2.add(path);
 				
 				// 섬네일 이미지
-				path = Paths.get("C:\\upload", vo.getUploadPath(), "s_" + vo.getUuid()+"_" + vo.getFileName());
+				path = Paths.get("D:\\upload", vo.getUploadPath(), "s_" + vo.getUuid()+"_" + vo.getFileName());
 				pathList2.add(path);
 				
 			});
@@ -389,7 +393,7 @@ public class ProductController {
 			
 		}// for
 		
-		String uploadFolder = "C:\\upload";
+		String uploadFolder = "D:\\upload";
 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -490,7 +494,7 @@ public class ProductController {
 			
 		}// for
 		
-		String uploadFolder = "C:\\upload";
+		String uploadFolder = "D:\\upload";
 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -576,7 +580,7 @@ public class ProductController {
 		try {
 			
 			//썸네일 파일 삭제
-			file = new File("c:\\upload\\" + URLDecoder.decode(fileName, "UTF-8"));
+			file = new File("d:\\upload\\" + URLDecoder.decode(fileName, "UTF-8"));
 			
 			file.delete();
 			
@@ -625,11 +629,28 @@ public class ProductController {
 	
 	//숙박 상품 자세히 보기 페이지
 	@GetMapping("/ac_productDetail")
-	public void ac_productDetail() throws Exception {
+	public String ac_productDetail(int ac_ProductNum, Model model, Criteria cri) throws Exception {
 		logger.info("숙박 상품 상세보기 페이지 진입!!");
+		
+		model.addAttribute("list", bservice.product_inquiry(cri));
+
+		int total = bservice.igetTotals(cri);
+
+		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+
+		model.addAttribute("pageMaker", pageMake);
+		
+		model.addAttribute("ac_enrollDetail", productService.ac_enrollDetail(ac_ProductNum));
+		
+		List imageList = productService.getAc_productsInfo(ac_ProductNum);
+		
+		model.addAttribute("ac_enrollDetail2", imageList);
+		
+		List list = productService.ac_roomList(ac_ProductNum);
+		
+		model.addAttribute("ac_roomList", list);
+		
+		return "/product/ac_productDetail";
+				
 	}
-	
-	
-	
-	
 }

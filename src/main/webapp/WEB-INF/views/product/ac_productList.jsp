@@ -554,6 +554,7 @@
                       </div>
                     </c:forEach>
                     </c:if>
+                     <c:if test="${ac_productListCheck != 'empty' }">
                     <!-- 페이지 이동 인터페이스 영역 -->
                     <div class="pageMaker_wrap" >
                     
@@ -583,6 +584,9 @@
 	                    </ul>
 	                    
                     </div>
+                    </c:if>
+                    <c:if test="${ac_productListCheck == 'empty' }">
+                    </c:if>
                     <form action="/product/ac_productList" id="moveForm" method="get">
                     	<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">
                     	<input type="hidden" name="amount" value="${pageMaker.cri.amount }">

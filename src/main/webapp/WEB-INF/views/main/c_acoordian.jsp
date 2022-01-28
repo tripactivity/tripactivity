@@ -63,6 +63,7 @@
         
         .cjh_accordion .cjh_contentBx .cjh_content>ul{
             width:100%;
+            padding:0 !important;
         }
         .cjh_accordion .cjh_contentBx .cjh_content>ul>li{
             padding:10px;

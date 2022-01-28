@@ -89,5 +89,11 @@ public interface ProductService {
 	//숙박 상품 리스트 총 개수
 	public int ac_productListTotal(Criteria cri) throws Exception;
 	
+	//객실 리스트
+	public List<RoomVO> ac_roomList(int ac_ProductNum) throws Exception;
+	
+	//숙박 상품 상세 페이지
+	public List<Ac_productVO> getAc_productsInfo(int ac_ProductNum)throws Exception;
+	
 	
 }

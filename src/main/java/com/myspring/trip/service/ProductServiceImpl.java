@@ -293,4 +293,40 @@ public class ProductServiceImpl implements ProductService  {
 		return productMapper.ac_productListTotal(cri);
 	}
 	
+	//숙박 상품 상세 페이지
+	@Override
+	public List<Ac_productVO> getAc_productsInfo(int ac_ProductNum) throws Exception {
+		
+		List<Ac_productVO> ac_productsInfo = productMapper.getAc_productsInfo(ac_ProductNum);
+		
+		ac_productsInfo.forEach(ac_product ->{
+			ac_product.getAc_ProductNum();
+			
+			List<ImageFileVO> imageList = attachMapper.getAc_productImageList(ac_ProductNum);
+			
+			ac_product.setImageList(imageList);
+		});
+		
+		return ac_productsInfo;
+		
+	}
+	
+	//객실 리스트
+	@Override
+	public List<RoomVO> ac_roomList(int ac_ProductNum) throws Exception {
+		log.info("ac_roomList()..............");
+		
+		List<RoomVO> list = productMapper.ac_roomList(ac_ProductNum);
+		
+		list.forEach(room ->{
+			int ac_roomNum = room.getAc_roomNum();
+			
+			List<ImageFileVO> imageList = attachMapper.getRoomImageList(ac_roomNum);
+			
+			room.setImageList(imageList);
+		});
+		
+		return list;
+	}
+	
 }

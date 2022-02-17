@@ -1,3 +1,4 @@
+<!-- 차정현 장영준 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -63,6 +64,7 @@
         
         .cjh_accordion .cjh_contentBx .cjh_content>ul{
             width:100%;
+            padding:0 !important;
         }
         .cjh_accordion .cjh_contentBx .cjh_content>ul>li{
             padding:10px;

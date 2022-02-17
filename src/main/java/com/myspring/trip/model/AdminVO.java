@@ -28,8 +28,16 @@ public class AdminVO {
 	
 	private boolean adminLogin;
 	
+	private boolean loginAdminVO;
 	
 	
+	
+	public boolean isLoginAdminVO() {
+		return loginAdminVO;
+	}
+	public void setLoginAdminVO(boolean loginAdminVO) {
+		this.loginAdminVO = loginAdminVO;
+	}
 	public boolean isAdminLogin() {
 		return adminLogin;
 	}

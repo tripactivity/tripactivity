@@ -1,6 +1,9 @@
+<!-- 차정현 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +37,8 @@
     }
 
     .cjh_admin_statistics{
-        height:100%; width:32%;
+        height:384px; width:100%; /* height 100프로로 바꿔야함 나중에 ㄱ완료후 바꾸고 지우기 필수*/
+        padding:20px;
     }
         .cjh_admin_container3{
             display:flex;
@@ -43,6 +47,14 @@
             height:auto;
             background:#e3e3e3;
         }
+        
+        .contents_mid{
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    background: #e3e3e3;
+    margin-top:30px;}
 
         .contents_bottom{
             display:flex;
@@ -75,10 +87,10 @@
         
         }
 
-        .qna_title{text-align:left; font-weight:bold; padding:20px; height:20%;}
+        .qna_title{text-align:left; font-weight:bold; padding:10px; height:20%;}
      
         .qna_padding{
-            padding:20px;
+            padding:10px;
         }
         /*입점 신청*/
         .admin_title, .ac_bu, .le_bu{
@@ -101,7 +113,7 @@
         }
    
         .ctg{
-            margin-left:10px;
+            margin-left:30px;
             display: inline-block;
     vertical-align: middle;
             width:10%;
@@ -113,7 +125,7 @@
     font-size: 13px;
     font-weight: 600;
     border-radius: 4px;
-    margin-right: 15px;
+    margin-right: 30px;
         }
 
         .content{
@@ -209,6 +221,20 @@
      #Line_Controls_Chart{width:100%;}
       #controlsArea{display:none;}
 
+
+.tbody, td, tfoot, th, thead, tr{
+text-align:center;}
+
+
+.report{padding:10px;}
+.notice_list{padding:10px;}
+.qna_tbl{padding:10px; width:100%;}
+.th{background:#ebf1fa; line-height:35px; border:1px solid black;}
+.td{line-height:35px; border:1px solid black;}
+.btn{    width: 100px;
+    line-height: 30px;
+    background:#ebf1fa; border:1px solid #e3e3e3;
+    float: right;}
     </Style>
 </head>
 <body>
@@ -236,100 +262,101 @@
    
                         </div><!--todaysmember 회원 증가-->
                 </div><!--cjh_admin_statistics-->
-                <div class="cjh_admin_statistics">
+               
+            </div><!--cjh_admin_container3-->
+            <div class="contents_mid">
+            
+             <div class="cjh_admin_statistics">
                         <div class="qna">
                             <div class="qna_title qna_cate">
                                 처리 해야할 고객 문의 사항
                             </div>
-                            <div class="busi_qna qna_cate">
-                                <p>기업회원 문의</p>
-                                <p class="qna_padding">23건</p>
-                            </div>
-
-                            <div class="normal_qna qna_cate">
-                                <p>일반 회원 문의</p>
-                                <p class="qna_padding">14건</p>
-                            </div>
+                           <table class="qna_tbl">
+                           
+                       		<tr>
+                       			<th class="th" style="width:10%;">글 번호</th>
+                       			<th class="th" style="width:40%;">작성 제목</th>
+                       			<th class="th" style="width:20%;">작성자</th>
+                       			<th class="th" style="width:30%;">날짜</th>
+                       		</tr>
+                       		<c:forEach var="list" items="${list}">
+                       		<tr>
+                       			<td class="td">${list.board_seq}</td>
+                       			<td class="td">${list.board_title }</td>
+                       			<td class="td">${list.n_Id}</td>
+                       			<td class="td"><fmt:formatDate value="${list.board_date}" pattern="yyyy-MM-dd"/></td>
+                       		</tr>
+                       		</c:forEach>
+                       </table>
                         </div>
                 </div><!--admin_statistics-->
                 <div class="cjh_admin_statistics">
                     <div class="qna">
                         <div class="qna_title qna_cate">
-                            처리 해야할 고객 문의 사항
+                            처리 해야할 기업고객 문의 사항
                         </div>
-                        <div class="busi_qna qna_cate">
-                            <p>숙박 사업주</p>
-                            <p class="qna_padding">23건</p>
-                        </div>
-
-                        <div class="normal_qna qna_cate">
-                            <p>레저 사업주 </p>
-                            <p class="qna_padding">14건</p>
-                        </div>
+                       <table class="qna_tbl">
+                       		<tr>
+                       			<th class="th" style="width:10%;">글 번호</th>
+                       			<th class="th" style="width:40%;">작성 제목</th>
+                       			<th class="th" style="width:20%;">작성자</th>
+                       			<th class="th" style="width:30%;">날짜</th>
+                       		</tr>
+                       		<c:forEach var="list2" items="${list2}">
+                       		<tr>
+                       			<td class="td">${list2.board_seq}</td>
+                       			<td class="td">${list2.board_title }</td>
+                       			<td class="td">${list2.c_Id}</td>
+                       			<td class="td"><fmt:formatDate value="${list2.board_date}" pattern="yyyy-MM-dd"/></td>
+                       		</tr>
+                       		</c:forEach>
+                       		
+                       </table>
+                       <a href="#"><button class="btn">더보기</button></a>
                     </div>
                 </div><!--cjh_Admin_statistics-->
-            </div><!--cjh_admin_container3-->
+            </div><!-- contents_mid -->
             <div class="contents_bottom">
                 <div class="report">
                     <div class="notice_title">
                         <h2>신고관리</h2>
                         <div class="notice_list">
                             <ul class="notice_list_ul">
+                            
+                            <c:forEach var="list3" items="${list3}" varStatus="status" begin="0" end="5">
                                 <li>
                                     <a href="#">
                                         <span>회원등급</span>
-                                        <span class="ctg">일반회원</span>
+                                        
+                                        <c:if test="${list3.n_Id !=null}">
+                                        <span class="ctg">
+                                        		<p>일반회원</p>			
+                                        </span>
                                         <span>아이디</span>
-                                        <span class="ctg">ae6567</span>
+                                        <span class="ctg">
+                                       <p>${list3.n_Id}</p>
+                                        
+                                       </span>
+                                       </c:if>
+                                       <c:if test="${list3.n_Id ==null}">
+                                       <span class="ctg">
+                                        		<p>기업회원</p>			
+                                        </span>
+                                        <span>아이디</span>
+                                        <span class="ctg">
+                                       <p>${list3.c_Id }</p>
+                                        
+                                       </span>
+                                       </c:if>
                                         <span>신고 내용</span>
-                                        <span class="content">불량 리뷰로 신고됨</span>
-                                        <span class="date">2021-12-31</span>
+                                        <span class="content">${list3.board_title}</span>
+                                        <span class="date"><fmt:formatDate value="${list3.board_date}" pattern="yyyy-MM-dd"/></span>
                                     </a>
                                 </li>
-                                 <li>
-                                    <a href="#">
-                                        <span>회원등급</span>
-                                        <span class="ctg">일반회원</span>
-                                        <span>아이디</span>
-                                        <span class="ctg">ae6567</span>
-                                        <span>신고 내용</span>
-                                        <span class="content">불량 리뷰로 신고됨</span>
-                                        <span class="date">2021-12-31</span>
-                                    </a>
-                                </li>
-                                 <li>
-                                    <a href="#">
-                                        <span>회원등급</span>
-                                        <span class="ctg">일반회원</span>
-                                        <span>아이디</span>
-                                        <span class="ctg">ae6567</span>
-                                        <span>신고 내용</span>
-                                        <span class="content">불량 리뷰로 신고됨</span>
-                                        <span class="date">2021-12-31</span>
-                                    </a>
-                                </li>
-                                 <li>
-                                    <a href="#">
-                                        <span>회원등급</span>
-                                        <span class="ctg">일반회원</span>
-                                        <span>아이디</span>
-                                        <span class="ctg">ae6567</span>
-                                        <span>신고 내용</span>
-                                        <span class="content">불량 리뷰로 신고됨</span>
-                                        <span class="date">2021-12-31</span>
-                                    </a>
-                                </li>
-                                 <li>
-                                    <a href="#">
-                                        <span>회원등급</span>
-                                        <span class="ctg">일반회원</span>
-                                        <span>아이디</span>
-                                        <span class="ctg">ae6567</span>
-                                        <span>신고 내용</span>
-                                        <span class="content">불량 리뷰로 신고됨</span>
-                                        <span class="date">2021-12-31</span>
-                                    </a>
-                                </li>
+                            </c:forEach>
+                                 
+                                 
+                                
                                 </ul>
                     </div>
                 </div><!--repoert-->

@@ -1,3 +1,4 @@
+<!-- 장영준 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     isELIgnored="false"%>
@@ -24,27 +25,27 @@
                 </ul>
                 <div class="yj_productEnroll_room">
                     <ul>
-                        <li style="width:30%;">
+                        <li style="width:32%;">
                             티켓명 :
                             <input type="text" name="le_ticketName" class="" id="">
                         </li>
-                        <li style="width:30%;">
+                        <li style="width:32%;">
                             할인율 : 
                             <input type="text" maxlength="2" class="" id="yj_ticketDiscount">
-                            <input type="hidden" name="le_ticketDiscount" value="">
+                            <input type="hidden" name="le_ticketDiscount" value="0.00">
                         </li>
-                        <li style="width:30%">
+                        <li style="width:32%">
                         	업체명 : 
                         	<input type="text" name="company_Name" value="${cmemberVO.company_Name}">
                         </li>
                     </ul>
                     <div class="yj_div1">
                         <ul>
-                            <li style="width:30%;">
+                            <li style="width:32%;">
                                 기준인원 :
                                 <input type="text" name="le_standardPeople" class="" id="">
                             </li>
-                            <li style="width:30%;">
+                            <li style="width:32%;">
                                 최대인원 :
                                 <input type="text" name="le_maxPeople" class="" id="">
                             </li>
@@ -64,16 +65,16 @@
                         <tr>
                             <th>평일</th>
                             <td><input type="text" name="le_n_Price" class="" id=""></td>
-                            <td><input type="time" name="le_n_startTime" class="" id=""></td>
-                            <td><input type="time" name="le_n_endTime" class="" id=""></td>
-                            <td><input type="time" name="le_n_lastEntrance" class="" id=""></td>
+                            <td><input type="text" name="le_n_startTime" class="" id=""></td>
+                            <td><input type="text" name="le_n_endTime" class="" id=""></td>
+                            <td><input type="text" name="le_n_lastEntrance" class="" id=""></td>
                         </tr>
                         <tr>
                             <th>주말</th>
                             <td><input type="text" name="le_h_Price" class="" id=""></td>
-                            <td><input type="time" name="le_h_startTime" class="" id=""></td>
-                            <td><input type="time" name="le_h_endTime" class="" id=""></td>
-                            <td><input type="time" name="le_h_lastEntrance" class="" id=""></td>
+                            <td><input type="text" name="le_h_startTime" class="" id=""></td>
+                            <td><input type="text" name="le_h_endTime" class="" id=""></td>
+                            <td><input type="text" name="le_h_lastEntrance" class="" id=""></td>
                         </tr>
                     </table>
                 </div>

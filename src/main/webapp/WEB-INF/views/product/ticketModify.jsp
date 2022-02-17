@@ -1,3 +1,4 @@
+<!-- 장영준 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     isELIgnored="false"%>
@@ -31,7 +32,7 @@
                         <li style="width:30%;">
                             할인율 : 
                             <input type="text" maxlength="2" class="" id="yj_ticketDiscount">
-                            <input type="hidden" name="le_ticketDiscount" value="">
+                            <input type="hidden" name="le_ticketDiscount" value="${ticketDetail.le_ticketDiscount}">
                         </li>
                         <li style="width:30%">
                         	업체명 : 

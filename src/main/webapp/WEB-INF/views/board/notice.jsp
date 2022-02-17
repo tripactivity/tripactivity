@@ -1,9 +1,17 @@
+<!-- 김찬영 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
      pageEncoding="UTF-8"
     isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
+ <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/> 
+    <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+    <script>
+        jQuery(function($){
+            $("#foo-table").DataTable();
+           
+        });
+    </script>
 <!DOCTYPE html>
 <html>
 
@@ -149,14 +157,13 @@ float:right;
 		<input type="hidden" name="keyword" value="${pageMaker.cri.keyword }">	
 		<input type="hidden" name="type" value="${pageMaker.cri.type }">	
 	</form>
-</div>
+</div> 
 	
 
 
    </section>
    
 <!-- 공지사항 게시판 finish -->
-
  
   </main><!-- End #main -->
   <div id="nav">
@@ -242,6 +249,8 @@ float:right;
 			moveForm.submit();
 		});
 		
+	
+	
 </script>
 
 <!--   <script src="resources/vendor/bootstrap/js/bootstrap.js"></script>
@@ -257,8 +266,8 @@ float:right;
 
   <!-- Template Main JS File -->
   <script src="${contextPath }/resources/bootstrap/js/main.js"></script>
-  
-  
+  <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+   
 </body>
 
 </html>

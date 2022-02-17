@@ -114,6 +114,7 @@
         }
         .yj_product_section_ui_aa{
             margin-bottom:16px;
+            padding:0px !important;
         }
         .yj_product_kinds{
             margin-bottom:16px;
@@ -271,7 +272,7 @@
             flex-direction: column;
             margin-top:auto;
         }
-        .yj_product_price_aa{
+        .yj_product_Price_aa{
             position:relative;
             display: flex;
             flex-direction: row;
@@ -289,7 +290,6 @@
         .yj_product_price_cc{
             position:relative;
             width:100%;
-            display:flex;
             justify-content: flex-end;
         }
         .yj_product_price_dd{
@@ -317,6 +317,7 @@
             font-weight: 500;
             letter-spacing:-.3px;
             color:#adb5bd;
+            text-decoration-line:line-through;
         }
         .yj_product_mainPrice_aa{
             display:flex;
@@ -410,6 +411,7 @@
         }
         .yj_product_search_text{
             width:280px;
+            margin-right:8px;
         }
         .yj_product_search_text>div{
             margin-right:8px;
@@ -420,15 +422,141 @@
             width:100%;
         }
         .yj_product_search_calendar{
-            width:280px;
+            width:350px;
+            margin-right:8px;
+        }
+        .yj_product_search_calendar_div1{
+        	position:relative;
+            display:inline-block;
+            width:100%;
+        }
+        .yj_product_search_calendar_div1>span{
+        	position:absolute;
+        	top:50%;
+        	left:14px;
+        	transform:translateY(-60%);
+        	background-color:#eee;
+        	font-weight:500;
+        	line-height:1;
         }
         .yj_product_search_person{
             width:280px;
+        }
+        .yj_product_search_person_div1{
+        	position:relative;
+        	width:100%;
+        	display:inline-block;
+        }
+        .yj_product_search_person_div1>span{
+        	position:absolute;
+        	top:50%;
+        	left:14px;
+        	transform:translateY(-60%);
+        	background-color:#eee;
+        	font-weight:500;
+        	line-height:1;
         }
         .yj_search_button{
             position:relative;
             display:inline-flex;
         }
+        .yj_searchbutton{
+        	display:flex;
+        	flex: 0 0 auto;
+        	flex-direction:row;
+        	padding:0px 32px;
+        	height:48px;
+        	font-size:16px;
+        	color:#fff;
+        	background-color:#87ceeb;
+        	cursor:pointer;
+        	outline-style:none;
+        	border:0;
+        	border-radius:4px;
+        	text-align:center;
+        	align-items:center;
+        	font-weight:bold;
+        }
         .yj_product_search_box.on{
             display:flex;
         }
+        .yj_null{
+        	font-size:20px;
+        }
+        .yj_input_text{
+        	padding:14px 14px 14px 42px;
+        	background-color:#eee;
+        	border:0;
+        	font-size:16px;
+        	width:100%;
+        	height:48px;
+        	border-radius:4px;
+        }
+        .yj_product_search_text_aa>span{
+        	position:absolute;
+        	top:50%;
+        	left:14px;
+        	transform:translateY(-60%);
+        	background-color:#eee;
+        	font-weight:500;
+        	line-height:1;
+        }
+        .yj_search_img{
+        	display:inline-block;
+        }
+        .yj_demo{
+        	padding:14px 14px 14px 42px;
+        	background-color:#eee;
+        	border:0;
+        	font-size:16px;
+        	width:100%;
+        	height:48px;
+        	border-radius:4px;
+        }
+        .yj_person_select{
+        	padding:14px 14px 14px 42px;
+        	background-color:#eee;
+        	border:0;
+        	font-size:16px;
+        	width:45%;
+        	height:48px;
+        	border-radius:4px;
+        }
+        .yj_product_button{
+        	cursor:pointer;
+        }
+        .on{
+        	border-bottom:4px solid #87ceeb;
+        }
+        .kind>button{
+        	background-color:#e7f4fd;
+        	border:1px solid #a7d4f9;
+        	color:#2b96ed;
+        	font-weight:bold;
+        }
+        .pageMaker_wrap{
+    		text-align:center;
+    		margin-top: 30px;
+    		margin-bottom:40px;
+   		}
+    	.pageMaker{
+    		list-style:none;
+    	}
+    	.pageMaker_btn {
+    		margin-left:10px;
+    		width:40px;
+    		height:40px;
+    		line-height:40px;
+    		display:inline-block;
+    	}
+    	.active{
+    		border:2px solid #eee;
+    		background-color:#eee;
+    		border-radius:4px;
+    	}
+    	#yj_hide1{
+    		display:none;
+    	}
+    	#yj_hide2{
+    		display:none;
+    	}

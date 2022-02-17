@@ -6,12 +6,18 @@
             padding:15px;
             display:block;
         }
+        .yj_productEnroll>ul{
+        	padding: 0px !important;
+        }
         .yj_productEnroll>ul>li{
             display:inline-block;
             padding:10px;
         }
         .yj_productEnroll_service{
             padding:15px;
+        }
+        .yj_productEnroll_service>ul{
+        	padding: 0px !important;
         }
         .yj_productEnroll_service>ul>li{
             display:inline-block;
@@ -32,6 +38,9 @@
         .yj_productEnroll_option>ul>li{
             padding:15px;
         }
+        .yj_productEnroll_option>ul{
+        	padding:0px !important;
+        }
         .yj_productEnroll_room>ul{
             padding:10px;
         }
@@ -40,6 +49,9 @@
         }
         .yj_div1{
             padding:10px;
+        }
+        .yj_div1>ul{
+        	padding:0px !important;
         }
         .yj_add_roomClass{
             float:right;
@@ -80,7 +92,7 @@
         }
         .yj_productEnroll_image>label{
             display:block;
-            width:100px;
+            width:200px;
             background-color: #1d1d1d;
             color:#fff;
             text-align: center;
@@ -145,7 +157,7 @@
         }
         .yj_mainImgLi>label{
             display:block;
-            width:100px;
+            width:200px;
             background-color: #1d1d1d;
             color:#fff;
             text-align: center;

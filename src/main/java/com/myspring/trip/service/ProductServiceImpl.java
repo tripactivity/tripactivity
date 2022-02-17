@@ -57,10 +57,26 @@ public class ProductServiceImpl implements ProductService  {
 	
 	//숙박 업체 수정하기
 	@Override
+	@Transactional
 	public int ac_enrollModify(Ac_productVO ac_product) throws Exception {
 		log.info("ac_productModify().........");
 		
-		return productMapper.ac_enrollModify(ac_product);
+		int result = productMapper.ac_enrollModify(ac_product);
+		
+		if(result == 1 && ac_product.getImageList() != null && ac_product.getImageList().size() > 0) {
+			
+			productMapper.deleteAc_productImageAll(ac_product.getAc_ProductNum());
+			
+			ac_product.getImageList().forEach(attach -> {
+			
+				attach.setAc_ProductNum(ac_product.getAc_ProductNum());
+				productMapper.imageEnroll(attach);
+				
+			});
+			
+		}
+		
+		return result;
 	}
 	
 	//숙박업체 정보 삭제하기
@@ -128,7 +144,22 @@ public class ProductServiceImpl implements ProductService  {
 	public int roomModify(RoomVO room) throws Exception {
 		log.info("roomModify().........");
 		
-		return productMapper.roomModify(room);
+		int result = productMapper.roomModify(room);
+		
+		if(result == 1 && room.getImageList() != null && room.getImageList().size() > 0) {
+			
+			productMapper.deleteRoomImageAll(room.getAc_roomNum());
+			
+			room.getImageList().forEach(attach -> {
+			
+				attach.setAc_roomNum(room.getAc_roomNum());
+				productMapper.imageEnroll(attach);
+				
+			});
+			
+		}
+		
+		return result;
 	}
 	
 	//객실 삭제하기
@@ -291,6 +322,68 @@ public class ProductServiceImpl implements ProductService  {
 		log.info("ac_productListTotal..............." + cri);
 		
 		return productMapper.ac_productListTotal(cri);
+	}
+	
+	//숙박 상품 상세 페이지
+	@Override
+	public List<Ac_productVO> getAc_productsInfo(int ac_ProductNum) throws Exception {
+		
+		List<Ac_productVO> ac_productsInfo = productMapper.getAc_productsInfo(ac_ProductNum);
+		
+		ac_productsInfo.forEach(ac_product ->{
+			ac_product.getAc_ProductNum();
+			
+			List<ImageFileVO> imageList = attachMapper.getAc_productImageList(ac_ProductNum);
+			
+			ac_product.setImageList(imageList);
+		});
+		
+		return ac_productsInfo;
+		
+	}
+	
+	//객실 리스트
+	@Override
+	public List<RoomVO> ac_roomList(int ac_ProductNum) throws Exception {
+		log.info("ac_roomList()..............");
+		
+		List<RoomVO> list = productMapper.ac_roomList(ac_ProductNum);
+		
+		list.forEach(room ->{
+			int ac_roomNum = room.getAc_roomNum();
+			
+			List<ImageFileVO> imageList = attachMapper.getRoomImageList(ac_roomNum);
+			
+			room.setImageList(imageList);
+		});
+		
+		return list;
+	}
+	
+	//레저업체 리스트 페이징 처리
+	@Override
+	public List<Le_productVO> le_productList(Criteria cri) throws Exception {
+		log.info("le_productList()............" + cri);
+		
+		List<Le_productVO> list = productMapper.le_productList(cri);
+		
+		list.forEach(le_product ->{
+			int le_ProductNum = le_product.getLe_ProductNum();
+			
+			List<ImageFileVO> imageList = attachMapper.getLe_productImageInfo(le_ProductNum);
+			
+			le_product.setImageList(imageList);
+		});
+		
+		return list;
+	}
+	
+	//레저 업체 리스트 총 개수
+	@Override
+	public int le_productListTotal(Criteria cri) throws Exception {
+		log.info("le_productListTotal..............." + cri);
+		
+		return productMapper.le_productListTotal(cri);
 	}
 	
 }

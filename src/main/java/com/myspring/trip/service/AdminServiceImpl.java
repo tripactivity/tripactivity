@@ -13,10 +13,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.myspring.trip.mapper.AdminMapper;
 import com.myspring.trip.mapper.AttachMapper;
+import com.myspring.trip.model.AdminQuestionVO;
 import com.myspring.trip.model.AdminVO;
 import com.myspring.trip.model.BoardVO;
+import com.myspring.trip.model.CmemberVO;
 import com.myspring.trip.model.CouponVO;
 import com.myspring.trip.model.Criteria;
+import com.myspring.trip.model.Deleted_n_memberVO;
 import com.myspring.trip.model.NmemberVO;
 
 @Service("adminService")
@@ -92,6 +95,20 @@ public class AdminServiceImpl implements AdminService{
 		log.info("(service)selectNMember()......" + nmemberVO);
 		
 		return adminMapper.selectNMember(nmemberVO);
+	}
+	
+	@Override
+	public List<Deleted_n_memberVO> selectDeletedNMember(Deleted_n_memberVO deleted_n_membervo) throws Exception{
+		
+
+		
+		return adminMapper.selectDeletedNMember(deleted_n_membervo);
+	}
+	
+	@Override
+	public List<CmemberVO> selectCmember(CmemberVO cmembervo)throws Exception{
+		
+		return adminMapper.selectCmember(cmembervo);
 	}
 	
 	/*@Override
@@ -172,4 +189,52 @@ public class AdminServiceImpl implements AdminService{
 		}
 		return result;
 	}
+	
+	@Override
+	public List nmemberQuestionInfo(AdminQuestionVO adminquestionvo) {
+		
+		return adminMapper.nmemberQuestionInfo(adminquestionvo);
+	}
+	
+	@Override
+	public List nmemberQuestionInfo2(AdminQuestionVO adminquestionvo) {
+		
+		return adminMapper.nmemberQuestionInfo2(adminquestionvo);
+	}
+	
+	@Override
+	public List reportInfo(AdminQuestionVO adminquestionvo) {
+		
+		return adminMapper.reportInfo(adminquestionvo);
+	}
+	
+	@Override
+	public List memberQuestionInfo(AdminQuestionVO adminquestionvo) {
+		return adminMapper.memberQuestionInfo(adminquestionvo);
+	}
+	
+	@Override
+	public Deleted_n_memberVO Deleted_getPage(String n_Id) {
+		return adminMapper.Deleted_getPage(n_Id);
+	}
+	
+	//기업 회원 조회
+	@Override
+	public CmemberVO select_c_Id(String c_Id) {
+		return adminMapper.select_c_Id(c_Id);
+	}
+	
+	@Override
+	public int c_member_modify(CmemberVO cmember) {
+		return adminMapper.c_member_modify(cmember);
+	}
+	
+	//기업회원 페이징
+	@Override
+	public List<CmemberVO> getCmemberListPaging(Criteria cri){
+		return adminMapper.getCmemberListPaging(cri);
+	}
+	
+
+	
 }

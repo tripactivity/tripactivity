@@ -26,6 +26,14 @@ public class CmemberVO {
 	private String level;
 	private String company_Name;
 	private String company_Number;
+	private String alert_Count;
+	
+	public String getAlert_Count() {
+		return alert_Count;
+	}
+	public void setAlert_Count(String alert_Count) {
+		this.alert_Count = alert_Count;
+	}
 	public String getC_Id() {
 		return c_Id;
 	}

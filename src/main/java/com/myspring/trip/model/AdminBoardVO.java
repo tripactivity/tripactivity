@@ -17,8 +17,16 @@ public class AdminBoardVO {
 	
 	private String board_date;
 	
-	private MultipartFile upload_file;
+	private MultipartFile upload_file; //브라우저가 보낸 파일 데이터 담기위한 변수
 	
+	public MultipartFile getUpload_file() {
+		return upload_file;
+	}
+
+	public void setUpload_file(MultipartFile upload_file) {
+		this.upload_file = upload_file;
+	}
+
 	private String FileName; //파일 이름 담을 변수
 
 	public int getContent_idx() {

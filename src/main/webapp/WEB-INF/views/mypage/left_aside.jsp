@@ -1,3 +1,4 @@
+<!-- 김예은 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
      pageEncoding="UTF-8"
     isELIgnored="false" %>
@@ -131,7 +132,7 @@
             
         </div><!--content bx-->
         <div class="cjh_contentBx">
-            <div class="cjh_label">회원 탈퇴</div>
+            <div class="cjh_label"><a href="/member/n_del">회원 탈퇴</a></div>
             
         </div><!--content bx-->
         

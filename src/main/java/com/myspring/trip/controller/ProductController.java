@@ -38,11 +38,12 @@ import com.myspring.trip.model.Le_productVO;
 import com.myspring.trip.model.PageMakerDTO;
 import com.myspring.trip.model.RoomVO;
 import com.myspring.trip.model.TicketVO;
+import com.myspring.trip.service.BoardService;
 import com.myspring.trip.service.ProductService;
 
 import net.coobird.thumbnailator.Thumbnails;
 
-@Controller("ac_productEnrollController")
+@Controller("productController")
 @RequestMapping("/product")
 public class ProductController {
 
@@ -50,6 +51,9 @@ public class ProductController {
 
 	@Autowired
 	private ProductService productService;
+	
+	@Autowired
+	private BoardService bservice;
 
 	// 숙박 업체 관리 페이지
 	@GetMapping("/ac_enrollManage")
@@ -576,7 +580,7 @@ public class ProductController {
 		try {
 			
 			//썸네일 파일 삭제
-			file = new File("c:\\upload\\" + URLDecoder.decode(fileName, "UTF-8"));
+			file = new File("C:\\upload\\" + URLDecoder.decode(fileName, "UTF-8"));
 			
 			file.delete();
 			
@@ -625,11 +629,59 @@ public class ProductController {
 	
 	//숙박 상품 자세히 보기 페이지
 	@GetMapping("/ac_productDetail")
-	public void ac_productDetail() throws Exception {
+	public String ac_productDetail(int ac_ProductNum, Model model, Criteria cri) throws Exception {
 		logger.info("숙박 상품 상세보기 페이지 진입!!");
+		
+		model.addAttribute("list", bservice.product_inquiry(cri));
+
+		int total = bservice.igetTotals(cri);
+
+		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+
+		model.addAttribute("pageMaker", pageMake);
+		
+		model.addAttribute("ac_enrollDetail", productService.ac_enrollDetail(ac_ProductNum));
+		
+		List imageList = productService.getAc_productsInfo(ac_ProductNum);
+		
+		model.addAttribute("ac_enrollDetail2", imageList);
+		
+		List list = productService.ac_roomList(ac_ProductNum);
+		
+		model.addAttribute("ac_roomList", list);
+		
+		return "/product/ac_productDetail";
+				
 	}
 	
+	//레저 리스트 페이지
+	@GetMapping("/le_productList")
+	public String le_productListGET(Criteria cri, Model model) throws Exception{
+		logger.info("le_productListGET 페이지 입장.............");
+		
+		//레저 업체 목록 리스트
+		List list = productService.le_productList(cri);
+				
+		if(!list.isEmpty()) {
+			model.addAttribute("le_productList",list); //숙박 상품이 존재하는 경우
+		} else {
+			model.addAttribute("le_productListCheck", "empty"); //숙박 상품이 존재하지 않는 경우
+			
+			return "/product/le_productList";
+		}
+		
+		int total = productService.le_productListTotal(cri);
+		
+		PageMakerDTO pageMaker = new PageMakerDTO(cri, total);
+		
+		model.addAttribute("pageMaker", pageMaker);
+		
+		return "/product/le_productList";
+	}
 	
-	
-	
+	//레저 상품 상세페이지
+	@GetMapping("/le_productDetail")
+	public void le_productDetailGET() throws Exception{
+		
+	}
 }

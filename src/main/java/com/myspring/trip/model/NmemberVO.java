@@ -8,6 +8,36 @@ public class NmemberVO {
 	private String n_Pw1;
 	private String n_Pw2;
 	private String n_Name;
+	private String n_grade;
+	private String reserv_num;
+	private String reserv_day;
+	public String getReserv_day() {
+		return reserv_day;
+	}
+	public void setReserv_day(String reserv_day) {
+		this.reserv_day = reserv_day;
+	}
+	public String getReserv_num() {
+		return reserv_num;
+	}
+	public void setReserv_num(String reserv_num) {
+		this.reserv_num = reserv_num;
+	}
+	public String getN_grade() {
+		return n_grade;
+	}
+	public void setN_grade(String n_grade) {
+		this.n_grade = n_grade;
+	}
+	
+	private String n_memberNum;
+	public String getN_memberNum() {
+		return n_memberNum;
+	}
+	public void setN_memberNum(String n_memberNum) {
+		this.n_memberNum = n_memberNum;
+	}
+
 	private String sex;
 	private String email1;
 	private String email2;
@@ -24,6 +54,13 @@ public class NmemberVO {
 	private int event_money;
 	private int coupon_Num;
 	private String level;
+	private String settingday;
+	public String getSettingday() {
+		return settingday;
+	}
+	public void setSettingday(String settingday) {
+		this.settingday = settingday;
+	}
 	
 	
 	public String getN_Id() {

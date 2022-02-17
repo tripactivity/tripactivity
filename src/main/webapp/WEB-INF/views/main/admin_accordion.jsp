@@ -1,3 +1,4 @@
+<!-- 차정현 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
      pageEncoding="UTF-8"
     isELIgnored="false" %>
@@ -88,12 +89,12 @@
             <div class="cjh_label cjh_plus">회원 관리</div>
             <div class="cjh_content">
                 <ul>
-                 	<li><a href="admin_join">관리자 회원 가입</a></li>
-                 	<li><a href="admin_inf_modify">관리자 정보 수정</a>
-                    <li><a href="admin_ac_manage.do">회원관리</a></li>
-                    <li><a href="admin_member_see_grade.do">회원등급관리</a></li>
-                    <li><a href="admin_withdraw_manage.do">회원탈퇴관리</a></li>
-                    <li><a href="admin_c_member_manage.do">기업회원관리</a></li>
+                 	<li><a href="admin_info/admin_join">관리자 회원 가입</a></li>
+                 	<li><a href="admin_info/admin_inf_modify">관리자 정보 수정</a>
+                    <li><a href="manage/admin_see_member_info">회원관리</a></li>
+                    <li><a href="manage/admin_member_see_grade.do">회원등급관리</a></li>
+                    <li><a href="manage/admin_withdraw_manage.do">회원탈퇴관리</a></li>
+                    <li><a href="manage/admin_c_member_manage01.do">기업회원관리</a></li>
                 </ul>
             </div><!--content-->
         </div><!--content bx-->
@@ -101,8 +102,8 @@
             <div class="cjh_label cjh_plus">숙박 레저 관리</div>
             <div class="cjh_content">
                 <ul>
-                    <li><a href="admin_ac_manage.do">숙박 관리</a></li>
-                    <li><a href="admin_lei_manage.do">레저 관리</a></li>
+                    <li><a href="#">숙박 관리</a></li>
+                    <li><a href="product/admin_lei_manage.do">레저 관리</a></li>
                     
                 </ul>
             </div><!--content-->
@@ -111,8 +112,8 @@
             <div class="cjh_label cjh_plus">주문 상품 관리</div>
             <div class="cjh_content">
             	<ul>
-            		<li><a href="admin_product_resv_manage.do">상품 예약 관리</a></li>
-            		<li><a href="admin_refund_manage.do">취소/환불 관리</a></li>
+            		<li><a href="#">상품 예약 관리</a></li>
+            		<li><a href="#">취소/환불 관리</a></li>
             	</ul>
             </div>
         </div><!--content bx-->
@@ -121,10 +122,9 @@
             <div class="cjh_label cjh_plus">프로모션</div>
             <div class="cjh_content">
             	<ul>
-            		<li><a href="admin_coupon.do">쿠폰 관리</a>
-            		<li><a href="admin_Grade_coupon_setting.do">등급별 쿠폰 설정</a>
-            		<li><a href="admin_birth_coupon_setting.do">생일 쿠폰 설정</a>
-            		<li><a href="admin_main_popup">메인 팝업 설정</a>
+            		<li><a href="coupon/admin_coupon.do">쿠폰 관리</a>
+
+            		
             	</ul>
             </div>
             
@@ -135,7 +135,7 @@
             <div class="cjh_label cjh_plus">고객 센터 관리</div>
             <div class="cjh_content">
                 <ul>
-                    <li><a href="admin_busi_inquiry_manage.do">기업 문의 관리</a></li>
+                    <li><a href="notice/admin_busi_inquiry_manage">기업 문의 관리</a></li>
                     <li><a href="admin_cus_inquiry_mange.do">고객 문의 관리</a></li>
                     <li><a href="admin_notice.do">공지사항 관리</a>
                     
@@ -143,20 +143,30 @@
             </div><!--content-->
         </div><!--content bx-->
         <div class="cjh_contentBx">
+        	<div class="cjh_label cjh_plus">팝업 관리</div>
+        	<div class="cjh_content">
+        		<ul>
+        			<li><a href="#">팝업 관리</a>
+        		</ul>
+        	</div><!-- cjh_content -->
+        </div><!-- content_bx -->
+        
+      <!-- 
+        <div class="cjh_contentBx">
             <div class="cjh_label cjh_plus">정산 및 통계</div>
             <div class="cjh_content">
             	<ul>
-            		<li><a href="admin_quick_sale_statistics.do">간편 매출 통계</a>
-            		<li><a href="admin_frequency_product_statistics.do">최다 빈도 상품 통계</a>
-            		<li><a href="admin_busi_cal_reg.do">입접 업체 정산 등록</a>
-					<li><a href="admin_busi_cal_refund.do">입접업체 정산 환불</a>
-					<li><a href="admin_busi_cal_manage.do">입점 업체 정산 관리</a>
+            		<li><a href="#">간편 매출 통계</a>
+            		<li><a href="#">최다 빈도 상품 통계</a>
+            		<li><a href="#">입접 업체 정산 등록</a>
+					<li><a href="#">입접업체 정산 환불</a>
+					<li><a href="#">입점 업체 정산 관리</a>
 					
             		
             	</ul>
-       		</div><!--ccjh_content -->
-       </div><!--content bx-->
-       <div class="cjh_contentBx">
+       		</div><!--ccjh_content 
+       </div>-->
+       <div class="cjh_contentBx">  
        		<div class="cjh_label"></div>
        </div>
 		  

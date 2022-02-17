@@ -1,3 +1,4 @@
+<!-- 김찬영 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
      pageEncoding="UTF-8"
     isELIgnored="false" %>
@@ -67,7 +68,7 @@
 					</div>
   				<textarea class="form-control" id = "board_content" name="board_content" rows="10"></textarea>
     			<button type = "button" class="btn-outline-secondary" onClick="location.href='/board/inquiry'">목록</button>
-    			<button type = "submit" class="btn-outline-secondary">글 작성하기</button>
+    			
     			<input type="button" name="modify" value="작성하기"
                   style="padding-left: 10px; background-color: skyblue; color: white; border-radius:2px;" onclick="Check_Join()">
 

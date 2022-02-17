@@ -98,12 +98,23 @@ public interface ProductMapper {
 	//지정된 레저 업체 이미지 전체 삭제
 	public void deleteLe_productImageAll(int le_ProductNum);
 	
-	//상품 리스트 페이징 처리
+	//숙박 업체 리스트 페이징 처리
 	public List<Ac_productVO> ac_productList(Criteria cri);
 	
 	//숙박 상품 리스트 총 개수
 	public int ac_productListTotal(Criteria cri);
 	
+	//숙박 상세페이지 객실 리스트
+	public List<RoomVO> ac_roomList(int ac_ProductNum);
+	
+	//숙박 상품 상세 페이지
+	public List<Ac_productVO> getAc_productsInfo(int ac_ProductNum);
+	
+	//레저 업체 리스트 페이징 처리
+	public List<Le_productVO> le_productList(Criteria cri);
+	
+	//레저 업체 리스트 총 개수
+	public int le_productListTotal(Criteria cri);
 	
 	
 }

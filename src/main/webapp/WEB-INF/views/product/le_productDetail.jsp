@@ -1,3 +1,4 @@
+<!-- 장영준 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     isELIgnored="false"%>
@@ -11,7 +12,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="/resources/css/reset.css">
     <link rel="stylesheet" href="/bootstrap/css/style.css">
@@ -66,19 +66,19 @@
                                 class="swiper mySwiper2">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="${contextPath }/resources/img/room_esecape1.jpg" />
+                                        <img src="/resources/img/room_esecape1.jpg" />
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="${contextPath }/resources/img/room_esecape1.jpg" />
+                                        <img src="/resources/img/room_esecape1.jpg" />
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="${contextPath }/resources/img/room_esecape1.jpg" />
+                                        <img src="/resources/img/room_esecape1.jpg" />
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="${contextPath }/resources/img/room_esecape1.jpg" />
+                                        <img src="/resources/img/room_esecape1.jpg" />
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="${contextPath }/resources/img/room_esecape1.jpg" />
+                                        <img src="/resources/img/room_esecape1.jpg" />
                                     </div>
                                 </div>
                                 <div class="swiper-button-next"></div>
@@ -87,19 +87,19 @@
                             <div thumbsSlider="" class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="${contextPath }/resources/img/room_esecape1.jpg" />
+                                        <img src="/resources/img/room_esecape1.jpg" />
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="${contextPath }/resources/img/room_esecape1.jpg" />
+                                        <img src="/resources/img/room_esecape1.jpg" />
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="${contextPath }/resources/img/room_esecape1.jpg" />
+                                        <img src="/resources/img/room_esecape1.jpg" />
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="${contextPath }/resources/img/room_esecape1.jpg" />
+                                        <img src="/resources/img/room_esecape1.jpg" />
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="${contextPath }/resources/img/room_esecape1.jpg" />
+                                        <img src="/resources/img/room_esecape1.jpg" />
                                     </div>
                                 </div>
                             </div><!-- swiper 끝 -->
@@ -270,13 +270,13 @@
                 <li class="item">
                     <h2 class="accordionTitle">상품 상세 정보 <span class="accIcon"></span></h2>
                     <div class="text">
-                        <img src="${contextPath }/resources/img/le_Detail_img.jpg">
-                        <img src="${contextPath }/resources/img/le_Detail_img2.jpg">
-                        <img src="${contextPath }/resources/img/le_Detail_img3.jpg">
-                        <img src="${contextPath }/resources/img/le_Detail_img4.jpg">
-                        <img src="${contextPath }/resources/img/le_Detail_img5.jpg">
-                        <img src="${contextPath }/resources/img/le_Detail_img6.jpg">
-                        <img src="${contextPath }/resources/img/le_Detail_img7.jpg">
+                        <img src="/resources/img/le_Detail_img.jpg">
+                        <img src="/resources/img/le_Detail_img2.jpg">
+                        <img src="/resources/img/le_Detail_img3.jpg">
+                        <img src="/resources/img/le_Detail_img4.jpg">
+                        <img src="/resources/img/le_Detail_img5.jpg">
+                        <img src="/resources/img/le_Detail_img6.jpg">
+                        <img src="/resources/img/le_Detail_img7.jpg">
 
                     </div>
                 </li>
@@ -363,7 +363,7 @@
             <li>
                 <div class="yj_review_guest">
                     <p class="yj_review_picture">
-                        <img src="${contextPath }/resources/img/review_onestar.png" alt="재밌게놀쟈">
+                        <img src="/resources/img/review_onestar.png" alt="재밌게놀쟈">
                     </p>
                     <strong>여기만한 곳은 어디에도 없을 거예요.</strong>
                     <div class="yj_score_wrap_sm">
@@ -383,7 +383,7 @@
             <li>
                 <div class="yj_review_guest">
                     <p class="yj_review_picture">
-                        <img src="${contextPath }/resources/img/review_onestar.png" alt="도곡동곡괭이">
+                        <img src="/resources/img/review_onestar.png" alt="도곡동곡괭이">
                     </p>
                     <strong>여기만한 곳은 어디에도 없을 거예요.</strong>
                     <div class="yj_score_wrap_sm">
@@ -583,11 +583,11 @@
                     "weekLabel": "W",
                     "daysOfWeek": ["월", "화", "수", "목", "금", "토", "일"],
                     "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-                    "firstDay": 1
+                    "firstDay": 6
                 },
                 "singleDatePicker": true,
-                "startDate": "2021-12-06",
-                "endDate": "2021-12-07",
+                "startDate": moment().startOf("day"),
+                "endDate": moment().startOf("day").add(1,"day"),
                 "drops": "down"
             }, function (start, end, label) {
                 console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');

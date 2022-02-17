@@ -1,3 +1,4 @@
+<!-- 차정현 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
      pageEncoding="UTF-8"
     isELIgnored="false" %>
@@ -94,12 +95,12 @@
             <div class="cjh_nav2">
                 <ul>
                 	<c:choose>
-                		<c:when test="${nmemberVO != null }">
+                		<c:when test="${isLogOn != null }">
                     		<li><a href="/member/logout.do">로그아웃</a></li>
                     		<li><a href="cart.do">장바구니</a></li>
                     		<li><a href="/mypage/MypageMain">마이페이지</a></li>
                     	</c:when>
-                    		<c:when test="${ cmemberVO != null }">
+                    		<c:when test="${cisLogOn != null }">
                     		<li><a href="/member/logout.do">로그아웃</a></li>
                     		<li><a href="cart.do">장바구니</a></li>
                     		<li><a href="/mypage/c_MypageMain">마이페이지</a></li>

@@ -402,7 +402,7 @@
 	<!-- 숙박 상품 리스트 페이징 -->
     <select id="ac_productList" resultType="com.myspring.trip.model.Ac_productVO">
     
-        select * from accommodation_tbl a left join room_tbl r on a.ac_CompanyName = r.company_Name where ac_n_sPrice = (select min(ac_n_sPrice) from room_tbl where ac_CompanyName = company_Name)
+        select * from accommodation_tbl a left join room_tbl r on a.ac_CompanyName = r.company_Name where r.ac_n_sPrice = (select max(ac_n_sPrice) from room_tbl where ac_CompanyName = company_Name)
         <if test="keyword != null">
             and ac_Add like concat('%',#{keyword},'%') or ac_CompanyName like concat('%',#{keyword},'%')
         </if>
@@ -414,9 +414,45 @@
    	<!-- 숙박업체 리스트 총 개수 -->
    	<select id="ac_productListTotal" resultType="int">
    	
-   		select count(*) from accommodation_tbl a left join room_tbl r on a.ac_CompanyName = r.company_Name where ac_n_sPrice = (select min(ac_n_sPrice) from room_tbl where ac_CompanyName = company_Name)
+   		select count(*) from accommodation_tbl a left join room_tbl r on a.ac_CompanyName = r.company_Name where r.ac_n_sPrice = (select max(ac_n_sPrice) from room_tbl where ac_CompanyName = company_Name)
    		<if test="keyword != null">
    			and ac_Add like concat('%', #{keyword},'%') or ac_CompanyName like concat('%',#{keyword},'%')
+   		</if>
+   		
+   	</select>
+   	
+   	<!-- 객실 리스트 -->
+   	<select id="ac_roomList" resultType="com.myspring.trip.model.RoomVO">
+   	
+   		select * from accommodation_tbl a left outer join room_tbl r on a.ac_CompanyName = r.company_Name where ac_ProductNum = ${ac_ProductNum}
+   		
+   	</select>
+   	
+   	<!-- 숙박업체별 상세보기 페이지 -->
+   	<select id="getAc_productsInfo" resultType="com.myspring.trip.model.Ac_productVO">
+   	
+   		select ac_ProductNum, fileName, imgFileKind, uuid, uploadPath  from img_tbl where ac_ProductNum = ${ac_ProductNum}
+   	
+   	</select>
+   	
+   	<!-- 레저 상품 리스트 페이징 -->
+    <select id="le_productList" resultType="com.myspring.trip.model.Le_productVO">
+    
+        select * from activity_tbl a left join ticket_tbl r on a.company_Name = r.company_Name where r.le_n_Price = (select max(r.le_n_Price) from ticket_tbl r where a.company_Name = r.company_Name)
+        <if test="keyword != null">
+            and le_Add like concat('%',#{keyword},'%') or a.company_Name like concat('%',#{keyword},'%')
+        </if>
+        order by le_ProductNum desc 
+        limit #{skip}, #{amount}    
+    
+    </select>
+    
+   	<!-- 레저업체 리스트 총 개수 -->
+   	<select id="le_productListTotal" resultType="int">
+   	
+   		select count(*) from activity_tbl a left join ticket_tbl r on a.company_Name = r.company_Name where r.le_n_Price = (select max(le_n_Price) from ticket_tbl r where a.company_Name = r.company_Name)
+   		<if test="keyword != null">
+   			and le_Add like concat('%', #{keyword},'%') or a.company_Name like concat('%',#{keyword},'%')
    		</if>
    		
    	</select>

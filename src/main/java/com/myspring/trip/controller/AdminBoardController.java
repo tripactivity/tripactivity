@@ -34,12 +34,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.myspring.trip.mapper.AttachMapper;
 import com.myspring.trip.model.AdminBoardVO;
 import com.myspring.trip.model.AttachImageVO;
 import com.myspring.trip.model.BoardVO;
 import com.myspring.trip.model.Criteria;
 import com.myspring.trip.model.PageMakerDTO;
+import com.myspring.trip.service.AdminBoardService;
 import com.myspring.trip.service.AdminService;
 import com.myspring.trip.service.AttachService;
 import com.myspring.trip.service.BoardService;
@@ -55,6 +55,9 @@ public class AdminBoardController {
 
 		@Autowired
 		private AdminService adminService;
+		
+		@Autowired
+		private AdminBoardService adminboardService;
 		
 		@Autowired
 		private BoardService bservice;
@@ -103,7 +106,7 @@ public class AdminBoardController {
 			
 			rttr.addFlashAttribute("result", "notice_write success");
 			
-			return "redirect:/admin/admin_notice";
+			return "redirect:/admin/notice/admin_notice";
 			
 		}
 		
@@ -135,7 +138,7 @@ public class AdminBoardController {
 			adminService.admin_modify(board);
 			rttr.addFlashAttribute("result", "modify success");
 			
-			return "redirect:/admin/admin_notice";
+			return "redirect:/admin/notice/admin_notice";
 			
 		}
 
@@ -299,29 +302,31 @@ public class AdminBoardController {
 
 
 	
-	/*	@GetMapping("/main")
+	@GetMapping("/main")
 		public String main(@RequestParam("table_idx") int table_idx, Model model) {
 			
 			model.addAttribute("table_idx", table_idx);
 			return "admin/main";
 		}
 		
-		@GetMapping("admin_board_write")
+		@GetMapping("notice/admin_board_write")
 		public String admin_board_write(@ModelAttribute("writeContentBean") AdminBoardVO writeContentBean) {
 			
-			return "admin/admin_board_write";
+			return "admin/notice/admin_board_write";
 		}
 		
-		@PostMapping("admin_board_write_pro")
+		@PostMapping("notice/admin_board_write_pro")
 		public String admin_board_write_pro(@Valid @ModelAttribute("writeContentBean") AdminBoardVO writeContentBean, BindingResult result) {
 			if(result.hasErrors()) {
-				return "admin/admin_board_write";
+				return "admin/notice/admin_board_write";
 			}
+			
+			adminboardService.addContentInfo(writeContentBean);
 			
 			return "admin/admin_write_success";
 				
 		}
 	
-			*/
+		
 		
 }

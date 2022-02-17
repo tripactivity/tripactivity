@@ -1,3 +1,4 @@
+<!-- 장영준 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
      pageEncoding="UTF-8"
     isELIgnored="false" %>
@@ -56,7 +57,7 @@
         <div class="yj_productEnroll">
             <b class="yj_roomB">기본 정보</b>
             <ul>
-                <li style="width:30%;">
+                <li style="width:32%;">
                     숙소 종류 :
                     <select name="ac_Kind" id="yj_enrollSelect" >
                         <option value="">-------</option>
@@ -65,7 +66,7 @@
                         <option value="3" <c:if test="${ac_enrollDetail.ac_Kind eq 3}">selected</c:if>>펜션</option>
                     </select>
                 </li>
-                <li style="width:30%;">
+                <li style="width:32%;">
                     호텔 등급 :
                     <select name="ac_Stars" id="yj_enrollSelect">
                         <option value="">-------</option>
@@ -76,34 +77,34 @@
                         <option value="5" <c:if test="${ac_enrollDetail.ac_Stars eq 5}">selected</c:if>>5성급</option>
                     </select>
                 </li>
-                <li style="width:30%;">
+                <li style="width:32%;">
                     대표자 성함 : 
-                    <input type="text" name="c_Name" class="" id="" value="${ac_enrollDetail.c_Name}" size="4" disabled>
+                    <input type="text" name="c_Name" class="" id="" value="${ac_enrollDetail.c_Name}" size="6" disabled>
                 </li>
             </ul>
             <ul>
-                <li style="width:30%;">
+                <li style="width:32%;">
                     업체명 :
                     <input type="text" name="ac_CompanyName" class="" id="" value="${ac_enrollDetail.ac_CompanyName }" disabled>
                 </li>
-                <li style="width:30%;">
+                <li style="width:32%;">
                     사업자 번호 :
                     <input type="text" name="ac_CompanyNumber" class="" id="" value="${ac_enrollDetail.ac_CompanyNumber}" disabled>
                 </li>
-                <li style="width:30%;">
+                <li style="width:32%;">
                     핸드폰 번호 :
                     <input type="text" name="ac_Phone" class="" id="" value="${ac_enrollDetail.ac_Phone}" disabled>
                 </li>
             </ul>
             <ul>
                 
-                <li style="width:30%;">
+                <li style="width:32%;">
                     업체 전화번호 :
                     <input type="text" name="ac_Call" class="" id="" value="${ac_enrollDetail.ac_Call}">
                 </li>
-                <li style="width:60%;">
+                <li style="width:64%;">
                     주소 :
-                    <input type="text" name="ac_Add" class="" id="address_kakao" value="${ac_enrollDetail.ac_Add}" size="84">
+                    <input type="text" name="ac_Add" class="" id="address_kakao" value="${ac_enrollDetail.ac_Add}" size="67">
                 </li>
             </ul>
             <ul>
@@ -272,7 +273,7 @@
             <input type="hidden" id="yj_checkSelect" name="ac_Service" value="${ac_enrollDetail.ac_Service }">
         </div>
         <div class="yj_productEnroll_info">
-            <b class="yj_roomB" style="display: block;">객실 소개</b><br>
+            <b class="yj_roomB" style="display: block;">숙소 정보</b><br>
             <textarea name="ac_Info" id="yj_productInfo" class="yj_info1" placeholder="객실 소개를 적어주세요.">${ac_enrollDetail.ac_Info}</textarea>
         </div>
         <input type="hidden" name='ac_ProductNum' value="${ac_enrollDetail.ac_ProductNum}">
@@ -358,6 +359,10 @@ $(function(){
 	
     /* 이미지 업로드 */
 	$("input[type='file']").on("change", function(e){
+		
+		if($("#result_card").length > 0){
+			deleteFile();
+		}
 		
 		let formData = new FormData();
 		let fileInput = $('input[name="fileName"]');

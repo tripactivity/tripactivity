@@ -47,7 +47,11 @@
          <beans:bean class="com.myspring.trip.interceptor.CheckLogininterceptor"></beans:bean>
       </interceptor>
        -->
-       
+       <interceptor>
+			<mapping path="/cart/**"/>
+			<exclude-mapping path="/cart/add"/>
+			<beans:bean id="CartIntreceptor" class="com.myspring.trip.interceptor.CartInterceptor"></beans:bean>
+		</interceptor>
        
    </interceptors>
    

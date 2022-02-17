@@ -1,3 +1,4 @@
+<!-- 장영준 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     isELIgnored="false"%>
@@ -55,42 +56,42 @@
             </ul>
             <div class="yj_productEnroll_room">
                 <ul>
-                    <li style="width:60%">
+                    <li style="width:64%">
                         객실이름 :
-                        <input type="text" name="ac_roomName" class="" id="" value="${roomDetail.ac_roomName}" size="70">
+                        <input type="text" name="ac_roomName" class="" id="" value="${roomDetail.ac_roomName}" size="55">
                     </li>
-                    <li style="width:30%">
+                    <li style="width:32%">
                         업체명 :
                         <input type="text" name="company_Name" class="" id="" value="${roomDetail.company_Name }">
                     </li>
                 </ul>
                 <ul>
-                	<li style="width:30%;">
+                	<li style="width:32%;">
                         숙박 할인율 : 
                         <input type="text" maxlength="2" value="${roomDetail.ac_stayDiscount }" id="stay_Discount">
-                        <input type="hidden" name="ac_stayDiscount" value="0">
+                        <input type="hidden" name="ac_stayDiscount" value="${roomDetail.ac_stayDiscount}">
                     </li>
-                    <li style="width:30%;">
+                    <li style="width:32%;">
                         대실 할인율 : 
                         <input type="text" maxlength="2" value="${roomDetail.ac_timeDiscount }" id="time_Discount">
-                        <input type="hidden" name="ac_timeDiscount" value="0">
+                        <input type="hidden" name="ac_timeDiscount" value="${roomDetail.ac_timeDiscount}">
                     </li>
-                    <li style="width:30%;">
+                    <li style="width:32%;">
                         객실 수 : 
                         <input type="text" name="ac_roomCount" class="" id="" value="${roomDetail.ac_roomCount }">
                     </li>
                 </ul>
                 <div class="yj_div1">
                     <ul>
-                        <li style="width:30%;">
+                        <li style="width:32%;">
                             기준인원 :
                             <input type="text" name="ac_standardPeople" class="" id="" value="${roomDetail.ac_standardPeople }">
                         </li>
-                        <li style="width:30%;">
+                        <li style="width:32%;">
                             최대인원 :
                             <input type="text" name="ac_maxPeople" class="" id="" value="${roomDetail.ac_maxPeople }">
                         </li>
-                        <li style="width:30%;">
+                        <li style="width:32%;">
                             인원당 추가요금 : 
                             <input type="text" name="ac_addPrice" class="" id=""size="16" value="${roomDetail.ac_addPrice }">
                         </li>
@@ -201,9 +202,43 @@ $(document).ready(function(){
 	/* 대실 할인율 값 삽입 */
 	let ac_timeDiscount = '${roomDetail.ac_timeDiscount}'*100;
 	$("#time_Discount").attr("value", ac_timeDiscount);
+	
+	//객실 이미지 정보 호출
+	let ac_roomNum = '${roomDetail.ac_roomNum}';
+	let uploadResult = $('#uploadResult');
+	
+	$.getJSON("/getRoomImageList",{ac_roomNum : ac_roomNum}, function(arr){
+		
+		//이미지가 없는 경우
+		if(arr.length == 0){
+
+			return;
+		}
+		
+		for(let i = 0; i<arr.length; i++){
+			let str = "";
+			let obj = arr[i];
+		
+			let fileCallPath = encodeURIComponent(obj.uploadPath + "/s_" + obj.uuid + "_" + obj.fileName);
+			str += "<div id='result_card'";
+			str += "data-path='" + obj.uploadPath + "' data-uuid='" + obj.uuid + "' data-filename='" + obj.fileName + "'";
+			str += ">";
+			str += "<img src='/display?fileName=" + fileCallPath +"'>";
+			str += "<div class='imgDeleteBtn' data-file='" + fileCallPath + "'>x</div>";
+			str += "<input type='hidden' name='imageList["+i+"].fileName' value='"+ obj.fileName +"'>";
+			str += "<input type='hidden' name='imageList["+i+"].uuid' value='"+ obj.uuid +"'>";
+			str += "<input type='hidden' name='imageList["+i+"].uploadPath' value='"+ obj.uploadPath +"'>";
+			str += "<input type='hidden' name='imageList["+i+"].imgFileKind' value='roomImg'>";
+			str += "</div>";
+		
+			uploadResult.append(str);
+			
+		}
+			
+	});
 });
 
-/* 할인율 Input 설정 */
+/* 숙박 할인율 Input 설정 */
 $("#stay_Discount").on("propertychange change keyup paste input", function(){
 	
 	let userInput = $("#stay_Discount");
@@ -215,7 +250,7 @@ $("#stay_Discount").on("propertychange change keyup paste input", function(){
 	discountInput.val(sendDiscountRate);	
 	
 });
-/* 할인율 Input 설정 */
+/* 대실 할인율 Input 설정 */
 $("#time_Discount").on("propertychange change keyup paste input", function(){
 	
 	let userInput = $("#time_Discount");
@@ -322,29 +357,8 @@ $("#uploadResult").on("click", ".imgDeleteBtn", function(e){
 
 /* 파일 삭제 메서드 */
 function deleteFile(){
-	
-	let targetFile = $(".imgDeleteBtn").data("file");
-	
-	let targetDiv = $("#result_card");
-	
-	$.ajax({
-		url: '/product/deleteFile',
-		data : {fileName : targetFile},
-		dataType : 'text',
-		type : 'POST',
-		success : function(result){
-			console.log(result);
-			
-			targetDiv.remove();
-			$("input[type='file']").val("");
-			
-		},
-		error : function(result){
-			console.log(result);
-			
-			alert("파일을 삭제하지 못하였습니다.")
-		}
-	});
+
+	$("#result_card").remove();
 }
 
 /* 수정 하기 */

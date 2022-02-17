@@ -1,3 +1,4 @@
+<!-- 장영준 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     isELIgnored="false"%>
@@ -55,42 +56,42 @@
             </ul>
             <div class="yj_productEnroll_room">
                 <ul>
-                    <li style="width:60%">
+                    <li style="width:64%">
                         객실이름 :
-                        <input type="text" name="ac_roomName" class="" id="" size="70">
+                        <input type="text" name="ac_roomName" class="" id="" size="55">
                     </li>
-                    <li style="width:30%">
+                    <li style="width:32%">
                         업체명 :
                         <input type="text" name="company_Name" class="" id="" value="${cmemberVO.company_Name }">
                     </li>
                 </ul>
                 <ul>
-                	<li style="width:30%;">
+                	<li style="width:32%;">
                         숙박 할인율 : 
                         <input type="text" maxlength="2" id="stay_Discount">
-                        <input type="hidden" name="ac_stayDiscount" value="">
+                        <input type="hidden" name="ac_stayDiscount" value="0.00">
                     </li>
-                    <li style="width:30%;">
+                    <li style="width:32%;">
                         대실 할인율 : 
                         <input type="text" maxlength="2" id="time_Discount">
-                        <input type="hidden" name="ac_timeDiscount" value="">
+                        <input type="hidden" name="ac_timeDiscount" value="0.00">
                     </li>
-                    <li style="width:30%;">
+                    <li style="width:32%;">
                         객실 수 : 
                         <input type="text" name="ac_roomCount" class="" id="">
                     </li>
                 </ul>
                 <div class="yj_div1">
                     <ul>
-                        <li style="width:30%;">
+                        <li style="width:32%;">
                             기준인원 :
                             <input type="text" name="ac_standardPeople" class="" id="">
                         </li>
-                        <li style="width:30%;">
+                        <li style="width:32%;">
                             최대인원 :
                             <input type="text" name="ac_maxPeople" class="" id="">
                         </li>
-                        <li style="width:30%;">
+                        <li style="width:33%;">
                             인원당 추가요금 : 
                             <input type="text" name="ac_addPrice" class="" id=""size="16">
                         </li>
@@ -120,13 +121,13 @@
                     </tr>
                     <tr>
                         <th>입실시간</th>
-                        <td colspan="3"><input type="time" name="ac_S_startTime" class="" id=""></td>
+                        <td colspan="3"><input type="text" name="ac_s_startTime" class="" id=""></td>
                         <!-- <td><input type="text" name="" class="" id="" value=""></td>
                         <td><input type="text" name="" class="" id="" value=""></td> -->
                     </tr>
                     <tr>
                         <th>퇴실시간</th>
-                        <td colspan="3"><input type="time" name="ac_S_endTime" class="" id=""></td>
+                        <td colspan="3"><input type="text" name="ac_s_endTime" class="" id=""></td>
                         <!-- <td><input type="text" name="" class="" id="" value=""></td>
                         <td><input type="text" name="" class="" id="" value=""></td> -->
                     </tr>
@@ -155,7 +156,7 @@
                     </tr>
                     <tr>
                         <th>마감시간</th>
-                        <td colspan="3"><input type="time" name="ac_d_endTime" class="" id=""></td>
+                        <td colspan="3"><input type="text" name="ac_d_endTime" class="" id=""></td>
                         <!-- <td><input type="text" name="" class="" id="" value=""></td>
                         <td><input type="text" name="" class="" id="" value=""></td> -->
                     </tr>

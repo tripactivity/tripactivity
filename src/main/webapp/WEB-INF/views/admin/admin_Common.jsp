@@ -1,3 +1,4 @@
+<!-- 차정현 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
      pageEncoding="UTF-8"
     isELIgnored="false" %>
@@ -46,34 +47,11 @@ ul, dl{padding-left:0 !important;}
        </div><!--left_side 네비게이션바-->
   	 <div class="cjh_admin_container2">
   	 	<div class="cjh_contaerin2_content">
-  		<div class="choose_value">
-  			<h3>분류 | <select>
-  			<option>일반회원</option>
-  			<option>기업회원</option>
-  			
-  			</select> 
-  			<input type="button" value="조회">
-  			</h3>
+  		
   		</div>
   		
   		<div class="cjh_contents">
-  			<table>
-  				<tr>
-	  				<th>번호</th>
-	  				<th colspan="2" >제목</th>
-	  				<th>작성자</th>
-	  				<th>작성일</th>
-	  				<th>조회수</th>
-	  				<th>상태</th>
-	  			</tr>
-	  			<tr>
-	  				<td>{no}</td>
-	  				<td colspan="2" style="width:40%;">{title}</td>
-	  				<td>{wrtier}</td>
-	  				<td>{date}</td>
-	  				<td>{hits</td>
-	  				<td>{Stats}</td>
-	  		</table>
+  			
   		</div>
   	</div><!-- cjh_container2_content -->
   	 </div><!-- cjh_admin_container2 -->

@@ -120,15 +120,15 @@ section{padding:0 !important;}
                     <a style="color: red; padding-right: 5px; white-space:nowrap;">*</a>이름
                 </div>
                 <div colspan="3" class="user_name" style=" padding-top: 5px;">
-                    <input type="text" name="memName" size="30" value="" placeholder="이름을 입력하시오." >
+                    <input type="text" name="n_Name" size="30" value="" placeholder="이름을 입력하시오." >
                 </div>
             </div>
             <div style ="text-align:left">
                 <a style="color: red; padding-right: 5px;">*</a>이메일
             </div>
             <div colspan="3" class="email" >
-                <input type="text" name="memEmail" value="" size="13" style="margin-bottom: 10px;" placeholder="Mail ID">
-                @ <select name="memEmail1"  id="selcet1"
+                <input type="text" name="eamil1" value="" size="13" style="margin-bottom: 10px;" placeholder="Mail ID">
+                @ <select name="email2"  id="selcet1"
                 style="height: 25px;">
                 <option value="naver.com">naver.com</option>
                 <option value="gmail.com">gmail.com</option>
@@ -149,11 +149,30 @@ section{padding:0 !important;}
     <div colspan="3" class="user_name" style=" padding-top: 10px;">
         <input type="text" name="memName" size="30" value="" placeholder="인증 번호를 입력하시오." >
     </div>
-    <button onclick="location.href='#'"
+    <button onclick="location.href='#'" id="findBtn"
     style="height: 30px; width: 280px; margin:0 auto; font-size: 17px; background-color: #48c5de; color: #1d1d1d; margin-top: 10px;">
     비밀번호 찾기</button>
 </section>
 </div>
 <%@ include file="../main/footer.jsp" %>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(function(){
+		$("#findBtn").click(function(){
+			$.ajax({
+				url : "/member/findpw",
+				type : "POST",
+				data : {
+					n_Name : $("#n_Name").val(),
+					email1 : $("#email1").val()
+					email2 : $("#email2").val()
+				},
+				success : function(result) {
+					alert(result);
+				},
+			})
+		});
+	})
+</script>
 </body>
 </html>

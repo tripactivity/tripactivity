@@ -1,19 +1,14 @@
 package com.myspring.trip.controller;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -34,7 +29,7 @@ private static final Logger log = LoggerFactory.getLogger(BoardController.class)
 	private BoardService bservice;
 	 
 
-	@GetMapping("/product_inquiry")
+	@GetMapping("/ac_productDetail")
 	// => @RequestMapping(value="list", method=RequestMethod.GET)
 	public void product_inquriy(Model model, Criteria cri) {
 
@@ -126,6 +121,8 @@ private static final Logger log = LoggerFactory.getLogger(BoardController.class)
 		model.addAttribute("pageMaker", pageMake);
 	
 	}
+ 
+
 	/* 1:1 문의사항 페이지 접속(페이징 적용) */
 	@GetMapping("/inquiry")
 	public void inquiryListGET(Model model, Criteria cri) {

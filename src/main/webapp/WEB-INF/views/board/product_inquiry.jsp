@@ -1,3 +1,4 @@
+<!-- 김찬영 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -93,13 +94,12 @@ section {
 	float: right;
 }
 </style>
-<%@ include file="../main/header.jsp"%>
 
 </head>
 
 <body>
 
-	<%@ include file="../main/centerside.jsp"%>
+	
 	<article class="yj_QnA yj_tabMenu">
 		<div class="container">
 			<section id="contact" class="contact">
@@ -198,8 +198,6 @@ section {
 		</div>
 	</article>
 
-
-	<%@ include file="../main/footer.jsp"%>
 
 
 	<!--   <script src="resources/vendor/bootstrap/js/bootstrap.js"></script>

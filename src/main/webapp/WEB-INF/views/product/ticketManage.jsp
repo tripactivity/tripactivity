@@ -1,3 +1,4 @@
+<!-- 장영준 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     isELIgnored="false"%>
@@ -14,7 +15,7 @@
         .yj_section1{
             width:1100px;
             margin:0px auto;
-            height: 600px;
+            height: 1000px;
         }
         .yj_div1{
             font-size:24px;

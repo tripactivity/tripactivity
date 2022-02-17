@@ -1,3 +1,4 @@
+<!-- 장영준 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     isELIgnored="false"%>
@@ -82,7 +83,7 @@
             <div class="yj_productEnroll">
                 <b class="yj_roomB">기본 정보</b>
                 <ul>
-                    <li style="width:30%;">
+                    <li style="width:32%;">
                         액티비티 종류 :
                         <select name="le_Kind" id="yj_enrollSelect">
                             <option value="">-----------------</option>
@@ -91,34 +92,34 @@
                             <option value="3">아웃도어</option>
                         </select>
                     </li>
-                    <li style="width:30%;">
+                    <li style="width:32%;">
                         대표자 성함 : 
                         <input type="text" name="c_Name" class="" id="" value="${cmemberVO.c_Name }" size="4">
                     </li>
                 </ul>
                 <ul>
-                    <li style="width:30%;">
+                    <li style="width:32%;">
                         업체명 :
                         <input type="text" name="company_Name" class="" id="" value="${cmemberVO.company_Name }">
                     </li>
-                    <li style="width:30%;">
+                    <li style="width:32%;">
                         사업자 번호 :
                         <input type="text" name="company_Number" class="" id="" value="${cmemberVO.company_Number }">
                     </li>
-                    <li style="width:30%;">
+                    <li style="width:32%;">
                         핸드폰 번호 :
                         <input type="text" name="le_Phone" class="" id="" value="${cmemberVO.phone1 }-${cmemberVO.phone2 }-${cmemberVO.phone3 }">
                     </li>
                 </ul>
                 <ul>
                     
-                    <li style="width:30%;">
+                    <li style="width:32%;">
                         업체 전화번호 :
                         <input type="text" name="le_Call" class="" id="" value="">
                     </li>
-                    <li style="width:60%;">
+                    <li style="width:64%;">
                         주소 :
-                        <input type="text" name="le_Add" class="" id="address_kakao" value="" size="84">
+                        <input type="text" name="le_Add" class="" id="address_kakao" value="" size="67">
                     </li>
                 </ul>
                 <ul>

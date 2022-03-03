@@ -139,7 +139,7 @@ float:right;
                         			<c:out value="${list.board_title}"/>
                     			</a>
     						</td>
-							<td>${list.n_Id}</td>
+							<td>${list.admin_id}</td>
 							<td><fmt:formatDate value="${list.board_date}" pattern="yyyy.MM.dd"/></td>
 						</tr>
 					</c:forEach>

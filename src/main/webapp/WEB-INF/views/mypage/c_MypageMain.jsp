@@ -40,21 +40,21 @@
 		                   <img id="kye_icon" src="/resources/img/calender.png">
 		                   <div id="button_solid"></div>
 		                   <div id="button_text">
-		                       <a href="#"><span id="kye_a">{2}</span>건</a>
+		                       <a href="#"><span id="kye_a"></span>건</a>
 		                   </div>
 		               </div><!--kye_M_T_B_reservation-->
 		               <div class="kye_M_T_B_coupone kye_circle_text">
 		                   <img id="kye_icon" src="/resources/img/coupon.png">
 		                   <div id="button_solid"></div>
 		                   <div id="button_text">
-		                       <a href="#"><span id="kye_a"><c:out value="${cmemberVO.coupon_Num}"/></span>개</a>
+		                       <a href="#"><span id="kye_a"><c:out value=""/></span>개</a>
 		                   </div>
 		               </div><!--kye_M_T_B_coupone-->
 		               <div class="kye_M_T_B_reserves kye_circle_text">
 		                   <img id="kye_icon" src="/resources/img/Reserves.png">
 		                   <div id="button_solid"></div>
 		                   <div id="button_text">
-		                       <a href="#"><span id="kye_a_reserves"><c:out value="${cmemberVO.event_money}"/><b>원</b></span></a>
+		                       <a href="#"><span id="kye_a_reserves"><c:out value=""/><b>원</b></span></a>
 		                   </div>
 		               </div><!--kye_M_T_B_reserves-->
 		           </div>
@@ -76,11 +76,11 @@
 		                   
 		               </tr>
 		               <tr class="cjh_td">
-		                   <td>{}</td>
-		                   <td>{}</td>
-		                   <td>{}</td>
-		                   <td>{}</td>
-		                   <td>{}</td>
+		                   <td></td>
+		                   <td></td>
+		                   <td></td>
+		                   <td></td>
+		                   <td></td>
 		
 		               </tr>
 		               <tr class="cjh_th" style="display:none;">
@@ -91,11 +91,11 @@
 		                   <th >현재상태</th>
 		               </tr>
 		               <tr class="cjh_td" style="display:none;">
-		                   <td>{}</td>
-		                   <td>{}</td>
-		                   <td>{}</td>
-		                   <td>{}</td>
-		                   <td>{}</td>
+		                   <td></td>
+		                   <td></td>
+		                   <td></td>
+		                   <td></td>
+		                   <td></td>
 		               </tr>
 		               <tr class="cjh_th" style="display:none;">
 		                   <th >주문일자</th>
@@ -105,9 +105,9 @@
 		                   <th >현재상태</th>
 		               </tr>
 		               <tr class="cjh_td" style="display:none;">
-		                   <td>{}</td>
-		                   <td>{}</td>
-		                   <td>{}</td>
+		                   <td></td>
+		                   <td></td>
+		                   <td></td>
 		                   <td>{}</td>
 		                   <td>{}</td>
 		               </tr>

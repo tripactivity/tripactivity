@@ -35,7 +35,7 @@
 	             <form id="register-form" class="register-form" method="POST">
 	             	<p>회원 탈퇴를 원하시면 비밀번호를 입력해주세요.</p>
 	             	<div style="display:none">
-	             		<input name="n_Id" type="text" id="n_id" value="<c:out value="${nmemberVO.n_Id}"/>">
+	             		<input name="n_Id" type="text" id="n_id" value="<c:out value="${id}"/>">
 	             	</div>
 	                <input type="password" name="n_Pw1" placeholder="password"/><br><br>
 	                <input type="submit" class="submit_register" id="submit_register" value="확인" />

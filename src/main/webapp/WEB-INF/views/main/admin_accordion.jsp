@@ -89,8 +89,8 @@
             <div class="cjh_label cjh_plus">회원 관리</div>
             <div class="cjh_content">
                 <ul>
-                 	<li><a href="admin_info/admin_join">관리자 회원 가입</a></li>
-                 	<li><a href="admin_info/admin_inf_modify">관리자 정보 수정</a>
+                 	<li><a href="admin_join">관리자 회원 가입</a></li>
+                 	<li><a href="admin_inf_modify">관리자 정보 수정</a>
                     <li><a href="manage/admin_see_member_info">회원관리</a></li>
                     <li><a href="manage/admin_member_see_grade.do">회원등급관리</a></li>
                     <li><a href="manage/admin_withdraw_manage.do">회원탈퇴관리</a></li>
@@ -135,9 +135,9 @@
             <div class="cjh_label cjh_plus">고객 센터 관리</div>
             <div class="cjh_content">
                 <ul>
-                    <li><a href="notice/admin_busi_inquiry_manage">기업 문의 관리</a></li>
-                    <li><a href="admin_cus_inquiry_mange.do">고객 문의 관리</a></li>
-                    <li><a href="admin_notice.do">공지사항 관리</a>
+                    <li><a href="/admin/notice/admin_busi_inquiry_manage">기업 문의 관리</a></li>
+                    <li><a href="/admin/admin_cus_inquiry_mange.do">고객 문의 관리</a></li>
+                    <li><a href="/admin/admin_notice.do">공지사항 관리</a>
                     
                 </ul>
             </div><!--content-->

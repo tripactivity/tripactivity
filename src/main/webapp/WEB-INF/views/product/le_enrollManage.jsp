@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <%@ include file="../main/header.jsp" %>
-	<link rel="stylesheet" type="css" href="/resources/css/reset.css">
+   <link rel="stylesheet" type="css" href="/resources/css/reset.css">
     <link rel="stylesheet" type="css" href="/resources/bootstrap/css/style.css">
     <style>
         .yj_section1{
@@ -37,10 +37,10 @@
             background-color:#eee;
         }
         tr td{
-        	border:1px solid #1d1d1d;
-        	vertical-align:middle;
-        	text-align:center;
-        	padding:10px;
+           border:1px solid #1d1d1d;
+           vertical-align:middle;
+           text-align:center;
+           padding:10px;
         }
         #yj_allButton{
             border:1px solid #1d1d1d;
@@ -76,14 +76,16 @@
                 <td>주소</td>
             </tr>
             <c:forEach items="${list}" var="list">
-           	 	<tr>
-            	    <td><a href="/product/le_enrollDetail?le_ProductNum=${list.le_ProductNum}">${list.company_Name}</a></td>
-                	<td>${list.company_Number}</td>
-               		<td>${list.c_Name}</td>
-               		<td>${list.le_Phone}</td>
-        	    	<td>${list.le_Call}</td>
-            	    <td>${list.le_Add}</td> 
-            	</tr>
+               <c:if test="${list.company_Name == cmemberVO.company_Name}">
+                     <tr>
+                      <td><a href="/product/le_enrollDetail?le_ProductNum=${list.le_ProductNum}">${list.company_Name}</a></td>
+                      <td>${list.company_Number}</td>
+                        <td>${list.c_Name}</td>
+                        <td>${list.le_Phone}</td>
+                     <td>${list.le_Call}</td>
+                      <td>${list.le_Add}</td> 
+                  </tr>
+               </c:if>
             </c:forEach>
         </table>
         <button type="button" onclick="location.href='/product/le_Enroll'" id="yj_allButton">등록 하기</button>
@@ -94,34 +96,34 @@
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script>
 $(document).ready(function(){
-	
-	let eResult = '<c:out value="${enroll_result}"/>';
-	
-	checkResult(eResult);
-	
-	function checkResult(result){
-		
-		if(result === ''){
-			return;
-		}
-		
-		alert("상품'"+ eResult +"'을 등록하였습니다.");
-		
-	}
-	
-	//수정 성공 이벤트 
-	let modify_result = '${modify_result}';
+   
+   let eResult = '<c:out value="${enroll_result}"/>';
+   
+   checkResult(eResult);
+   
+   function checkResult(result){
+      
+      if(result === ''){
+         return;
+      }
+      
+      alert("상품'"+ eResult +"'을 등록하였습니다.");
+      
+   }
+   
+   //수정 성공 이벤트 
+   let modify_result = '${modify_result}';
 
-	if(modify_result == 1){
-		alert("수정 완료");
-	}
-	
-	//삭제 성공 이벤트
-	let delete_result = '${delete_result}';
-	
-	if(delete_result == 1){
-		alert("삭제 완료");
-	}
+   if(modify_result == 1){
+      alert("수정 완료");
+   }
+   
+   //삭제 성공 이벤트
+   let delete_result = '${delete_result}';
+   
+   if(delete_result == 1){
+      alert("삭제 완료");
+   }
 
 });
 </script>

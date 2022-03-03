@@ -106,7 +106,7 @@
 </style>
 </head>
 <body>
-<%@ include file="../../main/admin_header.jsp" %>
+<%@ include file="../main/admin_header.jsp" %>
  <div class="login-page">
         <div class="form">
             <div class="admin_login"><p>관리자 로그인</p></div>
@@ -133,6 +133,6 @@
          </form:form>
         </div>
       </div>
-        <%@ include file="../../main/footer.jsp" %>
+        <%@ include file="../main/footer.jsp" %>
 </body>
 </html>

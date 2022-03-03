@@ -51,7 +51,7 @@ float:right;
      	<table class = "table table-hover">
      		
      		<tr><td>제목 : ${pageInfo.board_title} </td></tr>
-     		<tr><td>작성자 : ${pageInfo.n_Id}</td></tr>
+     		<tr><td>작성자 : ${pageInfo.admin_id}</td></tr>
      		<tr><td>작성일 : <fmt:formatDate value="${pageInfo.board_date}" pattern="yyyy.MM.dd"/></td></tr>
      		<tr><td>첨부파일 : <p><img src="#" style="width: 600px;
     height: 703px;
@@ -97,7 +97,52 @@ float:right;
 		form.attr("action", "/board/delete");
 		form.attr("method", "post");
 		form.submit();
-	});	
+	});
+	let form = $("#infoForm");
+
+	$("#list_btn").on("click", function(e) {
+		form.find("#board_seq").remove();
+		form.attr("action", "/board/notice");
+		form.submit();
+	});
+
+	/* 이미지 정보 호출 */
+	let board_seq = '<c:out value="${pageInfo.board_seq}"/>';
+	let uploadResult = $("#uploadResult");
+
+	$
+			.getJSON(
+					"/admin/getAttachList",
+					{
+						board_seq : board_seq
+					},
+					function(arr) {
+
+						if (arr.length === 0) {
+							let str = "";
+							str += "<div id='result_card'>";
+							str += "<img src='/resources/img/imgx.jpg'>";
+							str += "</div>";
+
+							uploadResult.html(str);
+							return;
+						}
+
+						let str = "";
+						let obj = arr[0];
+
+						let fileCallPath = encodeURIComponent(obj.uploadPath
+								+ "/s_" + obj.uuid + "_" + obj.fileName);
+						str += "<div id='result_card'";
+	str += "data-path='" + obj.uploadPath + "' data-uuid='" + obj.uuid + "' data-filename='" + obj.fileName + "'";
+	str += ">";
+						str += "<img src='/admin/display?fileName="
+								+ fileCallPath + "'>";
+						str += "</div>";
+
+						uploadResult.html(str);
+
+					});
 </script>	
 </body>
 </html>

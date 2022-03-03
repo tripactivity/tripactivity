@@ -57,7 +57,7 @@
 </head>
 <body>
 	<div>
-		<%@ include file="../mypage/left_aside.jsp" %>
+		<%@ include file="../main/c_acoordian.jsp"%>
 	</div>
 	<main>
 		<div class="section-title" data-aos="zoom-out">
@@ -65,10 +65,34 @@
 	          <p>회원정보 수정</p>
 	    </div>    
 	    <div class="kye_member_inform">
-	    	<form name="Modify" id="modifyform" action="/mypage/mpModify" method="post">
+	    	<form name="Modify" id="modifyform" action="/mypage/CmpModify" method="post">
 	        <section class="Easy-sgin-in-wrap">
                      <div id="MainBox">
                         <table style="width:400px; height:330px;">
+                           <tr>
+                              <td class="user_name" >
+                                 <div style="text-align:right">
+                                    회사 이름
+                                 </div>
+                              </td>
+                              <td colspan="3" class="user_name" style="padding-left: 20px;">
+                                 <div>
+                                   <c:out value="${cmemberVO.company_Name}"/> 
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="user_name" >
+                                 <div style="text-align:right">
+                                    사업자 등록 번호
+                                 </div>
+                              </td>
+                              <td colspan="3" class="user_name" style="padding-left: 20px;">
+                                 <div>
+                                   <c:out value="${cmemberVO.company_Number}"/> 
+                                 </div>
+                              </td>
+                           </tr>
                            <tr>
                               <td class="user_name" >
                                  <div style="text-align:right">
@@ -77,7 +101,7 @@
                               </td>
                               <td colspan="3" class="user_name" style="padding-left: 20px;">
                                  <div>
-                                   <c:out value="${nmemberVO.n_Name}"/> 
+                                   <c:out value="${cmemberVO.c_Name}"/> 
                                  </div>
                               </td>
                            </tr>
@@ -89,10 +113,10 @@
                               </td>
                               <td colspan="3" class="user_id" style="padding-left: 20px; ">
                                  <div>
-                                   <c:out value="${nmemberVO.n_Id}"/> 
+                                   <c:out value="${cmemberVO.c_Id}"/> 
                                  </div>
                                  <div class="Id_div" style="display:none">
-				             		<input name="n_Id" type="text" id="n_id" value="<c:out value="${nmemberVO.n_Id}"/>">
+				             		<input name="c_Id" type="text" id="c_id" value="<c:out value="${cmemberVO.c_Id}"/>">
 				             	</div>                               
                               </td>
                            </tr>
@@ -104,9 +128,9 @@
                               </td>
                               <td colspan="3" class="user_password1" style="padding-left: 20px;">
                               	<div class="password_div">
-	                                 <input type="password" class="npw_input" name="n_Pw1" id="n_Pw1" size="30" value="${nmemberVO.n_Pw1}">
+	                                 <input type="password" class="npw_input" name="c_Pw1" id="c_Pw1" size="30" value="${cmemberVO.c_Pw1}">
 	                                 <i class="fa fa-eye fa-lg"></i>
-	                                 <span class="final_pw_ck">${nmemberVO.n_Pw1}</span>
+	                                 <span class="final_pw_ck">${cmemberVO.c_Pw1}</span>
                                  </div>
                               </td>                               
                            </tr>
@@ -118,7 +142,7 @@
                               </td>
                               <td colspan="3" class="user_password2" style="padding-left: 20px;">
                               	<div class="password_div">
-                              		<input type="password" class="npwck_input" name="n_Pw2" id="n_Pw2" size="30" value="${nmemberVO.n_Pw2}">
+                              		<input type="password" class="npwck_input" name="c_Pw2" id="c_Pw2" size="30" value="${cmemberVO.c_Pw2}">
                               		<i class="fa fa-eye fa-lg"></i>
                               		<span class="final_pwck_ck">비밀번호 확인을 입력해주세요.</span>
                               		<span class="pwck_input_re_1" style="color:green;">비밀번호가 일치합니다.</span>
@@ -135,8 +159,8 @@
                               </td>
                               <td colspan="3" class="email" style="padding-left: 20px;">
                                	<div class="email_div">
-                                 	<input type="text" name="email1" id="email1" value="<c:out value="${nmemberVO.email1}"/>">@
-                                 	<input type="text" name="email2" id="email2" value="<c:out value="${nmemberVO.email2}"/>">
+                                 	<input type="text" name="email1" id="email1" value="<c:out value="${cmemberVO.email1}"/>">@
+                                 	<input type="text" name="email2" id="email2" value="<c:out value="${cmemberVO.email2}"/>">
                                  	<span class="final_email_ck">이메일을 입력해주세요.</span>
                                	</div>                        				
                               </td>
@@ -149,7 +173,7 @@
                               </td>
                               <td colspan="3" class="sex" style="padding-left: 20px;">
                               	<div class="sex_div">
-                                 <input type="text" name="sex" id="sex" value="<c:out value="${nmemberVO.sex}"/>">
+                                 <input type="text" name="sex" id="sex" value="<c:out value="${cmemberVO.sex}"/>">
                                  <span class="final_sex_ck">성별을 입력해주세요.</span>
                                 </div>
                               </td>
@@ -162,9 +186,9 @@
                               </td>
                               <td colspan="3" class="birth" style="padding-left: 20px;">
                               	<div class="birth_div">                                 
-                              	 <input type="text" name="birth_y" value="<c:out value="${nmemberVO.birth_y}"/>">년 
-                                 <input type="text" name="birth_m" value="<c:out value="${nmemberVO.birth_m}"/>">월 
-                                 <input type="text" name="birth_d" value="<c:out value="${nmemberVO.birth_d}"/>">일
+                              	 <input type="text" name="birth_y" value="<c:out value="${cmemberVO.birth_y}"/>">년 
+                                 <input type="text" name="birth_m" value="<c:out value="${cmemberVO.birth_m}"/>">월 
+                                 <input type="text" name="birth_d" value="<c:out value="${cmemberVO.birth_d}"/>">일
                                  <span class="final_birth_ck">생일을 입력해주세요.</span>
                                 </div>                           
                               </td>
@@ -178,9 +202,9 @@
                               </td>
                               <td colspan="3" class="phone" style="padding-left: 20px;">
                                 <div class="phone_div">
-                                 <input type="text" name="phone1"  id="phone1" value="<c:out value="${nmemberVO.phone1}"/>">- 
-                              	 <input type="text" name="phone2"  id="phone2" value="<c:out value="${nmemberVO.phone2}"/>">-
-                                 <input type="text" name="phone3"  id="phone3" value="<c:out value="${nmemberVO.phone3}"/>">
+                                 <input type="text" name="phone1"  id="phone1" value="<c:out value="${cmemberVO.phone1}"/>">- 
+                              	 <input type="text" name="phone2"  id="phone2" value="<c:out value="${cmemberVO.phone2}"/>">-
+                                 <input type="text" name="phone3"  id="phone3" value="<c:out value="${cmemberVO.phone3}"/>">
                                  <span class="final_phone_ck">핸드폰 번호를 입력해주세요.</span>
                                 </div>
                               </td>
@@ -243,9 +267,9 @@
 		
 	    /* 작가 수정 버튼 작동 및 유효성 검사 */
 		$(".modifyBtn").on("click", function(){
-			let n_Id = $(".Id_div c:out[value='${nmemberVO.n_Id}']").val();
-			let n_Pw1 = $(".password_div input[name='n_Pw1']").val();
-			let n_Pw2 = $(".password_div input[name='n_Pw2']").val();
+			let n_Id = $(".Id_div c:out[value='${cmemberVO.c_Id}']").val();
+			let n_Pw1 = $(".password_div input[name='c_Pw1']").val();
+			let n_Pw2 = $(".password_div input[name='c_Pw2']").val();
 			let email1 = $(".email_div input[name='email1']").val();
 			let email2 = $(".email_div input[name='email2']").val();
 			let 	sex	= $(".sex_div input[name='sex']").val();
@@ -256,9 +280,9 @@
 			let phone2 = $(".phone_div input[name='phone2']").val();
 			let phone3 = $(".phone_div input[name='phone3']").val();
 
-			let	n_IdCk = true;
-			let	n_Pw1Ck = false;
-			let n_Pw2Ck = false;
+			let	c_IdCk = true;
+			let	c_Pw1Ck = false;
+			let c_Pw2Ck = false;
 			let	email1Ck = false;
 			let email2Ck = false;
 			let	sexCk	 = false;
@@ -271,14 +295,14 @@
 
 			e.preventDefault();
 			
-			if(!n_Pw1){
+			if(!c_Pw1){
 				$(".final_pw_ck").css("display", "inline");
 			} else {
 				$(".final_pw_ck").css("display", "none");
 				n_Pw1Ck = true;
 			}
 			
-			if(!n_Pw2){
+			if(!c_Pw2){
 				$(".final_pwck_ck").css("display", "inline");
 			} else {
 				$(".final_pwck_ck").css("display", "none");
@@ -348,7 +372,7 @@
 				phone3Ck = true;
 			}
 			
-			if(n_Pw1Ck && n_Pw2Ck && email1Ck && email2Ck && sexCk && birth_yCk && birth_mCk && birth_dCk && phone1Ck && phone2Ck && phone3Ck ){
+			if(c_Pw1Ck && c_Pw2Ck && email1Ck && email2Ck && sexCk && birth_yCk && birth_mCk && birth_dCk && phone1Ck && phone2Ck && phone3Ck ){
 				modifyForm.submit();	
 			} else {
 				return false;

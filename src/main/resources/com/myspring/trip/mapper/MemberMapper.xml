@@ -87,13 +87,19 @@
 	<select id="findId" resultType="com.myspring.trip.model.NmemberVO">
 		select * from n_member_tbl where phone1 = #{phone1} and phone2 = #{phone2} and phone3 = #{phone3}
 	</select>
-		<!-- 회원 탈퇴 비밀번호 입력 -->
+	 	<!-- 회원 탈퇴 비밀번호 입력 -->
 	<select id="n_delPW" resultType="com.myspring.trip.model.NmemberVO">
 		select * from n_member_tbl where n_Id = #{n_Id} and n_Pw1 = #{n_Pw1}
-	</select>
+	</select> 
 	<!-- 회원 탈퇴 비밀번호 입력 -->
 	<delete id="n_delete">
-	DELETE FROM n_member_tbl
-	WHERE n_Id = #{n_Id}
+	delete from n_member_tbl
+	where n_Id = #{n_Id}
+	 and n_Pw1 = #{n_Pw1} 
 	</delete>
+	
+		<!-- 회원 탈퇴 비밀번호 -->
+	<select id="select_idpw" resultType="com.myspring.trip.model.NmemberVO">
+		select * from n_member_tbl where n_Id = #{n_Id}
+	</select>
   </mapper>

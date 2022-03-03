@@ -1,5 +1,7 @@
 package com.myspring.trip.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -308,17 +310,41 @@ public class MemberController {
 		return "member/n_del1";
 
 	}
-	// 회원 탈퇴 post
-		@RequestMapping(value="/n_delete", method = RequestMethod.POST)
-		public String memberDelete(String n_Id, HttpSession session, RedirectAttributes rttr) throws Exception {
-			
-			memberService.n_delete(n_Id);
-			
-			rttr.addFlashAttribute("result", "delete success");
-			
-			System.out.printf("회원 탈퇴 기능 ");
-			
-			return "redirect:/main/main";
-
+//	// 회원 탈퇴 post
+//		@RequestMapping(value="/n_delete", method = RequestMethod.POST)
+//		public String memberDelete(String n_Id, HttpSession session, RedirectAttributes rttr) throws Exception {
+//			
+//			memberService.n_delete(n_Id);
+//			
+//			rttr.addFlashAttribute("result", "delete success");
+//			
+//			System.out.printf("회원 탈퇴 기능 ");
+//			
+//			return "redirect:/main/main";
+//
+//		}
+	// 회원 탈퇴 get
+		@RequestMapping(value="/n_delete", method = RequestMethod.GET)
+		public String memberDeleteView() throws Exception{
+			return "member/n_delete";
 		}
+	
+	@RequestMapping(value="/n_delete", method = RequestMethod.POST)
+	public String memberDelete(NmemberVO vo, Model model, HttpSession session, RedirectAttributes rttr) throws Exception {
+
+		NmemberVO member = (NmemberVO) session.getAttribute("nmemberVO");
+			// 세션에있는 비밀번호
+			String sessionPass = member.getN_Pw1();
+			// vo로 들어오는 비밀번호
+			String voPass = vo.getN_Pw1();
+			
+			if(!(sessionPass.equals(voPass))) {
+				rttr.addFlashAttribute("msg", false);
+				return "redirect:/mypage/MypageMain";
+			}
+			
+			memberService.n_delete(vo);
+			session.invalidate();
+			return "redirect:/";
+}
 }

@@ -192,19 +192,19 @@ public class AdminController {
 	
 
 	/*관리자 페이지 완료된거 */ 
-	@GetMapping("admin_info/admin_join")
+	@GetMapping("admin_join")
 	public String join(@ModelAttribute("joinAdminVo") AdminVO adminvo) {
-		return "admin/admin_info/admin_join";
+		return "admin/admin_join";
 	}
 	
-	@PostMapping("admin_info/admin_join_pro")
+	@PostMapping("admin_join_pro")
 	public String join_pro(@Valid @ModelAttribute("joinAdminVo") AdminVO adminvo, BindingResult result) {
 		if(result.hasErrors()) {
-			return "admin/admin_info/admin_join";
+			return "admin/admin_join";
 		}
 		
 		adminService.addAdmininfo(adminvo);
-		return "admin/success/admin_join_success";
+		return "admin/admin_join_success";
 	}
 	/*
 	@InitBinder
@@ -229,7 +229,7 @@ public class AdminController {
 		logger.info("관리자 로그인 페이지");
 		//System.out.println(adminvo);
 		
-		return "admin/admin_info/admin_login";
+		return "admin/admin_login";
 	}
 	
 	@PostMapping("admin_login_pro")
@@ -237,17 +237,17 @@ public class AdminController {
 		
 	
 		if(result.hasErrors()) {
-			return "admin/admin_info/admin_login";
+			return "admin/admin_login";
 		}
 		
 		adminService.getLoginUserInfo(adminvo);
 		
 		if(loginAdminVO.isAdminLogin() == true) {
 			
-			return "admin/success/login_success";
+			return "admin/login_success";
 		}else {
 		
-		return "admin/fail/login_fail";
+		return "admin/login_fail";
 	}
 	}
 	
@@ -263,26 +263,26 @@ public class AdminController {
 	@GetMapping("not_login")
 	public String not_login() {
 		
-		return "admin/fail/admin_not_login";
+		return "admin/admin_not_login";
 	}
 	
-	@GetMapping("/admin_info/admin_inf_modify")
+	@GetMapping("admin_inf_modify")
 	public String admin_inf_modify(@ModelAttribute("admin_info_modify_AdminVO") AdminVO admin_info_modify_AdminVO) {
 		
 		adminService.getModifyAdminInfo(admin_info_modify_AdminVO);
-		return "admin/admin_info/admin_inf_modify";
+		return "admin/admin_inf_modify";
 	}
 	
-	@PostMapping("/admin_info/admin_info_modify_pro")
+	@PostMapping("admin_info_modify_pro")
 	public String admin_inf_modify_pro(@Valid @ModelAttribute("admin_info_modify_AdminVO") AdminVO admin_info_modify_AdminVO, BindingResult result) {
 		
 		if(result.hasErrors()) {
-			return "admin/admin_info/admin_inf_modify";
+			return "admin/admin_inf_modify";
 		}
 		
 		adminService.modifyAdminInfo(admin_info_modify_AdminVO);
 		
-		return "admin/success/admin_modify_success";
+		return "admin/admin_modify_success";
 	}
 
 	@RequestMapping(value="/notice/admin_busi_inquiry_manage", method=RequestMethod.GET)
@@ -291,7 +291,7 @@ public class AdminController {
 		
 		model.addAttribute("list", list);
 		
-		return "admin/notice/admin_busi_inquiry_manage";
+		return "admin/admin_busi_inquiry_manage";
 
 	}
 	}

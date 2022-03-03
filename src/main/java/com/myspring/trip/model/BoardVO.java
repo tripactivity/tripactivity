@@ -11,8 +11,18 @@ public class BoardVO {
 	private String n_Id;
 	private String c_Id;
 	
-	private String admin_Id;
+	public String getAdmin_id() {
+		return admin_id;
+	}
+
+	public void setAdmin_id(String admin_id) {
+		this.admin_id = admin_id;
+	}
+
+	private String admin_id;
 	
+
+
 	private String ac_ProductNum;
 	private String le_ProductNum;
 	
@@ -81,14 +91,6 @@ public class BoardVO {
 		this.c_Id = c_Id;
 	}
 
-	public String getAdmin_Id() {
-		return admin_Id;
-	}
-
-	public void setAdmin_Id(String admin_Id) {
-		this.admin_Id = admin_Id;
-	}
-
 	public String getAc_ProductNum() {
 		return ac_ProductNum;
 	}
@@ -140,7 +142,7 @@ public class BoardVO {
 	@Override
 	public String toString() {
 		return "BoardVO [board_seq=" + board_seq + ", board_kind=" + board_kind + ", board_kind1=" + board_kind1
-				+ ", n_Id=" + n_Id + ", c_Id=" + c_Id + ", admin_Id=" + admin_Id + ", ac_ProductNum=" + ac_ProductNum
+				+ ", n_Id=" + n_Id + ", c_Id=" + c_Id + ", admin_Id=" + admin_id + ", ac_ProductNum=" + ac_ProductNum
 				+ ", le_ProductNum=" + le_ProductNum + ", board_title=" + board_title + ", board_content="
 				+ board_content + ", board_state=" + board_state + ", board_date=" + board_date + ", imageList="
 				+ imageList + "]";

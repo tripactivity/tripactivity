@@ -60,7 +60,7 @@
 <title>회원 탈퇴</title>
 <body>
 
-
+<form action="/member/n_delete" method="post">
 	<div class="container">
 		<div class="section-title" data-aos="zoom-out">
 			<h2>Find Id</h2>
@@ -68,8 +68,7 @@
 		</div>
 
 
-		<c:if test="${check == 0 }">
-
+		
 			<div class="cy_header">
 				<h4>
 					${nmemberVO.n_Name} 님 !!!
@@ -81,10 +80,10 @@
 			
              	
 					<div id="main-back">
-					<form id="id" >
+					
 						<button style="height: 30px; width: 200px; font-size: 17px; background-color: #48c5de; color: #1d1d1d;">
 							회원 탈퇴</button>
-					</form>
+					
 					</div>
 					
 					
@@ -96,7 +95,7 @@
 							마이페이지 이동</button>
 					</div>
 				</div>
-				<form action="/member/n_delete" method="post">
+				
 				<div class="form-group has-feedback">
 					<label class="control-label" for="userId">아이디</label>
 					<input class="form-control" type="text" id="n_Id" name="n_Id" value="${nmemberVO.n_Id}" readonly="readonly"/>
@@ -113,46 +112,9 @@
 					<button class="btn btn-success" type="submit" id="submit">회원탈퇴</button>
 					<button class="cencle btn btn-danger" type="button">취소</button>
 				</div>
-			</form>
-
-		</c:if>
-
-		<!-- 이름과 전화번호가 일치하지 않을 때-->
-		<c:if test="${check == 1}">
-			<!-- <script>
-				opener.document.findform.name.value = "";
-				opener.document.findform.phone.value = "";
-			</script> -->
-			<div class="cy_header">
-				<h4>
-					일치하신 정보가 틀립니다.
-					<p>다시 입력해주세요.</p>
-				</h4>
-
-		
-				<button id="click"onclick="location.href='/member/n_del'"
-					style="height: 30px; width: 200px; font-size: 17px; background-color: #48c5de; color: #1d1d1d;">
-					비밀번호 입력 바로가기</button>
-			</div>
-		</c:if>
-		<!-- 이름과 비밀번호가 일치하지 않을 때 -->
-		<section class="cy-section testimony-section">
-			<div class="container">
-
-
-				<div class="container">
-					<div id="main-back">
-						<button onclick="location.href='/main/main'"
-							style="height: 30px; width: 200px; font-size: 17px; background-color: #48c5de; color: #1d1d1d;">
-							메인페이지 바로가기</button>
-					</div>
-				</div>
-			
-			</div>
-
-
-		</section>
+	
 	</div>
+	</form>
 	<script>
 					let click =document.querySelector("#click");
 						let id= document.querySelector("#id");

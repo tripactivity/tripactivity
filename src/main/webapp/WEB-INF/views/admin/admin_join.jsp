@@ -103,7 +103,7 @@ span{display:inherit; text-align: left;
 </style>
 </head>
 <body>
-<%@ include file="../../main/admin_header.jsp" %>
+<%@ include file="../main/admin_header.jsp" %>
 <div class="login-page">
         <div class="form">
             <div class="admin_login"><p>관리자 회원가입</p></div>
@@ -149,6 +149,6 @@ span{display:inherit; text-align: left;
 	</form:form>
 	  </div>
       </div>
-        <%@ include file="../../main/footer.jsp" %>
+        <%@ include file="../main/footer.jsp" %>
 </body>
 </html>

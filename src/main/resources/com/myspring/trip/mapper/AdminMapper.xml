@@ -50,7 +50,7 @@
 		resultType="com.myspring.trip.model.BoardVO">
 
 		select * from (
-		SELECT board_seq, board_title, n_Id, board_date FROM board_tbl where
+		SELECT board_seq, board_title, admin_id, board_date FROM board_tbl where
 		board_kind LIKE 'A%' order by board_seq desc) as T1
 		<!-- limit ((${pageNum}-1)*${amount}), ${amount} -->
 		limit #{skip},#{amount}
@@ -65,8 +65,8 @@
 			SELECT MAX(board_seq) FROM board_tbl
 
 		</selectKey>
-		insert into board_tbl(board_kind,board_title, board_content) values
-		(#{board_kind},#{board_title}, #{board_content})
+		insert into board_tbl(board_kind,board_title,admin_id, board_content) values
+		(#{board_kind},#{board_title}, #{admin_id}, #{board_content})
 
 	</insert>
 

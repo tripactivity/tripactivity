@@ -27,7 +27,7 @@ float:right;
  
 </head>
 <body>
-<%@ include file="../../main/admin_header.jsp" %>
+<%@ include file="../main/admin_header.jsp" %>
 <main id="main">
 <!-- 공지사항 글쓰기 수정 jsp -->
 
@@ -38,7 +38,7 @@ float:right;
           <h2>notice modify</h2> 
           <p>공지사항 수정하기</p>
      </div>
-    	<form id="modifyForm" name="modifyForm" action="/board/modify?board_seq=<c:out value="${pageInfo.board_seq}"/>" method="post" >
+    	<form id="modifyForm" name="modifyForm" action="/admin/admin_modify?board_seq=<c:out value="${pageInfo.board_seq}"/>" method="post" >
 			<input type="hidden" id="board_kind" name="board_kind" value="A">
 			
   				<div class="form-group">
@@ -76,7 +76,7 @@ float:right;
     
 </main>
 <div id="nav">
-	<%@ include file="../../main/footer.jsp" %>
+	<%@ include file="../main/footer.jsp" %>
 </div>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

@@ -33,7 +33,9 @@ public interface MemberService {
 	// 일반 회원 탈퇴
 	public NmemberVO n_delPW(NmemberVO vo);
 	
-	public int n_delete(String n_Id) throws Exception;
+	public NmemberVO n_delete(NmemberVO vo) throws Exception;
+	
+	public NmemberVO select_idpw(NmemberVO vo) throws Exception;
 	
 	
 }

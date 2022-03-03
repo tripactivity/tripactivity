@@ -80,10 +80,15 @@ public class MemberServiceImpl implements MemberService {
 	
 	// 일반회원 회원탈퇴
 		@Override
-		public int n_delete(String n_Id) throws Exception {
-			return memberMapper.n_delete(n_Id);
+		public NmemberVO n_delete(NmemberVO vo) throws Exception {
+			return memberMapper.n_delete(vo);
 		}
 	
+		// 일반회원 회원탈퇴
+				@Override
+				public NmemberVO select_idpw(NmemberVO vo) throws Exception {
+					return memberMapper.select_idpw(vo);
+				}
 
 	
 

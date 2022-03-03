@@ -10,14 +10,29 @@
   		select * from n_member_tbl where n_Id = #{n_Id} and n_Pw1 = #{n_Pw1}
   	</select>
   	
+  	<!-- 기업회원 마이페이지 회원정보수정 비밀번호 재확인 -->
+  	<select id="Cinfo_password" resultType="com.myspring.trip.model.CmemberVO">
+  		select * from c_member_tbl where c_Id = #{c_Id} and c_Pw1 = #{c_Pw1}
+  	</select>
+  	
   	<!-- 마이페이지 회원정보수정 회원정보 가져오기 -->
   	<select id="infoGetDetail" resultType="com.myspring.trip.model.NmemberVO">
   		SELECT * FROM n_member_tbl WHERE n_Id = #{n_Id}
   	</select>
   	
+  		<!-- 마이페이지 회원정보수정 회원정보 가져오기 -->
+  	<select id="CinfoGetDetail" resultType="com.myspring.trip.model.CmemberVO">
+  		SELECT * FROM c_member_tbl WHERE c_Id = #{c_Id}
+  	</select>
+  	
   	<!-- 마이페이지 회원정보 수정 -->
   	<update id="modifyinfo">
   		update n_member_tbl set n_Pw1 = #{n_Pw1}, n_Pw2 = #{n_Pw2}, email1 = #{email1}, email2 = #{email2}, sex = #{sex}, birth_y = #{birth_y}, birth_m = #{birth_m}, birth_d = #{birth_d}, phone1 = #{phone1}, phone2 = #{phone2}, phone3 = #{phone3} where n_Id = #{n_Id}
+  	</update>
+  	
+  		<!-- 마이페이지 회원정보 수정 -->
+  	<update id="Cmodifyinfo">
+  		update c_member_tbl set c_Pw1 = #{c_Pw1}, c_Pw2 = #{c_Pw2}, email1 = #{email1}, email2 = #{email2}, sex = #{sex}, birth_y = #{birth_y}, birth_m = #{birth_m}, birth_d = #{birth_d}, phone1 = #{phone1}, phone2 = #{phone2}, phone3 = #{phone3} where c_Id = #{c_Id}
   	</update>
 	
   </mapper>

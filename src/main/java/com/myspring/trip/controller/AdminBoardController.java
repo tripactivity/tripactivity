@@ -35,6 +35,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.myspring.trip.model.AdminBoardVO;
+import com.myspring.trip.model.AdminVO;
 import com.myspring.trip.model.AttachImageVO;
 import com.myspring.trip.model.BoardVO;
 import com.myspring.trip.model.Criteria;
@@ -98,15 +99,19 @@ public class AdminBoardController {
 		@PostMapping("/admin_notice_write")
 		public String boardEnrollPOST(BoardVO board, RedirectAttributes rttr) {
 			
+			
+			
 			logger.info("BoardVO : " + board);
 			
 			adminService.notice_write(board);
+			
+		
 			
 			logger.info("BoardVO : " + board);
 			
 			rttr.addFlashAttribute("result", "notice_write success");
 			
-			return "redirect:/admin/notice/admin_notice";
+			return "redirect:/admin/admin_notice";
 			
 		}
 		
@@ -138,7 +143,7 @@ public class AdminBoardController {
 			adminService.admin_modify(board);
 			rttr.addFlashAttribute("result", "modify success");
 			
-			return "redirect:/admin/notice/admin_notice";
+			return "redirect:/admin/admin_notice";
 			
 		}
 
@@ -312,13 +317,13 @@ public class AdminBoardController {
 		@GetMapping("notice/admin_board_write")
 		public String admin_board_write(@ModelAttribute("writeContentBean") AdminBoardVO writeContentBean) {
 			
-			return "admin/notice/admin_board_write";
+			return "admin/admin_board_write";
 		}
 		
 		@PostMapping("notice/admin_board_write_pro")
 		public String admin_board_write_pro(@Valid @ModelAttribute("writeContentBean") AdminBoardVO writeContentBean, BindingResult result) {
 			if(result.hasErrors()) {
-				return "admin/notice/admin_board_write";
+				return "admin/admin_board_write";
 			}
 			
 			adminboardService.addContentInfo(writeContentBean);

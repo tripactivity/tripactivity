@@ -34,7 +34,8 @@
          <beans:bean id="cloginInterceptor" class="com.myspring.trip.interceptor.CloginInterceptor"></beans:bean>
       </interceptor>
       
-      <!-- 
+     
+ <!-- 
       <interceptor>
          <mapping path="/admin/admin_*"></mapping>
          
@@ -42,11 +43,12 @@
          <exclude-mapping path="/admin/admin_login"></exclude-mapping>
          <exclude-mapping path="/admin/admin_login_pro"></exclude-mapping>
          <exclude-mapping path="/admin/admin_join"></exclude-mapping>
-         <exclude-mapping path="/admin/admin_join_pro"></exclude-mappgin>
+         <exclude-mapping path="/admin/admin_join_pro"></exclude-mapping>
          
          <beans:bean class="com.myspring.trip.interceptor.CheckLogininterceptor"></beans:bean>
       </interceptor>
        -->
+    
        <interceptor>
 			<mapping path="/cart/**"/>
 			<exclude-mapping path="/cart/add"/>

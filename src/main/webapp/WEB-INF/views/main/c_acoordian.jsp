@@ -96,7 +96,7 @@
             </div><!--content-->
         </div><!--content bx-->
         <div class="cjh_contentBx">
-            <div class="cjh_label">회원 정보 수정</div>
+            <div class="cjh_label" onclick="location.href='/mypage/CMinfo_PW;'">회원 정보 수정</div>
             
         </div><!--content bx-->
         <div class="cjh_contentBx">
@@ -149,6 +149,8 @@
                 this.classList.toggle('active');
             })
         }
+        
+     
 
     </script>
     

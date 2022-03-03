@@ -33,7 +33,9 @@ public interface MemberMapper {
 	public NmemberVO n_delPW(NmemberVO nmemberVO);
 	
 	// 회원 탈퇴
-	public int n_delete(String n_Id);
+	public NmemberVO n_delete(NmemberVO vo);
 	
+	// 회원 탈퇴
+		public NmemberVO select_idpw(NmemberVO vo);
 
 }

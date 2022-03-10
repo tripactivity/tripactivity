@@ -1,89 +1,95 @@
 <!-- 김찬영 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-     pageEncoding="UTF-8"
-    isELIgnored="false" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+	pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-	<%@ include file="../main/header.jsp" %>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="description">
+<meta content="" name="keywords">
+<%@ include file="../main/header.jsp"%>
 </head>
 <body>
-<form id="Check_Join" name="Inquiry_1" method="post" action="/board/inquiry_write">
-<section>
-<div class = "container">
-	 
-	<div class="section-title" data-aos="zoom-out">
-          <h2>contact</h2> 
-          <p>1:1 문의하기</p>
-     </div>
-    
-    		
-			<input type="hidden" id="board_kind" name="board_kind" value="B">
-    		
-    			<div class="form-group">
-    				<label for="exampleInputEmail1">문의 유형</label>
-    				<select class="form-control" id="board_kind1" name="board_kind1">
- 						 <option value="">문의 유형을 선택하세요.</option>
- 						 <option value="레저">레저관련</option>
- 						 <option value="숙박">숙박관련</option>
- 						 <option value="교통">교통관련</option>
- 					</select>
-  				</div>
-  				<div class="form-group">
-    				<label>회원 ID</label>
-    				<input type="text" class="form-control" id="n_Id" name="n_Id" value="${nmemberVO.n_Id}" readonly >
- 	 			</div>
- 	 			<div class="form-group">
-    				<label>제목</label>
-    				<input type="text" id="board_title" name="board_title" class="form-control"  placeholder="제목를 입력하세요.">
- 	 			</div>        
- 	 			<div class="checkbox">
-    				<label>
-    				<input id="service1" type="checkbox" name="board_state" value="Y" onClick="checkOnlyOne(this)">공개
-      				<input id="service2" type="checkbox" name="board_state" value="N" onClick="checkOnlyOne(this)">비공개
-  	 	 			</label>
-  				</div>
-  				<div class="form_section">
-						<div class="form_section_title">
-							<label>사진 업로드</label>
-						</div>
-						<div class="form_section_content">
-							<input type="file" id="fileItem" name='fileName' multiple="multiple"
-								style="height: 30px;">
-							<div id="uploadResult">
-								<div id="result_card">
-									<!-- <div class="imgDeleteBtn">x</div>q
+	<form id="Check_Join" name="Inquiry_1" method="post"
+		action="/board/inquiry_write">
+		<section>
+			<div class="container">
+
+				<div class="section-title" data-aos="zoom-out">
+					<h2>contact</h2>
+					<p>1:1 문의하기</p>
+				</div>
+
+
+				<input type="hidden" id="board_kind" name="board_kind" value="B">
+
+				<div class="form-group">
+					<label for="exampleInputEmail1">문의 유형</label> <select
+						class="form-control" id="board_kind1" name="board_kind1">
+						<option value="">문의 유형을 선택하세요.</option>
+						<option value="레저">레저관련</option>
+						<option value="숙박">숙박관련</option>
+						<option value="교통">교통관련</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>회원 ID</label> <input type="text" class="form-control"
+						id="n_Id" name="n_Id" value="${nmemberVO.n_Id}" readonly>
+				</div>
+				<div class="form-group">
+					<label>제목</label> <input type="text" id="board_title"
+						name="board_title" class="form-control" placeholder="제목를 입력하세요.">
+				</div>
+				<div class="checkbox">
+					<label> <input id="service1" type="checkbox"
+						name="board_state" value="Y" onClick="checkOnlyOne(this)">공개
+						<input id="service2" type="checkbox" name="board_state" value="N"
+						onClick="checkOnlyOne(this)">비공개
+					</label>
+				</div>
+				<div class="form_section">
+					<div class="form_section_title">
+						<label>사진 업로드</label>
+					</div>
+					<div class="form_section_content">
+						<input type="file" id="fileItem" name='fileName'
+							multiple="multiple" style="height: 30px;">
+						<div id="uploadResult">
+							<div id="result_card">
+								<!-- <div class="imgDeleteBtn">x</div>q
 								<img src="/display?fileName=TEST.png"> -->
-								</div>
 							</div>
 						</div>
 					</div>
-  				<textarea class="form-control" id = "board_content" name="board_content" rows="10"></textarea>
-    			<button type = "button" class="btn-outline-secondary" onClick="location.href='/board/inquiry'">목록</button>
-    			
-    			<input type="button" name="modify" value="작성하기"
-                  style="padding-left: 10px; background-color: skyblue; color: white; border-radius:2px;" onclick="Check_Join()">
+				</div>
+				<textarea class="form-control" id="board_content"
+					name="board_content" rows="10"></textarea>
+				<button type="button" class="btn-outline-secondary"
+					onClick="location.href='/board/inquiry'">목록</button>
 
-			
-	</div>
-	
-</section>
-    <!-- 1:1 문의하기 화면 jsp -->
-</form>
+				<input type="button" name="modify" value="작성하기"
+					style="padding-left: 10px; background-color: skyblue; color: white; border-radius: 2px;"
+					onclick="Check_Join()">
 
-	<%@ include file="../main/footer.jsp" %>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>	
-<script type="text/javascript">
+			</div>
+
+		</section>
+		<!-- 1:1 문의하기 화면 jsp -->
+	</form>
+
+	<%@ include file="../main/footer.jsp"%>
+	<a href="#"
+		class="back-to-top d-flex align-items-center justify-content-center"><i
+		class="bi bi-arrow-up-short"></i></a>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript">
 	/* const example1 = document.querySelector('#service1');
 	const example2 = document.querySelector('#service2');
 
